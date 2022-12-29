@@ -87,6 +87,6 @@ Outils génériques
 Téléchargement
 ===================================
 
-`Télécharger l'ensemble du SEDA 0.1 <../../releases/tag/seda-0.1/>`_ (schémas XML et documentation)
+`Télécharger l'ensemble du SEDA 0.1 <../../releases/tag/seda_v0.1/>`_ (schémas XML et documentation)
 
 
