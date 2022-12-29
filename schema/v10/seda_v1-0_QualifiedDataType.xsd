@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== Qualified DataType - Standard d'echange de donnees pour l'archivage ===== -->
+<!-- ================================================================== -->
+<!--
+        Schema agency: Service interministériel des archives de France (SIAF)
+        Schema version: 1.0
+        Schema date: 06 Juillet 2012
+        
+        Copyright (c) 2011 Service interministériel des archives de France
+        
+        Ce document est sous licence Creative Commons Paternité 2.0 France.
+        Pour accéder à une copie de cette licence, merci de vous rendre à l'adresse suivante
+        http://creativecommons.org/licenses/by/2.0/fr/ ou envoyez un courrier à
+        Creative Commons, 444 Castro Street, Suite 900,
+        Mountain View, California, 94041, USA.
+        
+        Prefix=QDTAES
+-->
+
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:10"
+	xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2" 
+	xmlns:ids5ISO316612A="urn:un:unece:uncefact:identifierlist:standard:5:ISO316612A:SecondEdition2006VI-8"
+	xmlns:clm63155CommunicationChannelCode="urn:un:unece:uncefact:codelist:standard:UNECE:CommunicationMeansTypeCode:D10A"
+	xmlns:clm6Recommendation20="urn:un:unece:uncefact:codelist:standard:6:Recommendation20:7"
+	xmlns:clmDAFAccessRestrictionCode="urn:un:unece:uncefact:codelist:draft:DAF:accessRestrictionCode:2009-08-18"
+	xmlns:clmDAFAppraisalCode="urn:un:unece:uncefact:codelist:draft:DAF:appraisalCode:2009-08-18"
+	xmlns:clmDAFDescriptionLevelCode="urn:un:unece:uncefact:codelist:draft:DAF:descriptionLevelCode:2009-08-18"
+	xmlns:clmDAFLanguageCode="urn:un:unece:uncefact:codelist:draft:DAF:languageCode:2011-10-07"
+	xmlns:clmDAFkeywordTypeCode="urn:un:unece:uncefact:codelist:draft:DAF:keywordTypeCode:2009-08-18"
+	xmlns:clmDAFDocumentTypeCode="urn:un:unece:uncefact:codelist:draft:DAF:documentTypeCode:2009-08-18"
+	xmlns:clmDAFFileTypeCode="urn:un:unece:uncefact:codelist:draft:DAF:fileTypeCode:2011-11-03"
+	xmlns:clmDAFUnitIdentifierCode="urn:un:unece:uncefact:codelist:draft:SIAF:unitIdentifier:2011-12-15"
+	xmlns:clmSIAFAuthorisationReasonCode="urn:un:unece:uncefact:codelist:draft:SIAF:authorisationReasonCode:2012-07-05"
+	
+	targetNamespace="fr:gouv:culture:archivesdefrance:seda:v1.0:QualifiedDataType:1" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified" 
+	version="1.0">
+
+<!-- ======================================================== -->
+<!-- ====                Imports                         ==== -->
+<!-- ======================================================== -->
+<!-- ======================================================== -->
+<!-- ====        Import of CoreComponentTypes            ==== -->
+<!-- ======================================================== -->
+
+<xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:10" schemaLocation="UnqualifiedDataType_10p0.xsd"/>
+<xsd:import namespace="urn:un:unece:uncefact:codelist:standard:6:Recommendation20:7"                     schemaLocation="codes/UNECE_MeasurementUnitCommonCode_7.xsd"/>
+<!-- ======================================================================= -->
+<!-- ===== Imports of Code Lists                                       ===== -->
+<!-- ======================================================================= -->
+<!--
+	<xsd:import namespace="urn:un:unece:uncefact:identifierlist:standard:5:ISO316612A:SecondEdition2006VI-8" schemaLocation="http://www.unece.org/uncefact/identifierlist/standard/ISO_ISOTwoletterCountryCode_SecondEdition2006VI-8.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:CommunicationMeansTypeCode:D10A" schemaLocation="http://www.unece.org/uncefact/codelist/standard/UNECE_CommunicationMeansTypeCode_D10A.xsd"/>
+-->
+	<xsd:import namespace="urn:un:unece:uncefact:identifierlist:standard:5:ISO316612A:SecondEdition2006VI-8" schemaLocation="codes/ISO_ISOTwoletterCountryCode_SecondEdition2006VI-8.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:CommunicationMeansTypeCode:D10A"    schemaLocation="codes/UNECE_CommunicationMeansTypeCode_D10A.xsd"/>
+
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:DAF:accessRestrictionCode:2009-08-18" schemaLocation="codes/seda_v1-0_accessrestriction_code.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:DAF:appraisalCode:2009-08-18"         schemaLocation="codes/seda_v1-0_appraisal_code.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:DAF:descriptionLevelCode:2009-08-18"  schemaLocation="codes/seda_v1-0_descriptionlevel_code.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:DAF:languageCode:2011-10-07"          schemaLocation="codes/seda_v1-0_language_code.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:DAF:keywordTypeCode:2009-08-18"       schemaLocation="codes/seda_v1-0_keywordtype_code.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:DAF:documentTypeCode:2009-08-18"      schemaLocation="codes/seda_v1-0_documenttype_code.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:DAF:fileTypeCode:2011-11-03"          schemaLocation="codes/seda_v1-0_filetype_code.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:SIAF:authorisationReasonCode:2012-07-05" schemaLocation="codes/seda_v1-0_authorisationReason_code.xsd"/>
+	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:SIAF:unitIdentifier:2011-12-15"          schemaLocation="codes/seda_v1-0_unitidentifier_code.xsd"/>
+
+	<!-- =================================================================== -->
+	<!-- ===== Binary Object. Type                                     ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="ArchivesBinaryObjectType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<ccts:UniqueID>QDTAES000001</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Archives Binary Object. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>A set of finite-length sequences of binary octets.</ccts:Definition>
+				<ccts:PrimitiveType>binary</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:BinaryObjectType">
+				<xsd:attribute name="format" type="clmDAFFileTypeCode:FileTypeCodeType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<ccts:Name>Binary Object. Format. Text</ccts:Name>
+							<ccts:Definition>The format of the binary content.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Code. DescriptionLevel                                  ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="CodeDescriptionLevelType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000002</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Code. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Code correspondant au niveau de description archivistique (source: EAD).</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="clmDAFDescriptionLevelCode:LevelDescriptionType">
+				<xsd:attribute name="listVersionID" type="xsd:token" use="optional" default="edition 2009">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<ccts:Name>Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>The version of the code list.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Code. AccessRestriction                                 ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="CodeAccessRestrictionType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000003</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Code. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Code correspondant au niveau de restriction d'access (source: loi archive).</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="clmDAFAccessRestrictionCode:AccessRestrictionCodeType">
+				<xsd:attribute name="listVersionID" type="xsd:token" use="optional" default="edition 2009">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<ccts:Name>Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>The version of the code list.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Code. Appraisal                                         ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="CodeAppraisalType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000004</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Code. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Code correspondant au sort-final.</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="clmDAFAppraisalCode:AppraisalCodeType">
+				<xsd:attribute name="listVersionID" type="xsd:token" use="optional" default="edition 2009">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<ccts:Name>Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>The version of the code list.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Code. Language                                          ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="CodeLanguageType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000005</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Code. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Code correspondant à la langue (source ISO-639).</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="clmDAFLanguageCode:LanguageCodeType">
+				<xsd:attribute name="listVersionID" type="xsd:token" use="optional" default="edition 2011">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<ccts:Name>Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>The version of the code list.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Code. Keyword                                           ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="CodeKeywordType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000006</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Code. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Code correspondant au type de mot-clef.</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="clmDAFkeywordTypeCode:KeywordType">
+				<xsd:attribute name="listVersionID" type="xsd:token" use="optional" default="edition 2009">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<ccts:Name>Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>The version of the code list.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Code. Document                                          ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="CodeDocumentType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000007</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Code. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Code correspondant au type de document (source OAIS).</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="clmDAFDocumentTypeCode:DocumentTypeCodeType">
+				<xsd:attribute name="listVersionID" type="xsd:token" use="optional" default="edition 2009">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<ccts:Name>Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>The version of the code list.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<!-- =================================================================== -->
+	<!-- ===== Hashcode Object. Type                                     ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="ArchivesHashcodeBinaryObjectType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<ccts:UniqueID>QDTAES000008</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>HashcodeBinary Object. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>A set of finite-length sequences of binary octets.</ccts:Definition>
+				<ccts:PrimitiveType>binary</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:base64Binary">
+				<xsd:attribute name="algorithme" type="xsd:string" use="required">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="fr">
+							<ccts:Name>Binary Object. Algorithme. Text</ccts:Name>
+							<ccts:Definition>Algorithme utilisé pour encoder la valeur de l'empreinte. Il est conseillé d'utiliser 
+								les identifiants du vocabulaire "Cryptographic Hash Functions"
+								de la Library Of Congress (http://id.loc.gov/vocabulary/cryptographicHashFunctions)  </ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>			
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Country Object. Type                                    ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="ArchivesCountryType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<ccts:UniqueID>QDTAES000009</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Country_ Identifier. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Identifiants des noms de pays (source ISO 3166-1 2A).</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="ids5ISO316612A:ISOTwoletterCountryCodeIdentifierContentType">
+				<xsd:attribute name="listVersionID" type="xsd:token" use="optional" default="second edition 2006">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<ccts:Name>Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>The version of the code list.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>			
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<!-- =================================================================== -->
+	<!-- ===== Duration Object. Type                                    ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="ArchivesDurationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<ccts:UniqueID>QDTAES000010</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Duration. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Duree.</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:duration">
+			</xsd:extension>			
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<!-- ================================================================== -->
+	<!-- ===== CommunicationChannel. Type                             ===== -->
+	<!-- ================================================================== -->
+	<xsd:complexType name="ArchivesCommunicationChannelCodeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<ccts:UniqueID>QDTAES000011</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Communication Channel_ Code. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>A character string used to represent a communication channel.</ccts:Definition>
+				<ccts:PrimaryRepresentationTerm>Code</ccts:PrimaryRepresentationTerm>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="clm63155CommunicationChannelCode:CommunicationMeansTypeCodeContentType">
+				<xsd:attribute name="listVersionID" type="xsd:token" use="optional" default="D10A" >
+					<xsd:annotation>
+						<xsd:documentation xml:lang="en">
+							<ccts:Name>Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>The version of the code list.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<!-- ================================================================== -->
+	<!-- ===== CustodialHistoryItem. Type                          ===== -->
+	<!-- ================================================================== -->
+	<xsd:complexType name="CustodialHistoryItemType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000012</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Custodial. History. Item. Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Chaine de caractères utilisé pour décrire une période ou un événement dans un historique</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="udt:TextType">
+				<xsd:attribute name="when" type="xsd:date" use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="fr">
+							<ccts:Name>Custodial. History. Item. Date</ccts:Name>
+							<ccts:Definition>Moment ou début de période.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<!-- ================================================================== -->
+	<!-- ===== Measure. Type                          ===== -->
+	<!-- ================================================================== -->
+	<xsd:complexType name="MeasureType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000013</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>Measure.Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Taille d'un contenu binaire ou fichier</ccts:Definition>
+				<ccts:PrimitiveType>decimal</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:MeasureType">
+				<xsd:attribute name="unitCode" type="clm6Recommendation20:MeasurementUnitCommonCodeContentType" use="required">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="fr">
+							<ccts:Name>Measure.Type. unitCode</ccts:Name>
+							<ccts:Definition>Unité dans laquelle est exprimée la mesure.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<!-- ================================================================== -->
+	<!-- ===== KeywordContent. Type                          ===== -->
+	<!-- ================================================================== -->
+	<xsd:complexType name="KeywordContentType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000014</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>KeywordContent.Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Valeur d'un mot-clé</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="udt:TextType">
+				<xsd:attribute name="role" type="xsd:token" use="optional">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="fr">
+							<ccts:Name>KeywordContent.Type. role</ccts:Name>
+							<ccts:Definition>Rôle du mot-clé.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<!-- ================================================================== -->
+	<!-- ===== UnitIdentifier. Type                          ===== -->
+	<!-- ================================================================== -->
+	<xsd:complexType name="UnitIdentifierType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000015</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>UnitIdentifier.Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Identifiant d'un objet SEDA (Document, Archive ou ArchiveObjet)</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:IDType">
+				<xsd:attribute name="schemeAgencyID" use="prohibited"/>
+				<xsd:attribute name="schemeName" type="clmDAFUnitIdentifierCode:UnitIdentifierType" use="required" >
+					<xsd:annotation>
+						<xsd:documentation xml:lang="fr">
+							<ccts:Name>UnitIdentifier.Type. schemeName</ccts:Name>
+							<ccts:Definition>Nom du schéma utilisé (correspond au type d'identifiant).</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>					
+				</xsd:attribute>			
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<!-- ================================================================== -->
+	<!-- ===== AuthorisationReason. Code                          ===== -->
+	<!-- ================================================================== -->
+	<xsd:complexType name="CodeAuthorisationReasonType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:UniqueID>QDTAES000016</ccts:UniqueID>
+				<ccts:Acronym>QDT</ccts:Acronym>
+				<ccts:DictionaryEntryName>CodeAuthorisationReason.Type</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Raison d'une demande d'autorisation</ccts:Definition>
+				<ccts:PrimitiveType>string</ccts:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="clmSIAFAuthorisationReasonCode:AuthorisationReasonCodeType">
+				<xsd:attribute name="listVersionID" type="xsd:token" use="optional" default="edition 2012">
+					<xsd:annotation>
+						<xsd:documentation xml:lang="fr">
+							<ccts:Name>Code List. Version. Identifier</ccts:Name>
+							<ccts:Definition>The version of the code list.</ccts:Definition>
+							<ccts:PrimitiveType>string</ccts:PrimitiveType>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+
+
+
+
+
+
+
+
+	<!-- =================================================================== -->
+	<!-- ===== Identifier. Type                                        ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="ArchivesIDType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:IDType">
+				<xsd:attribute name="schemeAgencyID" use="prohibited"/>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- =================================================================== -->
+	<!-- ===== Code. Type                                              ===== -->
+	<!-- =================================================================== -->
+	<xsd:complexType name="ArchivesCodeType">
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType">
+				<xsd:attribute name="listAgencyID" use="prohibited"/>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>

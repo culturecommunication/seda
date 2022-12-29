@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== Authorization - Standard d'echange de donnees pour l'archivage ===== -->
+<!-- ================================================================== -->
+<!--
+    Schema agency: Service interministériel des archives de France (SIAF)
+    Schema version: 1.0
+    Schema date: 06 Juillet 2012
+    
+    Copyright (c) 2011 Service interministériel des archives de France
+    
+    Ce document est sous licence Creative Commons Paternité 2.0 France.
+    Pour accéder à une copie de cette licence, merci de vous rendre à l'adresse suivante
+    http://creativecommons.org/licenses/by/2.0/fr/ ou envoyez un courrier à
+    Creative Commons, 444 Castro Street, Suite 900,
+    Mountain View, California, 94041, USA.
+    
+    Prefix=AUTAES
+-->
+<xsd:schema
+    targetNamespace="fr:gouv:culture:archivesdefrance:seda:v1.0"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="fr:gouv:culture:archivesdefrance:seda:v1.0"
+    xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:10"
+    xmlns:qdt="fr:gouv:culture:archivesdefrance:seda:v1.0:QualifiedDataType:1"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="1.0">
+
+    <!-- ======================================================== -->
+    <!-- ====                Includes                        ==== -->
+    <!-- ======================================================== -->
+    <xsd:include schemaLocation="seda_v1-0_archive.xsd"/>
+    <xsd:include schemaLocation="seda_v1-0_signature.xsd"/>
+    <xsd:include schemaLocation="seda_v1-0_organization.xsd"/>
+    <xsd:include schemaLocation="seda_v1-0_acknowledgement.xsd"/>
+
+    <!-- ======================================================== -->
+    <!-- ====                Imports                         ==== -->
+    <!-- ======================================================== -->
+    <!-- ======================================================== -->
+    <!-- ====        Import of CoreComponentTypes            ==== -->
+    <!-- ======================================================== -->
+    <xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:10" schemaLocation="UnqualifiedDataType_10p0.xsd"/>
+    <xsd:import namespace="fr:gouv:culture:archivesdefrance:seda:v1.0:QualifiedDataType:1" schemaLocation="seda_v1-0_QualifiedDataType.xsd"/>
+
+    <!-- ======================================================== -->
+    <!-- ==== AuthorizationOriginatingAgencyRequest Message    ==== -->
+    <!-- ======================================================== -->
+    <xsd:element name="AuthorizationOriginatingAgencyRequest" type="AuthorizationOriginatingAgencyRequestType"/>
+    
+    <!-- ======================================================== -->
+    <!-- ====                Type Definition                 ==== -->
+    <!-- ======================================================== -->
+    <xsd:complexType name="AuthorizationOriginatingAgencyRequestType">
+        <xsd:annotation>
+            <xsd:documentation>
+                <ccts:UniqueID>AUTAES000001</ccts:UniqueID>
+                <ccts:Acronym>ABIE</ccts:Acronym>
+                <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequest</ccts:DictionaryEntryName>
+                <ccts:Version>1.0</ccts:Version>
+                <ccts:DefinitionText>Demande d'autorisation au service producteur</ccts:DefinitionText>
+                <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequest</ccts:ObjectClassTerm>
+                <ccts:QualifierTerm>AuthorizationOriginatingAgencyRequest</ccts:QualifierTerm>
+            </xsd:documentation>
+        </xsd:annotation>
+        
+        <xsd:sequence>
+            <xsd:element name="Comment" type="udt:TextType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000001-01</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequest.Comment</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Comment</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="Date" type="udt:DateTimeType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000001-02</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequest.Date</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date d'émission du message</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Date</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="AuthorizationOriginatingAgencyRequestIdentifier" type="qdt:ArchivesIDType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000001-03</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequest.AuthorizationOriginatingAgencyRequestIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la demande d'autorisation au service producteur</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>AuthorizationOriginatingAgencyRequestIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="ArchivalAgency" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000001-04</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequest.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service d'archives</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>ArchivalAgency</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="OriginatingAgency" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000001-05</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequest.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service producteur</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>OriginatingAgency</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="Request" type="RequestType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000001-06</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequest.Request</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>La demande</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Request</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+                        
+            <xsd:element name="Archive" type="ArchiveType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000001-07</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequest.Archive</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition>Archive</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Archive</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000001-08</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequest.NonRepudiation</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Signature du message</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>NonRepudiation</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+         </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+    </xsd:complexType>
+    
+
+    <!-- ======================================================== -->
+    <!-- ==== AuthorizationControlAuthorityRequest Message    ==== -->
+    <!-- ======================================================== -->
+    <xsd:element name="AuthorizationControlAuthorityRequest" type="AuthorizationControlAuthorityRequestType"/>
+
+    <!-- ======================================================== -->
+    <!-- ====                Type Definition                 ==== -->
+    <!-- ======================================================== -->
+    <xsd:complexType name="AuthorizationControlAuthorityRequestType">
+        <xsd:annotation>
+            <xsd:documentation>
+                <ccts:UniqueID>AUTAES000002</ccts:UniqueID>
+                <ccts:Acronym>ABIE</ccts:Acronym>
+                <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequest</ccts:DictionaryEntryName>
+                <ccts:Version>1.0</ccts:Version>
+                <ccts:DefinitionText>Demande d'autorisation au service de contrôle</ccts:DefinitionText>
+                <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequest</ccts:ObjectClassTerm>
+                <ccts:QualifierTerm>AuthorizationControlAuthorityRequest</ccts:QualifierTerm>
+            </xsd:documentation>
+        </xsd:annotation>
+        
+        <xsd:sequence>
+            <xsd:element name="Comment" type="udt:TextType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000002-01</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequest.Comment</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Comment</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="Date" type="udt:DateTimeType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000002-02</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequest.Date</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date d'émission du message</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Date</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="AuthorizationControlAuthorityRequestIdentifier" type="qdt:ArchivesIDType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000002-03</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequest.AuthorizationControlAuthorityRequestIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la demande d'autorisation au service de contrôle</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>AuthorizationControlAuthorityRequestIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="ArchivalAgency" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000002-04</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequest.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service d'archives</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>ArchivalAgency</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="ControlAuthority" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000002-05</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequest.ControlAuthority</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Services de contrôle</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>ControlAuthority</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="OriginatingAgencyAuthorization" type="AuthorizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000002-06</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequest.OriginatingAgencyAuthorization</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service producteur</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>OriginatingAgencyAuthorization</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="Request" type="RequestType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000002-07</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequest.Request</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>La demande</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Request</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="Archive" type="ArchiveType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000002-08</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequest.Archive</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition>Archive</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Archive</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000002-09</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequest.NonRepudiation</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Signature du message</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequest</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>NonRepudiation</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+    </xsd:complexType>
+    
+    <!-- ========================================================== -->
+    <!-- ==== AuthorizationAuthorizationRequestReply Message ==== -->
+    <!-- ========================================================== -->
+    <xsd:element name="AuthorizationOriginatingAgencyRequestReply" type="AuthorizationOriginatingAgencyRequestReplyType"/>
+
+    <!-- ======================================================== -->
+    <!-- ====                Type Definition                 ==== -->
+    <!-- ======================================================== -->
+    <xsd:complexType name="AuthorizationOriginatingAgencyRequestReplyType">
+        <xsd:annotation>
+            <xsd:documentation>
+                <ccts:UniqueID>AUTAES000003</ccts:UniqueID>
+                <ccts:Acronym>ABIE</ccts:Acronym>
+                <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequestReply</ccts:DictionaryEntryName>
+                <ccts:Version>1.0</ccts:Version>
+                <ccts:DefinitionText>Réponse donnée à une demande d'autorisation au service producteur</ccts:DefinitionText>
+                <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequestReply</ccts:ObjectClassTerm>
+                <ccts:QualifierTerm>AuthorizationOriginatingAgencyRequestReply</ccts:QualifierTerm>
+            </xsd:documentation>
+        </xsd:annotation>
+
+        <xsd:sequence>
+            <xsd:element name="Comment" type="udt:TextType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000003-01</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequestReply.Comment</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Comment</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="Date" type="udt:DateTimeType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000003-02</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequestReply.Date</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date d'émission du message</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Date</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="AuthorizationOriginatingAgencyRequestIdentifier" type="qdt:ArchivesIDType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000003-03</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequestReply.AuthorizationOriginatingAgencyRequestIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la demande d'autorisation</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>AuthorizationOriginatingAgencyRequestIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="AuthorizationOriginatingAgencyRequestReplyIdentifier" type="qdt:ArchivesIDType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000003-04</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequestReply.AuthorizationOriginatingAgencyRequestReplyIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la réponse à la demande d'autorisation</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>AuthorizationOriginatingAgencyRequestReplyIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="ReplyCode" type="qdt:ArchivesCodeType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000003-05</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequestReply.ReplyCode</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Indique l'anomalie en cas de refus de l'autorisation.</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>ReplyCode</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="ArchivalAgency" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000003-06</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequestReply.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service d'archives</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>ArchivalAgency</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="OriginatingAgency" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000003-07</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequestReply.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service producteur</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>OriginatingAgency</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000003-08</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationOriginatingAgencyRequestReply.NonRepudiation</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Signature du message</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationOriginatingAgencyRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>NonRepudiation</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+        </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+    </xsd:complexType>
+
+    <!-- ========================================================== -->
+    <!-- ==== AuthorizationControlAuthorityRequestReply Message ==== -->
+    <!-- ========================================================== -->
+    <xsd:element name="AuthorizationControlAuthorityRequestReply" type="AuthorizationControlAuthorityRequestReplyType"/>
+    
+    <!-- ======================================================== -->
+    <!-- ====                Type Definition                 ==== -->
+    <!-- ======================================================== -->
+    <xsd:complexType name="AuthorizationControlAuthorityRequestReplyType">
+        <xsd:annotation>
+            <xsd:documentation>
+                <ccts:UniqueID>AUTAES000004</ccts:UniqueID>
+                <ccts:Acronym>ABIE</ccts:Acronym>
+                <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequestReply</ccts:DictionaryEntryName>
+                <ccts:Version>1.0</ccts:Version>
+                <ccts:DefinitionText>Réponse donnée à une demande d'autorisation au service de contrôle</ccts:DefinitionText>
+                <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequestReply</ccts:ObjectClassTerm>
+                <ccts:QualifierTerm>AuthorizationControlAuthorityRequestReply</ccts:QualifierTerm>
+            </xsd:documentation>
+        </xsd:annotation>
+        
+        <xsd:sequence>
+            <xsd:element name="Comment" type="udt:TextType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000004-01</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequestReply.Comment</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Comment</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="Date" type="udt:DateTimeType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000004-02</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequestReply.Date</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date d'émission du message</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Date</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="AuthorizationControlAuthorityRequestIdentifier" type="qdt:ArchivesIDType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000004-03</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequestReply.AuthorizationControlAuthorityRequestIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la demande d'autorisation</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>AuthorizationControlAuthorityRequestIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="AuthorizationControlAuthorityRequestReplyIdentifier" type="qdt:ArchivesIDType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000004-04</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequestReply.AuthorizationControlAuthorityRequestReplyIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la réponse à la demande d'autorisation</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>AuthorizationControlAuthorityRequestReplyIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="ReplyCode" type="qdt:ArchivesCodeType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000004-05</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequestReply.ReplyCode</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Indique l'anomalie en cas de refus de l'autorisation.</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>ReplyCode</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="ArchivalAgency" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000004-06</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequestReply.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service d'archives</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>ArchivalAgency</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="ControlAuthority" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000004-07</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequestReply.ControlAuthority</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service producteur</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>ControlAuthority</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000004-08</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationControlAuthorityRequestReply.NonRepudiation</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Signature du message</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationControlAuthorityRequestReply</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>NonRepudiation</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+        </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+    </xsd:complexType>
+    
+    <!-- ========================================================================= -->
+    <!-- ==== RequestType ==== -->
+    <!-- ========================================================================= -->
+    <xsd:element name="Request" type="RequestType"/>
+    
+    <!-- ======================================================== -->
+    <!-- ====                Type Definition                 ==== -->
+    <!-- ======================================================== -->
+    <xsd:complexType name="RequestType">
+        <xsd:annotation>
+            <xsd:documentation>
+                <ccts:UniqueID>AUTAES000007</ccts:UniqueID>
+                <ccts:Acronym>ABIE</ccts:Acronym>
+                <ccts:DictionaryEntryName>RequestType</ccts:DictionaryEntryName>
+                <ccts:Version>1.0</ccts:Version>
+                <ccts:DefinitionText>Objet d'une demande d'autorisation</ccts:DefinitionText>
+                <ccts:ObjectClassTerm>RequestType</ccts:ObjectClassTerm>
+                <ccts:QualifierTerm>RequestType</ccts:QualifierTerm>
+            </xsd:documentation>
+        </xsd:annotation>
+        
+        <xsd:sequence>    
+            <xsd:element name="AuthorisationReason" type="qdt:CodeAuthorisationReasonType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000007-01</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>RequestType.AuthorisationReason</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Raison de la demande d'autorisation (pour élimination, pour communication)</ccts:Definition>
+                        <ccts:ObjectClassTerm>RequestType</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>AuthorisationReason</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="RequestDate" type="udt:DateType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000007-02</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>RequestType.RequestDate</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date de la demande d'autorisation</ccts:Definition>
+                        <ccts:ObjectClassTerm>RequestType</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>RequestDate</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>      
+                        
+            <xsd:element name="UnitIdentifier" type="qdt:UnitIdentifierType" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000007-03</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>RequestType.UnitIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Tout identifiant permettant de reconnaître le contenu sur lequel porte la demande d'autorisation.</ccts:Definition>
+                        <ccts:ObjectClassTerm>RequestType</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>UnitIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="Requester" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000007-04</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>RequestType.Requester</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Le service à l'origine de la demandeur d'autorisation</ccts:Definition>
+                        <ccts:ObjectClassTerm>RequestType</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Requester</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>      
+          </xsd:sequence>
+        
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+    </xsd:complexType>
+    
+    
+    
+    <!-- ========================================================================= -->
+    <!-- ==== AuthorizationRequestReply  ==== -->
+    <!-- ========================================================================= -->
+    <xsd:element name="Authorization" type="AuthorizationType"/>
+    
+    <!-- ======================================================== -->
+    <!-- ====                Type Definition                 ==== -->
+    <!-- ======================================================== -->
+    <xsd:complexType name="AuthorizationType">
+        <xsd:annotation>
+            <xsd:documentation>
+                <ccts:UniqueID>AUTAES000008</ccts:UniqueID>
+                <ccts:Acronym>ABIE</ccts:Acronym>
+                <ccts:DictionaryEntryName>AuthorizationType</ccts:DictionaryEntryName>
+                <ccts:Version>1.0</ccts:Version>
+                <ccts:DefinitionText>Expression d'une réponse à une demande d'autorisation</ccts:DefinitionText>
+                <ccts:ObjectClassTerm>AuthorizationType</ccts:ObjectClassTerm>
+                <ccts:QualifierTerm>AuthorizationType</ccts:QualifierTerm>
+            </xsd:documentation>
+        </xsd:annotation>
+        
+        <xsd:sequence>    
+            <xsd:element name="Answer" type="udt:IndicatorType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000008-01</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationType.Answer</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Autorisation</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationType</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Answer</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>            
+
+            <xsd:element name="AuthorizationOriginatingAgencyRequestReplyIdentifier" type="qdt:ArchivesIDType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000008-02</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationType.AuthorizationOriginatingAgencyRequestReplyIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la réponse à la demande d'autorisation</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationType</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>AuthorizationOriginatingAgencyRequestReplyIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>            
+
+            <xsd:element name="Comment" type="udt:TextType" minOccurs="1" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000008-03</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationType.Comment</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationType</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Comment</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>            
+
+            <xsd:element name="OriginatingAgency" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>AUTAES000008-04</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>AuthorizationType.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service producteur</ccts:Definition>
+                        <ccts:ObjectClassTerm>AuthorizationType</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>OriginatingAgency</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>            
+        </xsd:sequence>
+        
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+    </xsd:complexType>
+</xsd:schema>

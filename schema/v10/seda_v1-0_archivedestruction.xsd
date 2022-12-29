@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== ArchiveDestruction - Standard d'echange de donnees pour l'archivage ===== -->
+<!-- ================================================================== -->
+<!--
+    Schema agency: Service interministériel des archives de France (SIAF)
+    Schema version: 1.0
+    Schema date: 06 Juillet 2012
+    
+    Copyright (c) 2011 Service interministériel des archives de France
+    
+    Ce document est sous licence Creative Commons Paternité 2.0 France.
+    Pour accéder à une copie de cette licence, merci de vous rendre à l'adresse suivante
+    http://creativecommons.org/licenses/by/2.0/fr/ ou envoyez un courrier à
+    Creative Commons, 444 Castro Street, Suite 900,
+    Mountain View, California, 94041, USA.
+    
+    Prefix=ADSAES
+-->
+<xsd:schema version="1.0"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+    xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:10"
+    xmlns:qdt="fr:gouv:culture:archivesdefrance:seda:v1.0:QualifiedDataType:1"
+    xmlns="fr:gouv:culture:archivesdefrance:seda:v1.0"
+    targetNamespace="fr:gouv:culture:archivesdefrance:seda:v1.0" 
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
+    <!-- ======================================================== -->
+    <!-- ====                Includes                        ==== -->
+    <!-- ======================================================== -->
+
+    <xsd:include schemaLocation="seda_v1-0_archive.xsd"/>
+    <xsd:include schemaLocation="seda_v1-0_signature.xsd"/>
+    <xsd:include schemaLocation="seda_v1-0_organization.xsd"/>
+    <xsd:include schemaLocation="seda_v1-0_acknowledgement.xsd"/>
+
+    <!-- ======================================================== -->
+    <!-- ====                Imports                         ==== -->
+    <!-- ======================================================== -->
+    <!-- ======================================================== -->
+    <!-- ====        Import of CoreComponentTypes            ==== -->
+    <!-- ======================================================== -->
+
+    <xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:10" schemaLocation="UnqualifiedDataType_10p0.xsd"/>
+    <xsd:import namespace="fr:gouv:culture:archivesdefrance:seda:v1.0:QualifiedDataType:1" schemaLocation="seda_v1-0_QualifiedDataType.xsd"/>
+
+    
+
+
+    <!-- ======================================================== -->
+    <!-- ====     ArchiveDestructionNotification Message     ==== -->
+    <!-- ======================================================== -->
+
+    <xsd:element name="ArchiveDestructionNotification" type="ArchiveDestructionNotificationType"/>
+
+    <!-- ======================================================== -->
+    <!-- ====                Type Definition                 ==== -->
+    <!-- ======================================================== -->
+
+    <xsd:complexType name="ArchiveDestructionNotificationType">
+        <xsd:annotation>
+            <xsd:documentation>
+                <ccts:UniqueID>ADSAES000005</ccts:UniqueID>
+                <ccts:Acronym>ABIE</ccts:Acronym>
+                <ccts:DictionaryEntryName>ArchiveDestructionNotification</ccts:DictionaryEntryName>
+                <ccts:Version>1.0</ccts:Version>
+                <ccts:DefinitionText>Notification d'élimination d'archives</ccts:DefinitionText>
+                <ccts:ObjectClassTerm>ArchiveDestructionNotification</ccts:ObjectClassTerm>
+                <ccts:QualifierTerm>ArchiveDestructionNotification</ccts:QualifierTerm>
+            </xsd:documentation>
+        </xsd:annotation>
+
+        <xsd:sequence>
+
+            <xsd:element name="Comment" type="udt:TextType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000005-01</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.Comment</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTerm>ArchiveDestructionNotification</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Comment</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="Date" type="udt:DateTimeType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000005-02</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.Date</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date d'émission du message</ccts:Definition>
+                        <ccts:ObjectClassTerm>ArchiveDestructionNotification</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>Date</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="AuthorizationRequestReplyIdentifier" type="qdt:ArchivesIDType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000005-03</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.AuthorizationRequestReplyIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la réponse d'accord pour l'élimination</ccts:Definition>
+                        <ccts:ObjectClassTerm>ArchiveDestructionNotification</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>AuthorizationRequestReplyIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="DestructionNotificationIdentifier" type="qdt:ArchivesIDType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000005-04</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.DestructionNotificationIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la notification d'élimination</ccts:Definition>
+                        <ccts:ObjectClassTerm>ArchiveDestructionNotification</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>DestructionNotificationIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="UnitIdentifier" type="qdt:UnitIdentifierType" maxOccurs="unbounded">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000005-06</ccts:UniqueID>
+                        <ccts:Acronym>BBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.UnitIdentifier</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Tout identiant permettant de reconnaître le contenu à éliminer</ccts:Definition>
+                        <ccts:ObjectClassTerm>ArchiveDestructionNotification</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>UnitIdentifier</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="ArchivalAgency" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000005-08</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service d'archives</ccts:Definition>
+                        <ccts:ObjectClassTerm>ArchiveDestructionNotification</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>ArchivalAgency</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            
+            <xsd:element name="OriginatingAgency" type="OrganizationType">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000005-07</ccts:UniqueID>
+                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:Version>1.0</ccts:Version>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Service producteur</ccts:Definition>
+                        <ccts:ObjectClassTerm>ArchiveDestructionNotification</ccts:ObjectClassTerm>
+                        <ccts:PropertyTerm>OriginatingAgency</ccts:PropertyTerm>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+
+            <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                        <xsd:annotation>
+                                <xsd:documentation>
+                                        <ccts:UniqueID>ADSAES000005-09</ccts:UniqueID>
+                                        <ccts:Acronym>ASBIE</ccts:Acronym>
+                                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.NonRepudiation</ccts:DictionaryEntryName>
+                                        <ccts:Version>1.0</ccts:Version>
+                                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                                        <ccts:Definition>Signature du message</ccts:Definition>
+                                        <ccts:ObjectClassTerm>ArchiveDestructionNotification</ccts:ObjectClassTerm>
+                                        <ccts:PropertyTerm>NonRepudiation</ccts:PropertyTerm>
+                                </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+        </xsd:sequence>
+        <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+    </xsd:complexType>
+   
+</xsd:schema>

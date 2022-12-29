@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: AuthorisationReason Code         ===== -->
+<!-- ======================================================== -->
+<!--
+	Schema agency: Service interministériel des archives de France (SIAF)
+	Schema version: 1.0
+	Schema date: 06 Juillet 2012
+
+	Copyright (c) 2011 Service interministériel des archives de France
+
+	Ce document est sous licence Creative Commons Paternité 2.0 France.
+	Pour accéder à une copie de cette licence, merci de vous rendre à l'adresse suivante
+	http://creativecommons.org/licenses/by/2.0/fr/ ou envoyez un courrier à
+	Creative Commons, 444 Castro Street, Suite 900,
+	Mountain View, California, 94041, USA.
+-->
+
+<xsd:schema version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+	xmlns="urn:un:unece:uncefact:codelist:draft:SIAF:authorisationReasonCode:2012-07-05"
+	xmlns:clmSIAFAuthorisationReasonCode="urn:un:unece:uncefact:codelist:draft:SIAF:authorisationReasonCode:2012-07-05"
+	targetNamespace="urn:un:unece:uncefact:codelist:draft:SIAF:authorisationReasonCode:2012-07-05"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<!-- ====================================================================== -->
+	<!-- =====  Element Declarations				      ===== -->
+	<!-- ====================================================================== -->
+	<!-- =====  Root Element Declaration				      ===== -->
+	<!-- ====================================================================== -->
+	<xsd:element name="AuthorisationReasonCode" type="clmSIAFAuthorisationReasonCode:AuthorisationReasonCodeType"/>
+	
+	<!-- ====================================================================== -->
+	<!-- ================ Type Definitions ============================= -->
+	<!-- =============================================================== -->
+	<!-- ===== Code List AuthorisationReasonCodeType: Authorisation Reason Code         ===== -->
+	<!-- =============================================================== -->
+
+
+	<xsd:simpleType name="AuthorisationReasonCodeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">
+				<ccts:Name>Table des codes pour les types de demande d'autorisation</ccts:Name>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="communication">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Communication</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="destruction">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Destruction</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

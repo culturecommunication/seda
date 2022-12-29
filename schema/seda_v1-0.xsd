@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema version="1.0"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="fr:gouv:culture:archivesdefrance:seda:v1.0">
+    
+    <xsd:include schemaLocation="v10/seda_v1-0_archivedestruction.xsd"/>
+    <xsd:include schemaLocation="v10/seda_v1-0_archivetransfer.xsd"/>
+    <xsd:include schemaLocation="v10/seda_v1-0_archivetransferrequest.xsd"/>
+    <xsd:include schemaLocation="v10/seda_v1-0_archivemodification.xsd"/>
+    <xsd:include schemaLocation="v10/seda_v1-0_archivedelivery.xsd"/>
+    <xsd:include schemaLocation="v10/seda_v1-0_archiverestitution.xsd"/>
+    <xsd:include schemaLocation="v10/seda_v1-0_authorization.xsd"/>
+</xsd:schema>

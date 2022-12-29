@@ -1,0 +1,3178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================== -->
+<!-- ===== Code List: File Type Code                       ===== -->
+<!-- ===== Extrait des PUID du registre PRONOM             ===== -->
+<!-- ===== au 2011-11-03 a l'exception des PUID en fmt/x-  ===== -->
+<!-- ======================================================== -->
+<!--
+	Schema agency: Service interministériel des archives de France (SIAF)
+	Schema version: 1.0
+	Schema date: 06 Juillet 2012
+
+	Copyright (c) 2011 Service interministériel des archives de France
+
+	Ce document est sous licence Creative Commons Paternité 2.0 France.
+	Pour accéder à une copie de cette licence, merci de vous rendre à l'adresse suivante
+	http://creativecommons.org/licenses/by/2.0/fr/ ou envoyez un courrier à
+	Creative Commons, 444 Castro Street, Suite 900,
+	Mountain View, California, 94041, USA.
+-->
+
+<xsd:schema version="1.0" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+    xmlns="urn:un:unece:uncefact:codelist:draft:DAF:fileTypeCode:2011-11-03"
+    xmlns:clmDAFFileTypeCode="urn:un:unece:uncefact:codelist:draft:DAF:fileTypeCode:2011-11-03"
+    targetNamespace="urn:un:unece:uncefact:codelist:draft:DAF:fileTypeCode:2011-11-03"
+    elementFormDefault="qualified" 
+    attributeFormDefault="unqualified">
+
+
+    <!-- ====================================================================== -->
+    <!-- =====  Element Declarations				      ===== -->
+    <!-- ====================================================================== -->
+    <!-- =====  Root Element Declaration				      ===== -->
+    <!-- ====================================================================== -->
+    <xsd:element name="FileTypeCode" type="clmDAFFileTypeCode:FileTypeCodeType"/>
+    <!-- ====================================================================== -->
+    <!-- ================ Type Definitions ============================= -->
+    <!-- =============================================================== -->
+    <!-- ===== Code List FileType: FileType Code ===== -->
+    <!-- =============================================================== -->
+
+    <xsd:simpleType name="FileTypeCodeType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="fr">
+                <ccts:Name>Table des formats de fichier</ccts:Name>
+                <ccts:Description>Source: le registre PRONOM. Seuls ont été retenus les PUID non
+                    préfixés par "x-"</ccts:Description>
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="fmt/122">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Encapsulated PostScript File Format</ccts:Name>
+                        <ccts:Description>Encapsulated PostScript File Format
+                            (Version=1.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/125">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Powerpoint Presentation</ccts:Name>
+                        <ccts:Description>Microsoft Powerpoint Presentation
+                            (Version=95)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/126">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Powerpoint Presentation</ccts:Name>
+                        <ccts:Description>Microsoft Powerpoint Presentation
+                            (Version=97-2002)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/124">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Encapsulated PostScript File Format</ccts:Name>
+                        <ccts:Description>Encapsulated PostScript File Format
+                            (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/123">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Encapsulated PostScript File Format</ccts:Name>
+                        <ccts:Description>Encapsulated PostScript File Format
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/160">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Device Independent File Format</ccts:Name>
+                        <ccts:Description>Device Independent File Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/7">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Tagged Image File Format</ccts:Name>
+                        <ccts:Description>Tagged Image File Format (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/8">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Tagged Image File Format</ccts:Name>
+                        <ccts:Description>Tagged Image File Format (Version=4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/9">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Tagged Image File Format</ccts:Name>
+                        <ccts:Description>Tagged Image File Format (Version=5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/10">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Tagged Image File Format</ccts:Name>
+                        <ccts:Description>Tagged Image File Format (Version=6)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/14">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF 1.0 - Portable Document Format</ccts:Name>
+                        <ccts:Description>Acrobat PDF 1.0 - Portable Document Format
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/15">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF 1.1 - Portable Document Format</ccts:Name>
+                        <ccts:Description>Acrobat PDF 1.1 - Portable Document Format
+                            (Version=1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/16">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF 1.2 - Portable Document Format</ccts:Name>
+                        <ccts:Description>Acrobat PDF 1.2 - Portable Document Format
+                            (Version=1.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/17">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF 1.3 - Portable Document Format</ccts:Name>
+                        <ccts:Description>Acrobat PDF 1.3 - Portable Document Format
+                            (Version=1.3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/18">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF 1.4 - Portable Document Format</ccts:Name>
+                        <ccts:Description>Acrobat PDF 1.4 - Portable Document Format
+                            (Version=1.4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/19">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF 1.5 - Portable Document Format</ccts:Name>
+                        <ccts:Description>Acrobat PDF 1.5 - Portable Document Format
+                            (Version=1.5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/3">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Graphics Interchange Format</ccts:Name>
+                        <ccts:Description>Graphics Interchange Format
+                            (Version=1987a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/4">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Graphics Interchange Format</ccts:Name>
+                        <ccts:Description>Graphics Interchange Format
+                            (Version=1989a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/86">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PCX</ccts:Name>
+                        <ccts:Description>PCX (Version=0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/87">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PCX</ccts:Name>
+                        <ccts:Description>PCX (Version=2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/88">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PCX</ccts:Name>
+                        <ccts:Description>PCX (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/89">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PCX</ccts:Name>
+                        <ccts:Description>PCX (Version=4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/90">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PCX</ccts:Name>
+                        <ccts:Description>PCX (Version=5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/45">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Rich Text Format</ccts:Name>
+                        <ccts:Description>Rich Text Format (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/46">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Rich Text Format</ccts:Name>
+                        <ccts:Description>Rich Text Format (Version=1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/47">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Rich Text Format</ccts:Name>
+                        <ccts:Description>Rich Text Format (Version=1.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/48">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Rich Text Format</ccts:Name>
+                        <ccts:Description>Rich Text Format (Version=1.3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/49">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Rich Text Format</ccts:Name>
+                        <ccts:Description>Rich Text Format (Version=1.4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/50">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Rich Text Format</ccts:Name>
+                        <ccts:Description>Rich Text Format (Version=1.5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/51">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Rich Text Format</ccts:Name>
+                        <ccts:Description>Rich Text Format (Version=1.6)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/52">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Rich Text Format</ccts:Name>
+                        <ccts:Description>Rich Text Format (Version=1.7)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/91">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Scalable Vector Graphics</ccts:Name>
+                        <ccts:Description>Scalable Vector Graphics (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/92">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Scalable Vector Graphics</ccts:Name>
+                        <ccts:Description>Scalable Vector Graphics (Version=1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/20">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF 1.6 - Portable Document Format</ccts:Name>
+                        <ccts:Description>Acrobat PDF 1.6 - Portable Document Format
+                            (Version=1.6)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/101">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Extensible Markup Language</ccts:Name>
+                        <ccts:Description>Extensible Markup Language
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/97">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Hypertext Markup Language</ccts:Name>
+                        <ccts:Description>Hypertext Markup Language (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/98">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Hypertext Markup Language</ccts:Name>
+                        <ccts:Description>Hypertext Markup Language (Version=3.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/99">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Hypertext Markup Language</ccts:Name>
+                        <ccts:Description>Hypertext Markup Language (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/100">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Hypertext Markup Language</ccts:Name>
+                        <ccts:Description>Hypertext Markup Language
+                            (Version=4.01)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/102">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Extensible Hypertext Markup Language</ccts:Name>
+                        <ccts:Description>Extensible Hypertext Markup Language
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/103">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Extensible Hypertext Markup Language</ccts:Name>
+                        <ccts:Description>Extensible Hypertext Markup Language
+                            (Version=1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/96">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Hypertext Markup Language</ccts:Name>
+                        <ccts:Description>Hypertext Markup Language</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/104">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Macromedia Flash</ccts:Name>
+                        <ccts:Description>Macromedia Flash (Version=1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/105">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Macromedia Flash</ccts:Name>
+                        <ccts:Description>Macromedia Flash (Version=2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/106">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Macromedia Flash</ccts:Name>
+                        <ccts:Description>Macromedia Flash (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/107">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Macromedia Flash</ccts:Name>
+                        <ccts:Description>Macromedia Flash (Version=4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/108">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Macromedia Flash</ccts:Name>
+                        <ccts:Description>Macromedia Flash (Version=5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/109">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Macromedia Flash</ccts:Name>
+                        <ccts:Description>Macromedia Flash (Version=6)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/110">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Macromedia Flash</ccts:Name>
+                        <ccts:Description>Macromedia Flash (Version=7)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/6">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Waveform Audio</ccts:Name>
+                        <ccts:Description>Waveform Audio</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/5">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Audio/Video Interleaved Format</ccts:Name>
+                        <ccts:Description>Audio/Video Interleaved Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/2">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Broadcast WAVE</ccts:Name>
+                        <ccts:Description>Broadcast WAVE (Version=1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/93">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Virtual Reality Modeling Language</ccts:Name>
+                        <ccts:Description>Virtual Reality Modeling Language
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/94">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Virtual Reality Modeling Language</ccts:Name>
+                        <ccts:Description>Virtual Reality Modeling Language
+                            (Version=97)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/11">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Portable Network Graphics</ccts:Name>
+                        <ccts:Description>Portable Network Graphics (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/12">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Portable Network Graphics</ccts:Name>
+                        <ccts:Description>Portable Network Graphics (Version=1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/13">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Portable Network Graphics</ccts:Name>
+                        <ccts:Description>Portable Network Graphics (Version=1.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/42">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>JPEG File Interchange Format</ccts:Name>
+                        <ccts:Description>JPEG File Interchange Format
+                            (Version=1.00)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/43">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>JPEG File Interchange Format</ccts:Name>
+                        <ccts:Description>JPEG File Interchange Format
+                            (Version=1.01)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/44">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>JPEG File Interchange Format</ccts:Name>
+                        <ccts:Description>JPEG File Interchange Format
+                            (Version=1.02)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/41">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Raw JPEG Stream</ccts:Name>
+                        <ccts:Description>Raw JPEG Stream</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/112">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Still Picture Interchange File Format</ccts:Name>
+                        <ccts:Description>Still Picture Interchange File Format
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/113">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Still Picture Interchange File Format</ccts:Name>
+                        <ccts:Description>Still Picture Interchange File Format
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/55">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel 2.1 Worksheet (xls)</ccts:Name>
+                        <ccts:Description>Microsoft Excel 2.1 Worksheet (xls)
+                            (Version=2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/56">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel 3.0 Worlsheet (xls)</ccts:Name>
+                        <ccts:Description>Microsoft Excel 3.0 Worlsheet (xls)
+                            (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/57">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel 4.0 Worksheet (xls)</ccts:Name>
+                        <ccts:Description>Microsoft Excel 4.0 Worksheet (xls)
+                            (Version=4S)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/58">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel 4.0 Workbook (xls)</ccts:Name>
+                        <ccts:Description>Microsoft Excel 4.0 Workbook (xls)
+                            (Version=4W)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/59">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel 5.0 Workbook (xls)</ccts:Name>
+                        <ccts:Description>Microsoft Excel 5.0 Workbook (xls)
+                            (Version=5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/60">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel 95 Workbook (xls)</ccts:Name>
+                        <ccts:Description>Microsoft Excel 95 Workbook (xls)
+                            (Version=7)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/61">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel 97 Workbook (xls)</ccts:Name>
+                        <ccts:Description>Microsoft Excel 97 Workbook (xls)
+                            (Version=8)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/62">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel 2000-2003 Workbook (xls)</ccts:Name>
+                        <ccts:Description>Microsoft Excel 2000-2003 Workbook (xls)
+                            (Version=8X)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/134">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>MPEG 1/2 Audio Layer 3</ccts:Name>
+                        <ccts:Description>MPEG 1/2 Audio Layer 3</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/39">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Word for Windows Document</ccts:Name>
+                        <ccts:Description>Microsoft Word for Windows Document
+                            (Version=6.0/95)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/40">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Word for Windows Document</ccts:Name>
+                        <ccts:Description>Microsoft Word for Windows Document
+                            (Version=97-2003)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/131">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Advanced Systems Format</ccts:Name>
+                        <ccts:Description>Advanced Systems Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/132">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Windows Media Audio</ccts:Name>
+                        <ccts:Description>Windows Media Audio</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/133">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Windows Media Video</ccts:Name>
+                        <ccts:Description>Windows Media Video</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/21">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/22">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=1.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/23">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=1.3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/24">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=1.4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/25">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/26">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=2.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/27">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=2.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/28">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=2.5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/29">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=2.6)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/30">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=R9)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/31">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=R10)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/32">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=R11/12)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/33">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=R13)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/34">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=R14)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/35">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=2000-2002)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/36">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>AutoCAD Drawing</ccts:Name>
+                        <ccts:Description>AutoCAD Drawing (Version=2004-2005)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/64">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/65">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=1.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/66">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=1.3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/67">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=1.4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/68">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/69">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=2.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/70">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=2.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/71">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=2.5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/72">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=2.6)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/73">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=R9)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/74">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=R10)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/75">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=R11/12)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/76">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=R13)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/77">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=R14)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/78">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=2000-2002)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/79">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=2004-2005)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/114">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Windows Bitmap</ccts:Name>
+                        <ccts:Description>Windows Bitmap (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/115">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Windows Bitmap</ccts:Name>
+                        <ccts:Description>Windows Bitmap (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/116">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Windows Bitmap</ccts:Name>
+                        <ccts:Description>Windows Bitmap (Version=3.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/117">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Windows Bitmap</ccts:Name>
+                        <ccts:Description>Windows Bitmap (Version=3.0 NT)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/118">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Windows Bitmap</ccts:Name>
+                        <ccts:Description>Windows Bitmap (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/119">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Windows Bitmap</ccts:Name>
+                        <ccts:Description>Windows Bitmap (Version=5.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/37">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Word for Windows Document</ccts:Name>
+                        <ccts:Description>Microsoft Word for Windows Document
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/38">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Word for Windows Document</ccts:Name>
+                        <ccts:Description>Microsoft Word for Windows Document
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/1">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Broadcast WAVE</ccts:Name>
+                        <ccts:Description>Broadcast WAVE (Version=0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/80">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (Binary)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (Binary)
+                            (Version=R10)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/81">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (Binary)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (Binary)
+                            (Version=R11/12)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/82">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (Binary)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (Binary)
+                            (Version=R13)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/83">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (Binary)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (Binary)
+                            (Version=R14)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/84">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (Binary)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (Binary)
+                            (Version=2000-2002)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/85">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (Binary)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (Binary)
+                            (Version=2004-2005)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/128">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenOffice Writer</ccts:Name>
+                        <ccts:Description>OpenOffice Writer (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/129">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenOffice Calc</ccts:Name>
+                        <ccts:Description>OpenOffice Calc (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/130">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenOffice Impress</ccts:Name>
+                        <ccts:Description>OpenOffice Impress (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/127">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenOffice Draw</ccts:Name>
+                        <ccts:Description>OpenOffice Draw (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/53">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Rich Text Format</ccts:Name>
+                        <ccts:Description>Rich Text Format (Version=1.8)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/54">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange Binary Format</ccts:Name>
+                        <ccts:Description>Drawing Interchange Binary Format
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/63">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Drawing Interchange File Format (ASCII)</ccts:Name>
+                        <ccts:Description>Drawing Interchange File Format (ASCII)
+                            (Version=Generic)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/111">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OLE2 Compound Document Format</ccts:Name>
+                        <ccts:Description>OLE2 Compound Document Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/121">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>DROID Signature File Format</ccts:Name>
+                        <ccts:Description>DROID Signature File Format
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/120">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>DROID File Collection File Format</ccts:Name>
+                        <ccts:Description>DROID File Collection File Format
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/95">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF/A - Portable Document Format</ccts:Name>
+                        <ccts:Description>Acrobat PDF/A - Portable Document Format
+                            (Version=1a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/135">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Format</ccts:Name>
+                        <ccts:Description>OpenDocument Format (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/136">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Text</ccts:Name>
+                        <ccts:Description>OpenDocument Text (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/137">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Spreadsheet</ccts:Name>
+                        <ccts:Description>OpenDocument Spreadsheet (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/138">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Presentation</ccts:Name>
+                        <ccts:Description>OpenDocument Presentation (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/139">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Graphics</ccts:Name>
+                        <ccts:Description>OpenDocument Graphics (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/140">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Database Format</ccts:Name>
+                        <ccts:Description>OpenDocument Database Format
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/141">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Waveform Audio (PCMWAVEFORMAT)</ccts:Name>
+                        <ccts:Description>Waveform Audio (PCMWAVEFORMAT)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/142">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Waveform Audio (WAVEFORMATEX)</ccts:Name>
+                        <ccts:Description>Waveform Audio (WAVEFORMATEX)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/143">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Waveform Audio (WAVEFORMATEXTENSIBLE)</ccts:Name>
+                        <ccts:Description>Waveform Audio (WAVEFORMATEXTENSIBLE)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/144">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF/X - Portable Document Format - Exchange
+                            1:1999</ccts:Name>
+                        <ccts:Description>Acrobat PDF/X - Portable Document Format - Exchange
+                            1:1999</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/145">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF/X - Portable Document Format - Exchange
+                            1:2001</ccts:Name>
+                        <ccts:Description>Acrobat PDF/X - Portable Document Format - Exchange
+                            1:2001</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/146">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF/X - Portable Document Format - Exchange
+                            1a:2003</ccts:Name>
+                        <ccts:Description>Acrobat PDF/X - Portable Document Format - Exchange
+                            1a:2003</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/147">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF/X - Portable Document Format - Exchange
+                            2:2003</ccts:Name>
+                        <ccts:Description>Acrobat PDF/X - Portable Document Format - Exchange
+                            2:2003</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/148">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF/X - Portable Document Format - Exchange
+                            3:2003</ccts:Name>
+                        <ccts:Description>Acrobat PDF/X - Portable Document Format - Exchange
+                            3:2003</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/149">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>JTIP (JPEG Tiled Image Pyramid)</ccts:Name>
+                        <ccts:Description>JTIP (JPEG Tiled Image Pyramid)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/150">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>JPEG-LS</ccts:Name>
+                        <ccts:Description>JPEG-LS</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/151">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>JPX (JPEG 2000 Extended)</ccts:Name>
+                        <ccts:Description>JPX (JPEG 2000 Extended)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/152">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Digital Negative Format (DNG)</ccts:Name>
+                        <ccts:Description>Digital Negative Format (DNG)
+                            (Version=1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/153">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Tagged Image File Format for Image Technology
+                            (TIFF/IT)</ccts:Name>
+                        <ccts:Description>Tagged Image File Format for Image Technology
+                            (TIFF/IT)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/154">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Tagged Image File Format for Electronic Still Picture Imaging
+                            (TIFF/EP)</ccts:Name>
+                        <ccts:Description>Tagged Image File Format for Electronic Still Picture
+                            Imaging (TIFF/EP)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/155">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>GeoTIFF</ccts:Name>
+                        <ccts:Description>GeoTIFF</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/156">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Tagged Image File Format for Internet Fax (TIFF-FX)</ccts:Name>
+                        <ccts:Description>Tagged Image File Format for Internet Fax
+                            (TIFF-FX)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/157">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF/X - Portable Document Format - Exchange
+                            1a:2001</ccts:Name>
+                        <ccts:Description>Acrobat PDF/X - Portable Document Format - Exchange
+                            1a:2001</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/158">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF/X - Portable Document Format - Exchange
+                            3:2002</ccts:Name>
+                        <ccts:Description>Acrobat PDF/X - Portable Document Format - Exchange
+                            3:2002</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/159">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>EBCDIC-US</ccts:Name>
+                        <ccts:Description>EBCDIC-US</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/161">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>SIARD (Software-Independent Archiving of Relational
+                            Databases)</ccts:Name>
+                        <ccts:Description>SIARD (Software-Independent Archiving of Relational
+                            Databases) (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/172">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Excel for Macintosh
+                            (Version=3.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/173">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Excel for Macintosh
+                            (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/174">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Excel for Macintosh
+                            (Version=98)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/175">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Excel for Macintosh
+                            (Version=2001)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/176">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Excel for Macintosh
+                            (Version=2002)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/177">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Excel for Macintosh
+                            (Version=2004)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/178">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Excel for Macintosh
+                            (Version=v.X)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/179">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft PowerPoint for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft PowerPoint for Macintosh
+                            (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/180">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft PowerPoint for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft PowerPoint for Macintosh
+                            (Version=98)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/181">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft PowerPoint for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft PowerPoint for Macintosh
+                            (Version=2001)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/182">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft PowerPoint for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft PowerPoint for Macintosh
+                            (Version=v.X)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/162">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Multiplan</ccts:Name>
+                        <ccts:Description>Microsoft Multiplan (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/163">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor for DOS
+                            (Version=1.05)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/164">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor for DOS
+                            (Version=1.12)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/165">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor for DOS
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/166">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for DOS
+                            (Version=1.05)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/167">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for DOS
+                            (Version=1.12)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/168">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for DOS
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/169">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for DOS
+                            (Version=1.05)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/170">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for DOS
+                            (Version=1.12)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/171">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for DOS
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/183">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PrimeOCR</ccts:Name>
+                        <ccts:Description>PrimeOCR (Version=3.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/184">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PrimeOCR</ccts:Name>
+                        <ccts:Description>PrimeOCR (Version=3.8)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/185">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Prime OCR</ccts:Name>
+                        <ccts:Description>Prime OCR (Version=3.9)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/186">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PrimeOCR</ccts:Name>
+                        <ccts:Description>PrimeOCR (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/187">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PrimeOCR</ccts:Name>
+                        <ccts:Description>PrimeOCR (Version=4.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/188">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PrimeOCR</ccts:Name>
+                        <ccts:Description>PrimeOCR (Version=4.3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/189">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Office Open XML</ccts:Name>
+                        <ccts:Description>Microsoft Office Open XML
+                            (Version=2007)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/190">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Adobe FrameMaker</ccts:Name>
+                        <ccts:Description>Adobe FrameMaker (Version=5.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/191">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Sony RAW Image File</ccts:Name>
+                        <ccts:Description>Sony RAW Image File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/192">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Kodak Digital Camera Raw Image File</ccts:Name>
+                        <ccts:Description>Kodak Digital Camera Raw Image File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/193">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Digital Moving Picture Exchange Bitmap</ccts:Name>
+                        <ccts:Description>Digital Moving Picture Exchange Bitmap</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/194">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>FileMaker Pro Ver. 7+ Database Document</ccts:Name>
+                        <ccts:Description>FileMaker Pro Ver. 7+ Database Document</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/195">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>ERDAS IMAGINE Gray-scale Bitmap Image</ccts:Name>
+                        <ccts:Description>ERDAS IMAGINE Gray-scale Bitmap Image</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/196">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>InDesign Document</ccts:Name>
+                        <ccts:Description>InDesign Document</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/197">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>InstallShield Compiled Rules File</ccts:Name>
+                        <ccts:Description>InstallShield Compiled Rules File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/198">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>MPEG Audio Stream, Layer II</ccts:Name>
+                        <ccts:Description>MPEG Audio Stream, Layer II</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/199">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>MPEG-4 Media File</ccts:Name>
+                        <ccts:Description>MPEG-4 Media File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/200">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Material Exchange Format</ccts:Name>
+                        <ccts:Description>Material Exchange Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/201">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Mathematica Notebook</ccts:Name>
+                        <ccts:Description>Mathematica Notebook</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/202">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Nikon Digital SLR Camera Raw Image File</ccts:Name>
+                        <ccts:Description>Nikon Digital SLR Camera Raw Image File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/203">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Ogg Vorbis Codec Compressed Multimedia File</ccts:Name>
+                        <ccts:Description>Ogg Vorbis Codec Compressed Multimedia
+                            File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/204">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>RealVideo Clip</ccts:Name>
+                        <ccts:Description>RealVideo Clip</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/205">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Synchronized Multimedia Integration Language</ccts:Name>
+                        <ccts:Description>Synchronized Multimedia Integration
+                            Language</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/206">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Structured Query Language Data</ccts:Name>
+                        <ccts:Description>Structured Query Language Data</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/207">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Obsidium Project File</ccts:Name>
+                        <ccts:Description>Obsidium Project File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/208">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Binary File</ccts:Name>
+                        <ccts:Description>Binary File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/209">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Sound Designer II Audio File</ccts:Name>
+                        <ccts:Description>Sound Designer II Audio File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/210">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Statistica Report File</ccts:Name>
+                        <ccts:Description>Statistica Report File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/211">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Kodak Photo-CD</ccts:Name>
+                        <ccts:Description>Kodak Photo-CD</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/212">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Information or Setup File</ccts:Name>
+                        <ccts:Description>Information or Setup File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/213">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>ScanIt Document</ccts:Name>
+                        <ccts:Description>ScanIt Document</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/214">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Excel for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Excel for Windows
+                            (Version=2007)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/215">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Powerpoint for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Powerpoint for Windows
+                            (Version=2007)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/216">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Visio for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Visio for Windows
+                            (Version=2007)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/217">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>PaintShopPro Browser Cache File</ccts:Name>
+                        <ccts:Description>PaintShopPro Browser Cache File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/218">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft FrontPage</ccts:Name>
+                        <ccts:Description>Microsoft FrontPage</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/219">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Windows
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/220">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Windows
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/221">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor for Windows
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/222">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Windows
+                            (Version=2.0a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/223">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Windows
+                            (Version=3.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/224">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Windows
+                            (Version=3.0a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/225">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Windows
+                            (Version=3.0b)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/226">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Windows
+                            (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/227">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Windows
+                            (Version=2.0a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/228">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Windows
+                            (Version=3.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/229">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Windows
+                            (Version=3.0a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/230">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Windows
+                            (Version=3.0b)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/231">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Windows
+                            (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/232">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor for Windows
+                            (Version=2.0a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/233">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor for Windows
+                            (Version=3.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/234">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor for Windows
+                            (Version=3.0a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/235">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor for Windows
+                            (Version=3.0b)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/236">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor for Windows
+                            (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/237">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Office Binder File for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Office Binder File for Windows
+                            (Version=95)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/238">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Office Binder Template for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Office Binder Template for Windows
+                            (Version=95)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/239">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Office Binder Wizard for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Office Binder Wizard for Windows
+                            (Version=95)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/240">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Office Binder File for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Office Binder File for Windows
+                            (Version=97-2003)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/241">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Office Binder Template for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Office Binder Template for Windows
+                            (Version=97-2003)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/242">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Office Binder Wizard for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Office Binder Wizard for Windows
+                            (Version=97-2003)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/243">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>GPS eXchange Format</ccts:Name>
+                        <ccts:Description>GPS eXchange Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/244">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Keyhole Markup Language</ccts:Name>
+                        <ccts:Description>Keyhole Markup Language</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/245">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Structured Data Exchange Format</ccts:Name>
+                        <ccts:Description>Structured Data Exchange Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/246">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Windows
+                            (Version=4.0a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/247">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Windows
+                            (Version=4.0a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/248">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor Windows
+                            (Version=4.0a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/249">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Windows
+                            (Version=4.5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/250">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Windows
+                            (Version=4.5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/251">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor Windows
+                            (Version=4.5)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/252">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Windows
+                            (Version=4.5a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/253">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Windows
+                            (Version=4.5a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/254">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor Windows
+                            (Version=4.5a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/255">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>DjVu File Format</ccts:Name>
+                        <ccts:Description>DjVu File Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/256">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Windows
+                            (Version=2000)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/257">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Windows
+                            (Version=2000)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/258">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor Windows</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor Windows
+                            (Version=2000)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/259">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for DOS
+                            (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/260">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for DOS
+                            (Version=3a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/261">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for DOS
+                            (Version=3b)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/262">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for DOS
+                            (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/263">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for DOS
+                            (Version=3a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/264">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for DOS
+                            (Version=3b)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/265">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor DOS
+                            (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/266">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor DOS
+                            (Version=3a)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/267">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor DOS</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor DOS
+                            (Version=3b)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/268">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Macintosh
+                            (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/269">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Database for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Works Database for Macintosh
+                            (Version=4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/270">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Macintosh
+                            (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/271">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Spreadsheet for Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Works Spreadsheet for Macintosh
+                            (Version=4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/272">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor Macintosh
+                            (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/273">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Works Word Processor Macintosh</ccts:Name>
+                        <ccts:Description>Microsoft Works Word Processor Macintosh
+                            (Version=4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/274">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>SPSS Output File (spv)</ccts:Name>
+                        <ccts:Description>SPSS Output File (spv)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/275">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Access Database</ccts:Name>
+                        <ccts:Description>Microsoft Access Database
+                            (Version=2007)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/276">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF 1.7 - Portable Document Format</ccts:Name>
+                        <ccts:Description>Acrobat PDF 1.7 - Portable Document Format
+                            (Version=1.7)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/277">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>ESRI Arc/View Shapefile Index</ccts:Name>
+                        <ccts:Description>ESRI Arc/View Shapefile Index</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/278">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Internet Message Format</ccts:Name>
+                        <ccts:Description>Internet Message Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/279">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>FLAC (Free Lossless Audio Codec)</ccts:Name>
+                        <ccts:Description>FLAC (Free Lossless Audio Codec)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/280">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>LaTeX (Master document)</ccts:Name>
+                        <ccts:Description>LaTeX (Master document)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/281">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>LaTeX (Subdocument)</ccts:Name>
+                        <ccts:Description>LaTeX (Subdocument)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/282">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>netCDF-3 Classic</ccts:Name>
+                        <ccts:Description>netCDF-3 Classic</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/283">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>netCDF-3 64-bit</ccts:Name>
+                        <ccts:Description>netCDF-3 64-bit</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/284">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Gridded Binary</ccts:Name>
+                        <ccts:Description>Gridded Binary (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/285">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Gridded Binary</ccts:Name>
+                        <ccts:Description>Gridded Binary (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/286">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>HDF5</ccts:Name>
+                        <ccts:Description>HDF5 (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/287">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>HDF5</ccts:Name>
+                        <ccts:Description>HDF5 (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/288">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Front Page Server Extension Configuration</ccts:Name>
+                        <ccts:Description>Microsoft Front Page Server Extension
+                            Configuration</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/289">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>WARC</ccts:Name>
+                        <ccts:Description>WARC</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/290">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Text</ccts:Name>
+                        <ccts:Description>OpenDocument Text (Version=1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/291">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Text</ccts:Name>
+                        <ccts:Description>OpenDocument Text (Version=1.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/292">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Presentation</ccts:Name>
+                        <ccts:Description>OpenDocument Presentation (Version=1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/293">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Presentation</ccts:Name>
+                        <ccts:Description>OpenDocument Presentation (Version=1.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/294">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Spreadsheet</ccts:Name>
+                        <ccts:Description>OpenDocument Spreadsheet (Version=1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/295">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Spreadsheet</ccts:Name>
+                        <ccts:Description>OpenDocument Spreadsheet (Version=1.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/296">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Graphics</ccts:Name>
+                        <ccts:Description>OpenDocument Graphics (Version=1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/297">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>OpenDocument Graphics</ccts:Name>
+                        <ccts:Description>OpenDocument Graphics (Version=1.2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/298">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Autodesk Animator Pro FLIC</ccts:Name>
+                        <ccts:Description>Autodesk Animator Pro FLIC</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/299">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Autodesk Animator (FlicLib)</ccts:Name>
+                        <ccts:Description>Autodesk Animator (FlicLib)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/300">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>ChiWriter Document</ccts:Name>
+                        <ccts:Description>ChiWriter Document (Version=4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/301">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Computer Graphics Metafile ASCII</ccts:Name>
+                        <ccts:Description>Computer Graphics Metafile ASCII
+                            (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/302">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Computer Graphics Metafile ASCII</ccts:Name>
+                        <ccts:Description>Computer Graphics Metafile ASCII
+                            (Version=4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/303">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Computer Graphics Metafile (Binary)</ccts:Name>
+                        <ccts:Description>Computer Graphics Metafile (Binary)
+                            (Version=1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/304">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Computer Graphics Metafile (Binary)</ccts:Name>
+                        <ccts:Description>Computer Graphics Metafile (Binary)
+                            (Version=2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/305">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Computer Graphics Metafile (Binary)</ccts:Name>
+                        <ccts:Description>Computer Graphics Metafile (Binary)
+                            (Version=3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/306">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Computer Graphics Metafile (Binary)</ccts:Name>
+                        <ccts:Description>Computer Graphics Metafile (Binary)
+                            (Version=4)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/307">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Quicken Interchange Format</ccts:Name>
+                        <ccts:Description>Quicken Interchange Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/308">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Quicken Data Format</ccts:Name>
+                        <ccts:Description>Quicken Data Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/309">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Open Financial Exchange</ccts:Name>
+                        <ccts:Description>Open Financial Exchange (Version=1.02)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/310">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Open Financial Exchange</ccts:Name>
+                        <ccts:Description>Open Financial Exchange (Version=1.03)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/311">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Open Financial Exchange</ccts:Name>
+                        <ccts:Description>Open Financial Exchange (Version=1.6)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/312">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Open Financial Exchange</ccts:Name>
+                        <ccts:Description>Open Financial Exchange (Version=2.0.3)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/313">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Open Financial Exchange</ccts:Name>
+                        <ccts:Description>Open Financial Exchange (Version=2.1.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/314">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Play SID Audio</ccts:Name>
+                        <ccts:Description>Play SID Audio (Version=1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/315">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Play SID Audio</ccts:Name>
+                        <ccts:Description>Play SID Audio (Version=2)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/316">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Real SID Audio</ccts:Name>
+                        <ccts:Description>Real SID Audio</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/317">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Macromedia Director</ccts:Name>
+                        <ccts:Description>Macromedia Director (Version=Macintosh)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/318">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Secure DjVU</ccts:Name>
+                        <ccts:Description>Secure DjVU</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/319">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>ESRI Spatial Index File</ccts:Name>
+                        <ccts:Description>ESRI Spatial Index File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/320">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>ESRI Shapefile Projection (Well-Known Text) Format</ccts:Name>
+                        <ccts:Description>ESRI Shapefile Projection (Well-Known Text)
+                            Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/321">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>ESRI Shapefile Header Index</ccts:Name>
+                        <ccts:Description>ESRI Shapefile Header Index</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/322">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Portable Form File</ccts:Name>
+                        <ccts:Description>Portable Form File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/323">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Extended Module Audio File</ccts:Name>
+                        <ccts:Description>Extended Module Audio File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/324">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>EndNote Style File</ccts:Name>
+                        <ccts:Description>EndNote Style File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/325">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>EndNote Library</ccts:Name>
+                        <ccts:Description>EndNote Library</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/326">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>EndNote Connection File</ccts:Name>
+                        <ccts:Description>EndNote Connection File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/327">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>EndNote Filter File</ccts:Name>
+                        <ccts:Description>EndNote Filter File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/328">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>EndNote Import File</ccts:Name>
+                        <ccts:Description>EndNote Import File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/329">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Shell Archive Format</ccts:Name>
+                        <ccts:Description>Shell Archive Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/330">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Peak Graphical Waveform File</ccts:Name>
+                        <ccts:Description>Peak Graphical Waveform File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/331">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Autorun Configuration File</ccts:Name>
+                        <ccts:Description>Autorun Configuration File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/332">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>ESRI Arc/View Project</ccts:Name>
+                        <ccts:Description>ESRI Arc/View Project (Version=3.x)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/333">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Chemical Markup Language</ccts:Name>
+                        <ccts:Description>Chemical Markup Language</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/334">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Crystallographic Information Framework</ccts:Name>
+                        <ccts:Description>Crystallographic Information Framework</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/335">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Dreamweaver Lock File</ccts:Name>
+                        <ccts:Description>Dreamweaver Lock File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/336">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Graphic Workshop for Windows Thumbnail File</ccts:Name>
+                        <ccts:Description>Graphic Workshop for Windows Thumbnail
+                            File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/337">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Motion JPEG2000</ccts:Name>
+                        <ccts:Description>Motion JPEG2000</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/338">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Interchange File Format Interleaved Bitmap</ccts:Name>
+                        <ccts:Description>Interchange File Format Interleaved
+                            Bitmap</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/339">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Interchange File Format 8-bit Sampled Voice</ccts:Name>
+                        <ccts:Description>Interchange File Format 8-bit Sampled
+                            Voice</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/340">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Lotus WordPro Document</ccts:Name>
+                        <ccts:Description>Lotus WordPro Document
+                            (Version=97/Millennium)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/341">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Macintosh PICT Image</ccts:Name>
+                        <ccts:Description>Macintosh PICT Image (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/342">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Project Export File</ccts:Name>
+                        <ccts:Description>Microsoft Project Export File
+                            (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/343">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Project Export File</ccts:Name>
+                        <ccts:Description>Microsoft Project Export File
+                            (Version=3.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/344">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Windows Enhanced Metafile</ccts:Name>
+                        <ccts:Description>Microsoft Windows Enhanced Metafile
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/345">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Windows Enhanced Metafile</ccts:Name>
+                        <ccts:Description>Microsoft Windows Enhanced Metafile
+                            (Version=3.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/346">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Word for Macintosh Document</ccts:Name>
+                        <ccts:Description>Microsoft Word for Macintosh Document
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/347">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>MPEG 1/2 Audio Layer I</ccts:Name>
+                        <ccts:Description>MPEG 1/2 Audio Layer I</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/348">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Paint Shop Pro Image</ccts:Name>
+                        <ccts:Description>Paint Shop Pro Image (Version=9)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/349">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Paint Shop Pro Image</ccts:Name>
+                        <ccts:Description>Paint Shop Pro Image (Version=10)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/350">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Paradox Database Table</ccts:Name>
+                        <ccts:Description>Paradox Database Table (Version=3.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/351">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Paradox Database Table</ccts:Name>
+                        <ccts:Description>Paradox Database Table (Version=4.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/352">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Paradox Database Table</ccts:Name>
+                        <ccts:Description>Paradox Database Table (Version=5.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/353">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Tagged Image File Format</ccts:Name>
+                        <ccts:Description>Tagged Image File Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/354">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Acrobat PDF/A - Portable Document Format</ccts:Name>
+                        <ccts:Description>Acrobat PDF/A - Portable Document Format
+                            (Version=1b)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/355">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Rich Text Format</ccts:Name>
+                        <ccts:Description>Rich Text Format (Version=1.9)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/356">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Adaptive Multi-Rate Audio</ccts:Name>
+                        <ccts:Description>Adaptive Multi-Rate Audio</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/357">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>3GPP Audio/Video File</ccts:Name>
+                        <ccts:Description>3GPP Audio/Video File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/358">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Internet Data Query File</ccts:Name>
+                        <ccts:Description>Internet Data Query File</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/359">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>Microsoft Front Page Binary Tree Index</ccts:Name>
+                        <ccts:Description>Microsoft Front Page Binary Tree Index</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/360">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>pulse EKKO data file</ccts:Name>
+                        <ccts:Description>pulse EKKO data file</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/361">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>pulse EKKO header file</ccts:Name>
+                        <ccts:Description>pulse EKKO header file</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/362">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>GSSI SIR-10 RADAN data file</ccts:Name>
+                        <ccts:Description>GSSI SIR-10 RADAN data file</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/363">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>SEG Y Data Exchange Format</ccts:Name>
+                        <ccts:Description>SEG Y Data Exchange Format
+                            (Version=Generic)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/364">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>National Imagery Transmission Format</ccts:Name>
+                        <ccts:Description>National Imagery Transmission Format
+                            (Version=1.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/365">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>National Imagery Transmission Format</ccts:Name>
+                        <ccts:Description>National Imagery Transmission Format
+                            (Version=2.0)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/366">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>National Imagery Transmission Format</ccts:Name>
+                        <ccts:Description>National Imagery Transmission Format
+                            (Version=2.1)</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="fmt/367">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <ccts:Name>ESRI World File Format</ccts:Name>
+                        <ccts:Description>ESRI World File Format</ccts:Description>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

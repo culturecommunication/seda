@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== OtherMetadata - Standard d'echange de donnees pour l'archivage ===== -->
+<!-- ================================================================== -->
+<!--
+	Schema agency: Service interministériel des archives de France (SIAF)
+	Schema version: 1.0
+	Schema date: 06 Juillet 2012
+
+	Copyright (c) 2011 Service interministériel des archives de France
+
+	Ce document est sous licence Creative Commons Paternité 2.0 France.
+	Pour accéder à une copie de cette licence, merci de vous rendre à l'adresse suivante
+	http://creativecommons.org/licenses/by/2.0/fr/ ou envoyez un courrier à
+	Creative Commons, 444 Castro Street, Suite 900,
+	Mountain View, California, 94041, USA.
+-->
+
+<xsd:schema version="1.0" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="fr:gouv:culture:archivesdefrance:seda:v1.0"
+	targetNamespace="fr:gouv:culture:archivesdefrance:seda:v1.0" 
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+
+	<xsd:complexType name="OtherMetadataType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">Les métadonnees doivent etre exprimées en XML et
+				respecter le Schéma XML explicitement donné. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:any namespace="##other" processContents="strict"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>
