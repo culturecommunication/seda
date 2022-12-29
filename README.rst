@@ -123,6 +123,6 @@ Outils génériques
 Téléchargement
 ===================================
 
-`Télécharger l'ensemble du SEDA 2.2 <../../releases/tag/seda-2.2/>`_ (schémas XML et documentation)
+`Télécharger l'ensemble du SEDA 2.2 <../../releases/tag/seda_v2.2/>`_ (schémas XML et documentation)
 
 
