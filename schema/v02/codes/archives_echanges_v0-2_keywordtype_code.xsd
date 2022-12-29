@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: Keywordtype                       ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 8. January 2010
+  Previews change: 31. January 2006
+
+  Liste de code des mots cles, standard d'echange 0.2
+
+-->
+
+<xsd:schema version="1.1" 
+	    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2" 
+	    xmlns="urn:un:unece:uncefact:codelist:draft:daf:keywordTypeCode:2009-08-18" 
+	    xmlns:clmDAFkeywordTypeCode="urn:un:unece:uncefact:codelist:draft:DAF:keywordTypeCode:2009-08-18"
+	    targetNamespace="urn:un:unece:uncefact:codelist:draft:DAF:keywordTypeCode:2009-08-18"  
+	    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<!-- ====================================================================== -->
+	<!-- =====  Element Declarations				      ===== -->
+	<!-- ====================================================================== -->
+	<!-- =====  Root Element Declaration				      ===== -->
+	<!-- ====================================================================== -->
+	<xsd:element name="KeywordTypeCode" type="clmDAFkeywordTypeCode:KeywordType"/>
+	<!-- ====================================================================== -->
+	<!-- ================ Type Definitions ============================= -->
+	<!-- =============================================================== -->
+	<!-- ===== Code List KeywordType: KeywordType Code           ======= -->
+	<!-- =============================================================== -->
+
+  	<xsd:simpleType name="KeywordType">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Table des types de mots-clef</ccts:Name>
+		      </xsd:documentation>
+		</xsd:annotation>
+	     <xsd:restriction base="xsd:token">
+		<xsd:enumeration value="corpname">
+		     <xsd:annotation>
+		          <xsd:documentation xml:lang="fr"><ccts:Name>Collectivité</ccts:Name></xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="famname">
+		     <xsd:annotation>
+		          <xsd:documentation xml:lang="fr"><ccts:Name>Nom de famille</ccts:Name></xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="geogname">
+		     <xsd:annotation>
+		          <xsd:documentation xml:lang="fr"><ccts:Name>Nom géographique</ccts:Name></xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="name">
+		     <xsd:annotation>
+		          <xsd:documentation xml:lang="fr"><ccts:Name>Nom</ccts:Name></xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="occupation">
+		     <xsd:annotation>
+		          <xsd:documentation xml:lang="fr"><ccts:Name>Fonction</ccts:Name></xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="persname">
+		     <xsd:annotation>
+		          <xsd:documentation xml:lang="fr"><ccts:Name>Nom de personne</ccts:Name></xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="subject">
+		     <xsd:annotation>
+		          <xsd:documentation xml:lang="fr"><ccts:Name>Mot-matière</ccts:Name></xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="genreform">
+		     <xsd:annotation>
+		          <xsd:documentation xml:lang="fr"><ccts:Name>Type de document</ccts:Name></xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="function">
+		     <xsd:annotation>
+		          <xsd:documentation xml:lang="fr"><ccts:Name>Activité</ccts:Name></xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+	     </xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

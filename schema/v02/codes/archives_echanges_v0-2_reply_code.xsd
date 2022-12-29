@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: ReplyCode                         ===== -->
+<!-- ======================================================== -->
+<!--
+  Last change: 8. January 2010
+  Previews change: 16. February 2006
+
+  Liste des codes de réponse, standard d'echange 0.2
+
+-->
+
+<xsd:schema version="1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+	xmlns="urn:un:unece:uncefact:codelist:draft:daf:replyCode:2009-08-18"
+	xmlns:clmDAFReplyCode="urn:un:unece:uncefact:codelist:draft:DAF:replyCode:2009-08-18"
+	targetNamespace="urn:un:unece:uncefact:codelist:draft:DAF:replyCode:2009-08-18"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<!-- ====================================================================== -->
+	<!-- =====  Element Declarations				      ===== -->
+	<!-- ====================================================================== -->
+	<!-- =====  Root Element Declaration				      ===== -->
+	<!-- ====================================================================== -->
+	<xsd:element name="ReplyCode" type="clmDAFReplyCode:ReplyCodeType"/>
+	<!-- ====================================================================== -->
+	<!-- ================ Type Definitions ============================= -->
+	<!-- =============================================================== -->
+	<!-- ===== Code List ReplyCodeType: ReplyCode                  ===== -->
+	<!-- =============================================================== -->
+
+
+
+	<xsd:simpleType name="ReplyCodeType">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Table des codes réponse</ccts:Name>
+		      </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+
+			<!-- ********************************************************************************* -->
+			<!-- *** Succès de la demande                                                          -->
+			<!-- ********************************************************************************* -->
+			<xsd:enumeration value="000">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>OK</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="001">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>OK (consulter les commentaires pour
+							information)</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="002">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>OK (Demande aux autorités de contrôle effectuée)</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>			
+
+			<!-- ********************************************************************************* -->
+			<!-- *** Erreurs de bas niveau                                                         -->
+			<!-- ********************************************************************************* -->
+			<xsd:enumeration value="101">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Message mal formé.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="102">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Système momentanément indisponible.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+
+			<!-- ********************************************************************************* -->
+			<!-- *** Erreurs                                                                       -->
+			<!-- ********************************************************************************* -->
+			<xsd:enumeration value="200">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Service producteur non reconnu.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="201">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Service d'archive non reconnu.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="202">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Service versant non reconnu.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="203">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme au profil de données.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="204">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Format de document non géré.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="205">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Format de document non conforme au format déclaré.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="206">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Signature du message invalide.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="207">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Empreinte(s) invalide(s).</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="208">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Archive indisponible. Délai de communication non écoulé.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="209">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Archive absente (élimination, restitution, transfert)</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="210">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Archive inconnue</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="211">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Pièce attachée absente.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="212">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dérogation refusée.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+
+			<!-- ********************************************************************************* -->
+			<!-- *** non conformites concernant la convention                                      -->
+			<!-- ********************************************************************************* -->
+			<xsd:enumeration value="300">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Convention invalide.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="301">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Quota des versements dépassé.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="302">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Identifiant du producteur non conforme.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="303">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Identifiant du service versant non conforme.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="304">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Identifiant du service d'archives non conforme.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="305">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Signature(s) de document(s) absente(s).</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="306">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Volume non conforme.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="307">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Format non conforme.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>		
+			<xsd:enumeration value="308">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Empreinte(s) non transmise(s).</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="309">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Absence de signature du message.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="310">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Signature(s) de document(s) non valide(s).</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="311">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Signature(s) de document(s) non vérifiée(s).</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>		
+			<xsd:enumeration value="312">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Dépôt non conforme à la convention. Dates de début ou de fin non respectées.</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>		
+			
+			
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

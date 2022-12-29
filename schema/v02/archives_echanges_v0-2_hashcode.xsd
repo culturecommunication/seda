@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ======================================================== -->
+<!-- =====                                              ===== -->
+<!-- =====                  HashCode                    ===== -->
+<!-- =====                                              ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 8. January 2010
+  Previews change: 16. February 2006
+
+  HashCode, standard d'echange 0.2
+  Prefix=HCAES
+
+-->
+
+<xsd:schema version="1.1" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+            xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:6"
+            xmlns:qdt="fr:gouv:ae:archive:draft:standard_echange_v0.2:QualifiedDataType:1" 
+            
+            xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.2" 
+            targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.2"  
+            elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<!-- ======================================================== -->
+<!-- ====                Includes                        ==== -->
+<!-- ======================================================== -->
+
+<!-- ======================================================== -->
+<!-- ====                Imports                         ==== -->
+<!-- ======================================================== -->
+<!-- ======================================================== -->
+<!-- ====        Import of CoreComponentTypes            ==== -->
+<!-- ======================================================== -->
+
+<xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:6" schemaLocation="UnqualifiedDataType_6p0.xsd"/>
+<xsd:import namespace="fr:gouv:ae:archive:draft:standard_echange_v0.2:QualifiedDataType:1" schemaLocation="archives_echanges_v0-2_QualifiedDataType.xsd"/>
+
+<!-- ======================================================== -->
+<!-- ====                Root element                    ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="HashCode" type="HashCodeType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="HashCodeType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>HCAES000001</ccts:UniqueID>
+                                <ccts:Acronym>ABIE</ccts:Acronym>
+                                <ccts:DictionaryEntryName>HashCode</ccts:DictionaryEntryName>
+                                <ccts:Version>1.0</ccts:Version>
+                                <ccts:Definition>Empreinte associée à un fichier ou une partie de fichier aux fins d'en contrôler l'intégrité. Le mécanisme de description du HashCode reprend le mécanisme de référence décrit dans XMLDsig</ccts:Definition>
+                                <ccts:ObjectClassTerm>HashCode</ccts:ObjectClassTerm>
+                                <ccts:QualifierTerm>HashCode</ccts:QualifierTerm>
+                        </xsd:documentation>
+                </xsd:annotation>
+                <xsd:sequence>
+
+                        <xsd:element name="Contains" type="qdt:ArchivesHashcodeBinaryObjectType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>HCAES000001-1</ccts:UniqueID>
+                                <ccts:Acronym>BBIE</ccts:Acronym>
+                                <ccts:DictionaryEntryName>HashCode.Contains</ccts:DictionaryEntryName>
+                                <ccts:Version>1.0</ccts:Version>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Empreinte d'un élément de l'archive.</ccts:Definition>
+                                <ccts:ObjectClassTerm>HashCode</ccts:ObjectClassTerm>
+                                <ccts:PropertyTerm>Contains</ccts:PropertyTerm>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="UnitIdentifier" type="qdt:ArchivesIDType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>HCAES000001-2</ccts:UniqueID>
+                                <ccts:Acronym>BBIE</ccts:Acronym>
+                                <ccts:DictionaryEntryName>HashCode.UnitIdentifier</ccts:DictionaryEntryName>
+                                <ccts:Version>1.0</ccts:Version>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant permettant de reconnaître l'élément dont l'empreinte est founie, qui peut être une archive, ou tout autre objet qui la compose.</ccts:Definition>
+                                <ccts:ObjectClassTerm>HashCode</ccts:ObjectClassTerm>
+                                <ccts:PropertyTerm>UnitIdentifier</ccts:PropertyTerm>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                </xsd:sequence>
+        </xsd:complexType>
+
+
+
+</xsd:schema>

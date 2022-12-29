@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: AppraisalCode	                ===== -->
+<!-- ======================================================== -->
+<!--
+  Last change: 8. January 2010
+  Previews change: 31. January 2006
+
+  Liste de code des types Appraisal, standard d'echange 0.2
+
+-->
+
+<xsd:schema version="1.1" 
+	    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2" 
+	    xmlns="urn:un:unece:uncefact:codelist:draft:daf:accessRestrictionCode:2009-08-18" 
+	    xmlns:clmDAFAppraisalCode="urn:un:unece:uncefact:codelist:draft:DAF:appraisalCode:2009-08-18"
+	    targetNamespace="urn:un:unece:uncefact:codelist:draft:DAF:appraisalCode:2009-08-18"  
+	    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<!-- ====================================================================== -->
+	<!-- =====  Element Declarations				      ===== -->
+	<!-- ====================================================================== -->
+	<!-- =====  Root Element Declaration				      ===== -->
+	<!-- ====================================================================== -->
+	<xsd:element name="AppraisalCode" type="clmDAFAppraisalCode:AppraisalCodeType"/>
+	<!-- ====================================================================== -->
+	<!-- ================ Type Definitions ============================= -->
+	<!-- =============================================================== -->
+	<!-- ===== Code List AppraisalCodeType: Appraisal Code         ===== -->
+	<!-- =============================================================== -->
+
+
+  	<xsd:simpleType name="AppraisalCodeType">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Table des codes pour le sort final</ccts:Name>
+		      </xsd:documentation>
+		</xsd:annotation>
+	     <xsd:restriction base="xsd:token">
+		<xsd:enumeration value="conserver">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="fr">
+					<ccts:Name>Conserver</ccts:Name>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="detruire">
+			<xsd:annotation>
+				<xsd:documentation xml:lang="fr">
+					<ccts:Name>Détruire</ccts:Name>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+	 </xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>		

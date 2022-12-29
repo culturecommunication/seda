@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== -->
+<!-- =====  60133 - Codelist Schema Module                            ===== -->
+<!-- ====================================================================== -->
+<!--
+   Schema agency:  UN/CEFACT	
+   Schema version:   3.0
+   Schema date:       26 January 2009
+   
+   Code List Name:   Character Set Encoding Code
+   Code list agency:  UN/CEFACT
+   Code list version:  40106
+  	  	
+  	Copyright (C) UN/CEFACT (2009). All Rights Reserved.
+
+	This document and translations of it may be copied and furnished to others, 
+	and derivative works that comment on or otherwise explain it or assist 
+	in its implementation may be prepared, copied, published and distributed, 
+	in whole or in part, without restriction of any kind, provided that the 
+	above copyright notice and this paragraph are included on all such copies 
+	and derivative works. However, this document itself may not be modified in 
+	any way, such as by removing the copyright notice or references to 
+	UN/CEFACT, except as needed for the purpose of developing UN/CEFACT 
+	specifications, in which case the procedures for copyrights defined in the 
+	UN/CEFACT Intellectual Property Rights document must be followed, or as 
+	required to translate it into languages other than English.
+
+	The limited permissions granted above are perpetual and will not be revoked 
+	by UN/CEFACT or its successors or assigns.
+
+	This document and the information contained herein is provided on an "AS IS"
+	basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+	BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL 
+	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
+	FITNESS FOR A PARTICULAR PURPOSE.
+-->
+<xsd:schema xmlns:clm60133="urn:un:unece:uncefact:codelist:standard:6:0133:40106" xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:un:unece:uncefact:codelist:standard:6:0133:40106" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0">
+	<!-- ================================================================== -->
+	<!-- =====  Element Declarations                                  ===== -->
+	<!-- ================================================================== -->
+	<!-- =====  Root element                                          ===== -->
+	<!-- ================================================================== -->
+	<xsd:element name="CharacterSetEncodingCode" type="clm60133:CharacterSetEncodingCodeContentType"/>
+	<!-- ================================================================== -->
+	<!-- =====  Type Definitions                                      ===== -->
+	<!-- ================================================================== -->
+	<!-- =====  Type Definition:  Character Set Encoding Code Content Type ===== -->
+	<!-- ================================================================== -->
+	<xsd:simpleType name="CharacterSetEncodingCodeContentType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ccts:name>ASCII 7 bit</ccts:name>
+						<ccts:definition>ASCII 7 bit code.</ccts:definition>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ccts:name>ASCII 8 bit</ccts:name>
+						<ccts:definition>ASCII 8 bit code.</ccts:definition>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="3">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ccts:name>Code page 500 (EBCDIC Multinational No. 5)</ccts:name>
+						<ccts:definition>Encoding schema for the repertoire as defined by the code
+             page.</ccts:definition>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="4">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ccts:name>Code page 850 (IBM PC Multinational)</ccts:name>
+						<ccts:definition>Encoding schema for the repertoire as defined by the code
+             page.</ccts:definition>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="5">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ccts:name>UCS-2</ccts:name>
+						<ccts:definition>Universal Multiple-Octet Coded Character Set (UCS)
+             two-octet per character encoding schema as defined in
+             ISO/IEC 10646-1.</ccts:definition>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="6">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ccts:name>UCS-4</ccts:name>
+						<ccts:definition>Universal Multiple-Octet Coded Character Set (UCS)
+             four-octet per character encoding schema as defined in
+             ISO/IEC 10646-1.</ccts:definition>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="7">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ccts:name>UTF-8</ccts:name>
+						<ccts:definition>UCS Transformation Format 8 (UTF-8) multi-octet (of
+             length one to six octets) per character encoding schema
+             as defined in ISO/IEC 10646-1, Annex R.</ccts:definition>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="8">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ccts:name>UTF-16</ccts:name>
+						<ccts:definition>UCS Transformation Format 16 (UTF-16) two-octet per character encoding schema as defined in ISO/IEC 10646-1, Annex Q.</ccts:definition>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="zzz">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						<ccts:name>Mutually agreed</ccts:name>
+						<ccts:definition>Mutually agreed between trading partners</ccts:definition>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

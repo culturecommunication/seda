@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ======================================================== -->
+<!-- =====                                              ===== -->
+<!-- =====             Organization                     ===== -->
+<!-- =====                                              ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 8. January 2010
+  Previews change: 20. February 2006
+
+  OrganizationAddressContact, standard d'echange 0.2
+  Prefix: OCAAES
+
+-->
+<xsd:schema 
+	attributeFormDefault="unqualified" 
+	elementFormDefault="qualified" 
+	targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.2" 
+	version="1.1"
+	 xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.2" 
+	 xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:6" 
+	 xmlns:qdt="fr:gouv:ae:archive:draft:standard_echange_v0.2:QualifiedDataType:1" 
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	 xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+	 >
+ <!-- ======================================================== -->
+ <!-- ====                Imports                         ==== -->
+ <!-- ======================================================== -->
+ <!-- ======================================================== -->
+ <!-- ====    Import of CoreComponentTypes                ==== -->
+ <!-- ======================================================== -->
+
+<xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:6" schemaLocation="UnqualifiedDataType_6p0.xsd"/>
+<xsd:import namespace="fr:gouv:ae:archive:draft:standard_echange_v0.2:QualifiedDataType:1" schemaLocation="archives_echanges_v0-2_QualifiedDataType.xsd"/>
+
+<!-- ======================================================== -->
+<!-- ====          Organization element                  ==== -->
+<!-- ======================================================== -->
+
+<xsd:element name="Organization" type="OrganizationType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+	<xsd:complexType name="OrganizationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:UniqueID>OCAAES000001</ccts:UniqueID>
+				<ccts:Acronym>ABIE</ccts:Acronym>
+				<ccts:DictionaryEntryName>Organization</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Informations sur une structure organisée constituée pour un objet particulier, comme une administration, une entreprise ou une association. Par extension il peut s'agir d'une personne physique.</ccts:Definition>
+				<ccts:ObjectClassTerm>Organization</ccts:ObjectClassTerm>
+				<ccts:QualifierTerm>Organization</ccts:QualifierTerm>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="BusinessType" type="qdt:ArchivesCodeType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000001-01</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Organization.BusinessType</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Code définissant la nature de l'activité de l'organisation. UN00000057 Organisation.Business Type.Code Répertoire SIRENE: Code APE (APEN ou APET suivant le niveau)</ccts:Definition>
+						<ccts:ObjectClassTerm>Organization</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>BusinessType</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Description" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000001-02</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Organization.Description</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Description textuelle de l'organisation</ccts:Definition>
+						<ccts:ObjectClassTerm>Organization</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Description</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Identification" type="qdt:ArchivesIDType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000001-04</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Organization.Identification</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>1..1</ccts:Cardinality>
+						<ccts:Definition>Identifiant unique de l'organisation. UN00000053 Organisation.Identification.Identifier.Par exemple dans le Répertoire SIRENE: SIREN ou SIRET suivant le niveau.</ccts:Definition>
+						<ccts:ObjectClassTerm>Organization</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Identification</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="LegalClassification" type="qdt:ArchivesCodeType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000001-05</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Organization.LegalClassification</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Code définissant la catégorie juridique de l'organisation. UN00000056 Organisation.Legal Classification.Code. Répertoire SIRENE: personne morale ou pour une entreprise individuelle, la catégorie professionnelle.</ccts:Definition>
+						<ccts:ObjectClassTerm>Organization</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>LegalClassification</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Name" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000001-06</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Organization.Name</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Dénomination ou enseigne: Nom sous lequel l'organisation exerce son activité.Ex. Service d'état civil.UN000000054 Organisation.Name.Text. Répertoire SIRENE.</ccts:Definition>
+						<ccts:ObjectClassTerm>Organization</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Name</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="Contact" type="ContactType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000001-08</ccts:UniqueID>
+						<ccts:Acronym>ASBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Organization.Contact</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..n</ccts:Cardinality>
+						<ccts:Definition>Contacts identifiés de l'organisation</ccts:Definition>
+						<ccts:ObjectClassTerm>Organization</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Contact</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="Address" type="AddressType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000001-09</ccts:UniqueID>
+						<ccts:Acronym>ASBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Organization.Address</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..n</ccts:Cardinality>
+						<ccts:Definition>Adresses de l'organisation.</ccts:Definition>
+						<ccts:ObjectClassTerm>Organization</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Address</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="Communication" type="CommunicationType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000001-10</ccts:UniqueID>
+						<ccts:Acronym>ASBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Organization.Communication</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..n</ccts:Cardinality>
+						<ccts:Definition>Moyen de communication de l'organisation.</ccts:Definition>
+						<ccts:ObjectClassTerm>Organization</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Communication</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ======================================================== -->
+	<!-- ====             Address element                    ==== -->
+	<!-- ======================================================== -->
+	<xsd:element name="Address" type="AddressType"/>
+	<!-- ======================================================== -->
+	<!-- ====                Type Definition                 ==== -->
+	<!-- ======================================================== -->
+	<xsd:complexType name="AddressType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:UniqueID>OCAAES000002</ccts:UniqueID>
+				<ccts:Acronym>ABIE</ccts:Acronym>
+				<ccts:DictionaryEntryName>Address</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Lieu où une organisation ou une personne peuvent être jointes ou trouvées.</ccts:Definition>
+				<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+				<ccts:QualifierTerm>Address</ccts:QualifierTerm>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="BlockName" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-01</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.BlockName</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Nom du corps de bâtiment.</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>BlockName</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BuildingName" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-02</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.BuildingName</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Nom du bâtiment.</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>BuildingName</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BuildingNumber" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-03</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.BuildingNumber</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Numéro, exprimé en texte, d'un bâtiment sur la voie à cette adresse.</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>BuildingNumber</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CityName" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-04</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.CityName</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Localité. Eléments de la norme Afnor XP Z 10-011: Zone d'habitation : il s'agit en général de la commune d'implantation du destinataire. Elle est identifiée par son libellé INSEE sauf dans quelques cas ou le libellé postal diffère du libellé INSEE, généralement pour lever les ambiguïtés. Par exception, la localité de destination est dans certains cas un lieu dit si celui-ci est le siège d'un bureau distributeur.Exemple : Pyla-sur-Mer en Gironde (CP : 33115, commune 33529 la Teste de Buch).</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>CityName</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CitySub-DivisionName" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-05</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.CitySub-DivisionName</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Nom d'une sous division de la localité où se trouve l'adresse, par exemple un arrondissement ou un quartier.</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>CitySub-DivisionName</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			
+			<xsd:element minOccurs="0" name="Country" type="qdt:ArchivesCountryType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-06</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.Country</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Identifiant unique du pays de l'adresse  (Reference ISO 3166 and UN/ECE Rec 3).</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Country</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FloorIdentification" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-08</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.FloorIdentification</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Etage ou niveau.</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>FloorIdentification</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Postcode" type="qdt:ArchivesCodeType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-18</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.Postcode</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Code postal.</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Postcode</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PostOfficeBox" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-19</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.PostOfficeBox</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Boite postale.</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>PostOfficeBox</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="RoomIdentification" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-20</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.RoomIdentification</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Identifiant de la salle ou de la pièce.</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>RoomIdentification</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="StreetName" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000002-21</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Address.StreetName</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Nom de la voie.</ccts:Definition>
+						<ccts:ObjectClassTerm>Address</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>StreetName</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- ======================================================== -->
+	<!-- ====             Contact element                    ==== -->
+	<!-- ======================================================== -->
+	<xsd:element name="Contact" type="ContactType"/>
+	<!-- ======================================================== -->
+	<!-- ====                Type Definition                 ==== -->
+	<!-- ======================================================== -->
+	<xsd:complexType name="ContactType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:UniqueID>OCAAES000003</ccts:UniqueID>
+				<ccts:Acronym>ABIE</ccts:Acronym>
+				<ccts:DictionaryEntryName>Contact</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Informations relatives à une personne ou à une organisation qui agit comme point de contact avec une autre personne ou une autre organisation.</ccts:Definition>
+				<ccts:ObjectClassTerm>Contact</ccts:ObjectClassTerm>
+				<ccts:QualifierTerm>Contact</ccts:QualifierTerm>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="DepartmentName" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000003-01</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Contact.DepartmentName</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Service auquel appartient le contact dans une organisation (exemple: Support).</ccts:Definition>
+						<ccts:ObjectClassTerm>Contact</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>DepartmentName</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Identification" type="qdt:ArchivesIDType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000003-02</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Contact.Identification</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Identifiant du contact. A titre indicatif, la longueur du champ peut être de 30 caractères.</ccts:Definition>
+						<ccts:ObjectClassTerm>Contact</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Identification</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PersonName" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000003-04</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Contact.PersonName</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Nom de la personne ou du service à contacter.</ccts:Definition>
+						<ccts:ObjectClassTerm>Contact</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>PersonName</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Responsibility" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000003-05</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Contact.Responsibility</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Description textuelle des responsabilité(s) générales ou spécifiques du contact.</ccts:Definition>
+						<ccts:ObjectClassTerm>Contact</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Responsibility</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Address" type="AddressType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000003-07</ccts:UniqueID>
+						<ccts:Acronym>ASBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Contact.Address</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Adressse du contact.</ccts:Definition>
+						<ccts:ObjectClassTerm>Contact</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Address</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="Communication" type="CommunicationType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000003-08</ccts:UniqueID>
+						<ccts:Acronym>ASBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Contact.Communication</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..n</ccts:Cardinality>
+						<ccts:Definition>Moyen de communication du contact.</ccts:Definition>
+						<ccts:ObjectClassTerm>Contact</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Communication</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- ======================================================== -->
+	<!-- ====             Communication element              ==== -->
+	<!-- ======================================================== -->
+	<xsd:element name="Communication" type="CommunicationType"/>
+	<!-- ======================================================== -->
+	<!-- ====                Type Definition                 ==== -->
+	<!-- ======================================================== -->
+	<xsd:complexType name="CommunicationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:UniqueID>OCAAES000004</ccts:UniqueID>
+				<ccts:Acronym>ABIE</ccts:Acronym>
+				<ccts:DictionaryEntryName>Communication</ccts:DictionaryEntryName>
+				<ccts:Version>1.0</ccts:Version>
+				<ccts:Definition>Moyens de communication des personnes et/ou organisations (téléphone, fax, e-mail, etc.) sauf courrier postal.</ccts:Definition>
+				<ccts:ObjectClassTerm>Communication</ccts:ObjectClassTerm>
+				<ccts:QualifierTerm>Communication</ccts:QualifierTerm>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>		
+			<xsd:element minOccurs="0" name="Channel" type="qdt:ArchivesCodeType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000004-02</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Communication.Channel</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Un code spécifiant le canal ou la manière dont s'établit la communication (téléphone, e-mail, etc.).</ccts:Definition>
+						<ccts:ObjectClassTerm>Communication</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>Channel</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CompleteNumber" type="udt:TextType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000004-03</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Communication.CompleteNumber</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Un numéro à composer complet.</ccts:Definition>
+						<ccts:ObjectClassTerm>Communication</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>CompleteNumber</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="URI" type="qdt:ArchivesIDType">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:UniqueID>OCAAES000004-01</ccts:UniqueID>
+						<ccts:Acronym>BBIE</ccts:Acronym>
+						<ccts:DictionaryEntryName>Communication.URI</ccts:DictionaryEntryName>
+						<ccts:Version>1.0</ccts:Version>
+						<ccts:Cardinality>0..1</ccts:Cardinality>
+						<ccts:Definition>Un identifiant URI (Uniform Resource Identifier), terme générique pour tous les types de noms et d'adresses qui réfèrent des objets sur le Word Wide Web (e. e-mail, URL, etc.).</ccts:Definition>
+						<ccts:ObjectClassTerm>Communication</ccts:ObjectClassTerm>
+						<ccts:PropertyTerm>URI</ccts:PropertyTerm>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

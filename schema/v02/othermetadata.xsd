@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ======================================================== -->
+<!-- =====                                              ===== -->
+<!-- =====                OtherMetadata                 ===== -->
+<!-- =====                                              ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 8. January 2010
+
+  OtherMetadata, standard d'echange 0.2
+ 
+-->
+
+<xsd:schema version="1.1" 
+	    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.2" 
+            targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.2"  
+            elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<xsd:complexType name="OtherMetadataType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="fr">Les métadonnees doivent etre exprimées en XML 
+			et respecter le Schema XML explicitement donné. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:any namespace="##other" processContents="strict"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

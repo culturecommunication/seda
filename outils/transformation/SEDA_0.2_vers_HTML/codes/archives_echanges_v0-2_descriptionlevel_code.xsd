@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: Description Level                 ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 8. January 2010
+  Previews change: 31. January 2006
+
+  Liste de code des niveaux de description, standard d'echange 0.2
+
+-->
+
+<xsd:schema version="1.1" 
+	    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2" 
+	    xmlns="urn:un:unece:uncefact:codelist:draft:daf:accessRestrictionCode:2009-08-18" 
+	    xmlns:clmDAFDescriptionLevelCode="urn:un:unece:uncefact:codelist:draft:DAF:descriptionLevelCode:2009-08-18"
+	    targetNamespace="urn:un:unece:uncefact:codelist:draft:DAF:descriptionLevelCode:2009-08-18"  
+	    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<!-- ====================================================================== -->
+	<!-- =====  Element Declarations				      ===== -->
+	<!-- ====================================================================== -->
+	<!-- =====  Root Element Declaration				      ===== -->
+	<!-- ====================================================================== -->
+	<xsd:element name="LevelDescriptionCode" type="clmDAFDescriptionLevelCode:LevelDescriptionType"/>
+	<!-- ====================================================================== -->
+	<!-- ================ Type Definitions ============================= -->
+	<!-- =============================================================== -->
+	<!-- ===== Code List DescriptionLevel: DescriptionLevel Code ======= -->
+	<!-- =============================================================== -->
+
+  	<xsd:simpleType name="LevelDescriptionType">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Table des codes pour le niveau de description</ccts:Name>
+			      <ccts:Description>Source EAD (Encoded Archival Description)</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+	     <xsd:restriction base="xsd:token">
+		<xsd:enumeration value="class">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Classe</ccts:Name>
+			      <ccts:Description>Cette valeur, issue de la tradition archivistique allemande, ne correspond pas pour l'instant aux pratiques archivistiques françaises</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="collection">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Collection</ccts:Name>
+			      <ccts:Description>Réunion artificielle de documents en fonction de critères communs liés à leur contenu ou à leur support, sans considération de leur provenance, par opposition au fonds d'archives constitué de façon organique</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="file">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Dossier</ccts:Name>
+			      <ccts:Description>ensemble de documents regroupés, soit par le producteur pour son usage courant, soit dans le processus du classement d'archives, parce qu'ils concernent un même sujet ou une même affaire; le dossier est ordinairement l'unité de base à l'intérieur d'une série organique</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="fonds">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Fonds</ccts:Name>
+			      <ccts:Description>ensemble de documents quels que soit leur type et leur support, créé ou reçu de manière organique et utilisé par une personne physique ou morale dans l'exercice de ses activités</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="item">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Item</ccts:Name>
+			      <ccts:Description>plus petite unité documentaire, par exemple une lettre, un mémoire, un rapport, une photographie, un enregistrement sonore</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="recordgrp">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Groupe de documents</ccts:Name>
+			      <ccts:Description>niveau de description intermédiaire qui ne correspond pas à une division organique (sous-fonds, série ou sous-série organique); parties au sein d'une collection, versements,  épaves d'un fonds, subdivisions de fonds dont on ne connait pas la nature exacte, sous-ensemble classés thématiquement</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="series">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Serie organique</ccts:Name>
+			      <ccts:Description>division organique d'un fonds, correspondant à un ensemble de dossiers maintenus groupés parce qu'ils résultent d'une même activité, se rapportent à une même fonction ou à un même sujet ou revêtent une même forme</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="subfonds">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Sous fonds</ccts:Name>
+			      <ccts:Description>division organique d'un fonds correspondant aux divisions administratives de l'institution ou de l'organisme producteur, ou, à défaut,  à un regroupement géographique, chronologique, fonctionnel ou autre des documents; quand le producteur a une structure hiérarchique complexe , chaque sous-fonds est lui-même subdivisé, autant que nécessaire pour refléter les niveaux hiérarchiques</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="subgrp">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Sous-groupe de documents</ccts:Name>
+			      <ccts:Description>subdivision du groupe de documents</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="subseries">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Sous-série organique</ccts:Name>
+			      <ccts:Description>subdivision de la série organique</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+	     </xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

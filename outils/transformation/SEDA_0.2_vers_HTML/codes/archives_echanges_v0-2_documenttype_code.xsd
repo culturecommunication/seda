@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: DocumentType                      ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 22. February 2010
+  Previews change: 8. January 2010
+                   31. January 2006
+
+  Liste de code des niveaux de description, standard d'echange 0.2
+
+-->
+
+<xsd:schema version="1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+	xmlns="urn:un:unece:uncefact:codelist:draft:daf:documentTypeCode:2009-08-18"
+	xmlns:clmDAFDocumentTypeCode="urn:un:unece:uncefact:codelist:draft:DAF:documentTypeCode:2009-08-18"
+	targetNamespace="urn:un:unece:uncefact:codelist:draft:DAF:documentTypeCode:2009-08-18"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<!-- ====================================================================== -->
+	<!-- =====  Element Declarations				      ===== -->
+	<!-- ====================================================================== -->
+	<!-- =====  Root Element Declaration				      ===== -->
+	<!-- ====================================================================== -->
+	<xsd:element name="DocumentTypeCode" type="clmDAFDocumentTypeCode:DocumentTypeCodeType"/>
+	<!-- ====================================================================== -->
+	<!-- ================ Type Definitions ============================= -->
+	<!-- =============================================================== -->
+	<!-- ===== Code List DocumentType: DocumentType Code         ======= -->
+	<!-- =============================================================== -->
+
+
+
+	<xsd:simpleType name="DocumentTypeCodeType">
+		<xsd:annotation>
+		      <xsd:documentation xml:lang="fr">
+			      <ccts:Name>Table des types d'information</ccts:Name>
+			      <ccts:Description>Source: la norme ISO 14721 OAIS (Open Archival Information System)</ccts:Description>
+		      </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="CDO">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Contenu de données</ccts:Name>
+						<ccts:Description>Objet numérique ou physique qui est l'objet principal de
+							la pérennisation. ISO 14721:2003(Space data and information transfer
+							systems -- Open archival information system --Reference
+						model)</ccts:Description>
+					</xsd:documentation>
+					<xsd:documentation xml:lang="en">
+						<ccts:Name>Content Data Object</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RI">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Information de représentation</ccts:Name>
+						<ccts:Description>Information qui traduit un contenu de données en des
+							concepts plus explicites. Par exemple, la définition du code ASCII
+							décrit comment une séquence de bits (un contenu de données) est
+							convertie en caractères. L'information de représentation peut être de
+							structure ou sémantique. ISO 14721:2003 (Space data and information
+							transfer systems -- Open archival information system -- Reference
+						model</ccts:Description>
+					</xsd:documentation>
+					<xsd:documentation xml:lang="en">
+						<ccts:Name>Representation Information</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RISTR">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Information de structure</ccts:Name>
+						<ccts:Description>Information de représentation qui explique la façon dont
+							d'autres informations sont organisées. Elle établit par exemple une
+							correspondance entre les trains de bits et les types de données courants
+							sur ordinateurs (tels que caractères, nombres, pixels ou agrégats de ces
+							types tels que chaînes de caractères et tableaux). ISO 14721:2003 (Space
+							data and information transfer systems -- Open archival information
+							system -- Reference model)</ccts:Description>
+					</xsd:documentation>
+					<xsd:documentation xml:lang="en">
+						<ccts:Name>Structure Information</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RISEM">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Information sémantique</ccts:Name>
+						<ccts:Description>Information de représentation qui complète l'information
+							de structure pour donner par exemple la signification particulière
+							associée à chacun des éléments de la structure, les opérations
+							réalisables sur chaque type de données, leurs corrélations... ISO
+							14721:2003 (Space data and information systemstransfe -- Open archival
+							information system -- Reference model)</ccts:Description>
+					</xsd:documentation>
+					<xsd:documentation xml:lang="en">
+						<ccts:Name>Semantic Information</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PDI">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Information de pérennisation</ccts:Name>
+						<ccts:Description>Information nécessaire à une bonne conservation du contenu
+							d'information, et qui peut être décomposée en informations de
+							provenance, d'identification, d'intégrité et de contexte. ISO 14721:2003
+							(Space data and information transfer systems -- Open archival
+							information system -- Reference model)</ccts:Description>
+					</xsd:documentation>
+					<xsd:documentation xml:lang="en">
+						<ccts:Name>Preservation Description Information</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PDIPRO">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Information de provenance</ccts:Name>
+						<ccts:Description>Information de pérennisation qui documente l'historique du
+							contenu d'information. Cette information renseigne sur l'origine ou la
+							source du contenu d'information, sur toute modification intervenue
+							depuis sa création et sur ceux qui en ont eu la responsabilité. Exemple
+							: nom du principal responsable de l'enregistrement des données,
+							informations relatives au stockage, à la manipulation et à la migration
+							des données. ISO 14721:2003 (Space data and information transfer systems
+							-- Open archival information system -- Reference
+						model)</ccts:Description>
+					</xsd:documentation>
+					<xsd:documentation xml:lang="en">
+						<ccts:Name>Provenance Information</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PDIREF">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Information d'identification</ccts:Name>
+						<ccts:Description>Information de pérennisation qui identifie, et si
+							nécessaire décrit, le ou les mécanismes d'attribution des
+							identificateurs au contenu d'information. Elle inclut aussi les
+							identificateurs qui permettent à un système externe de se référer sans
+							équivoque à un contenu d'information particulier. ISO 14721:2003 (Space
+							data and information transfer systems -- Open archival information
+							system -- Reference model)</ccts:Description>
+					</xsd:documentation>
+					<xsd:documentation xml:lang="en">
+						<ccts:Name>Reference Information</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PDIFIX">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Information d'intégrité</ccts:Name>
+						<ccts:Description>Information de pérennisation qui décrit les mécanismes et
+							des clés d'authentification garantissant que le contenu d'information
+							n'a pas subi de modification sans que celle-ci ait été tracée. Par
+							exemple, le code CRC (contrôl de redondance cyclique) pour un fichier.
+							ISO 14721:2003 (Space data and information transfer systems -- Open
+							archival information system -- Reference model)</ccts:Description>
+					</xsd:documentation>
+					<xsd:documentation xml:lang="en">
+						<ccts:Name>Fixity Information</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PDICTX">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="fr">
+						<ccts:Name>Information de contexte</ccts:Name>
+						<ccts:Description>Information de pérennisation qui décrit les liens entre un
+							contenu d'information et son environnement. Elle inclut entre autres les
+							raisons de la création de ce contenu d'information et son rapport avec
+							d'autres Objets-contenu d'information. ISO 14721:2003 (Space data and
+							information transfer systems -- Open archival information system --
+							Reference model)</ccts:Description>
+					</xsd:documentation>
+					<xsd:documentation xml:lang="en">
+						<ccts:Name>Context Information</ccts:Name>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

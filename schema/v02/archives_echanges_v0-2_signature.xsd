@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ======================================================== -->
+<!-- =====                                              ===== -->
+<!-- =====                Signature                     ===== -->
+<!-- =====                                              ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 8. January 2010
+  Previews change: 16. February 2006
+
+  Signature XFMessages, standard d'echange 0.2
+  Prefix=SGAES
+
+-->
+
+<xsd:schema version="1.0" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2" 
+            xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:6"
+            xmlns:qdt="fr:gouv:ae:archive:draft:standard_echange_v0.2:QualifiedDataType:1" 
+            
+            xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+            xmlns:xad="http://uri.etsi.org/01903/v1.4.1#"
+            xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.2"
+            targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.2"  
+            elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<!-- ======================================================== -->
+<!-- ====                Includes                        ==== -->
+<!-- ======================================================== -->
+
+<!-- ======================================================== -->
+<!-- ====                Imports                         ==== -->
+<!-- ======================================================== -->
+<!-- ======================================================== -->
+<!-- ====        Import of CoreComponentTypes            ==== -->
+<!-- ======================================================== -->
+
+<xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:6" schemaLocation="UnqualifiedDataType_6p0.xsd"/>
+<xsd:import namespace="fr:gouv:ae:archive:draft:standard_echange_v0.2:QualifiedDataType:1" schemaLocation="archives_echanges_v0-2_QualifiedDataType.xsd"/>
+
+<!-- ======================================================== -->
+<!-- ====        Import des schemas de signature         ==== -->
+<!-- ======================================================== -->
+<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+<xsd:import namespace="http://uri.etsi.org/01903/v1.4.1#" schemaLocation="XAdESv141.xsd"/>
+
+<!-- ======================================================== -->
+<!-- ====      Root element                              ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="Signature" type="SignatureType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="SignatureType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>SGAES000001</ccts:UniqueID>
+                        <ccts:Acronym>ABIE</ccts:Acronym>
+                        <ccts:DictionaryEntryName>Organization</ccts:DictionaryEntryName>
+                        <ccts:Version>000001</ccts:Version>
+                        <ccts:Definition>Informations de signature du contenu. Cette signature peut être binaire (PKCS7) ou XML (DSIG ou XADES).</ccts:Definition>
+                        <ccts:ObjectClassTerm>Organization</ccts:ObjectClassTerm>
+                        <ccts:QualifierTerm>Organization</ccts:QualifierTerm>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                
+                <xsd:choice>
+        
+                        <xsd:element name="PKCS7Signature" type="qdt:ArchivesBinaryObjectType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>SGAES000001-01</ccts:UniqueID>
+                                <ccts:Acronym>BBIE</ccts:Acronym>
+                                <ccts:DictionaryEntryName>Signature.PKCS7Signature</ccts:DictionaryEntryName>
+                                <ccts:Version>000001</ccts:Version>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Signature Binaire de type PKCS7.</ccts:Definition>
+                                <ccts:ObjectClassTerm>Signature</ccts:ObjectClassTerm>
+                                <ccts:PropertyTerm>PKCS7Signature</ccts:PropertyTerm>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="XMLSignature" type="ds:SignatureType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>SGAES000001-02</ccts:UniqueID>
+                                <ccts:Acronym>ASBIE</ccts:Acronym>
+                                <ccts:DictionaryEntryName>Signature.XMLSignature</ccts:DictionaryEntryName>
+                                <ccts:Version>000001</ccts:Version>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Signature XML de type XMLDsig ou XADES</ccts:Definition>
+                                <ccts:ObjectClassTerm>Signature</ccts:ObjectClassTerm>
+                                <ccts:PropertyTerm>XMLSignature</ccts:PropertyTerm>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                
+                </xsd:choice>
+        </xsd:complexType>
+        
+</xsd:schema>
