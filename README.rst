@@ -126,6 +126,6 @@ Outils génériques
 Téléchargement
 ===================================
 
-`Télécharger l'ensemble du SEDA 2.0 <../../releases/tag/seda-2.0/>`_ (schémas XML et documentation)
+`Télécharger l'ensemble du SEDA 2.0 <../../releases/tag/seda_v2.0/>`_ (schémas XML et documentation)
 
 
