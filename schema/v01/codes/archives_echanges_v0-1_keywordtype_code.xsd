@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: Keywordtype                       ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 31. January 2006
+
+  Liste de code des mots cles, standard d'echange 0.1
+
+-->
+
+<xsd:schema version="1.0" 
+	    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	    xmlns:cct="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" 
+	    xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.1" 
+	    targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.1"  
+	    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<!-- ================ Type Definition =================== -->
+	<!-- ==================================================== -->
+	<!-- ===== Code List KeywordType: KeywordType Code ===== -->
+
+  	<xsd:simpleType name="KeywordType">
+	     <xsd:restriction base="xsd:token">
+		<xsd:enumeration value="corpname">
+		     <xsd:annotation>
+		          <xsd:documentation>Collectivité</xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="famname">
+		     <xsd:annotation>
+		          <xsd:documentation>Nom de famille</xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="geogname">
+		     <xsd:annotation>
+		          <xsd:documentation>Nom géographique</xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="name">
+		     <xsd:annotation>
+		          <xsd:documentation>Nom</xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="occupation">
+		     <xsd:annotation>
+		          <xsd:documentation>Fonction</xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="persname">
+		     <xsd:annotation>
+		          <xsd:documentation>Nom de personne</xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="subject">
+		     <xsd:annotation>
+		          <xsd:documentation>Mot-matière</xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="genreform">
+		     <xsd:annotation>
+		          <xsd:documentation>Genre et caractéristiques physiques</xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="function">
+		     <xsd:annotation>
+		          <xsd:documentation>Activité</xsd:documentation>
+	             </xsd:annotation>
+                </xsd:enumeration>
+	     </xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

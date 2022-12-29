@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ======================================================== -->
+<!-- ===== CCTS Core Component Types Schema Module ===== -->
+<!-- ======================================================== -->
+<!--
+   This file was created by Gunther Stuhec of SAP AG and Garret Minakawa of Oracle
+   Last change: 24. March 2004
+
+  Core Component Types Schema Module 0.3 Revision 4
+
+  Copyright (C) UN/CEFACT (2004). All Rights Reserved.
+
+  This document and translations of it may be copied and furnished to others, and
+  derivative works that comment on or otherwise explain it or assist in its
+  implementation may be prepared, copied, published and distributed, in whole or
+  in part, without restriction of any kind, provided that the above copyright
+  notice and this paragraph are included on all such copies and derivative works.
+  However, this document itself may not be modified in any way, such as by
+  removing the copyright notice or references to UN/CEFACT, except as needed for the
+  purpose of developing UN/CEFACT specifications, in which case the procedures for
+  copyrights defined in the UN/CEFACT Intellectual Property Rights document must be
+  followed, or as required to translate it into languages other than English.
+
+  The limited permissions granted above are perpetual and will not be revoked by
+  UN/CEFACT or its successors or assigns.
+
+  This document and the information contained herein is provided on an "AS IS"
+  basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+  LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT
+  INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR
+  A PARTICULAR PURPOSE.
+
+  ===============================================================================
+
+  For our absent friend, Michael J. Adcock  - il miglior fabbro
+
+  ===============================================================================
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cct="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" targetNamespace="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- ===== Type Definitions ===== -->
+	<!-- ============================ -->
+	<!-- ===== CCT: AmountType ===== -->
+	<xsd:complexType name="AmountType" id="UNDT000001">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="currencyID" type="xsd:token" use="optional" id="UNDT000001-SC2"/>
+				<xsd:attribute name="codeListVersionID" type="xsd:token" use="optional" id="UNDT000001-SC3"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== CCT: BinaryObjectType ===== -->
+	<xsd:complexType name="BinaryObjectType" id="UNDT000002">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:base64Binary">
+				<xsd:attribute name="format" type="xsd:token" use="optional" id="UNDT000002-SC2"/>
+				<xsd:attribute name="mimeCode" type="xsd:token" use="optional" id="UNDT000002-SC3"/>
+				<xsd:attribute name="encodingCode" type="xsd:token" use="optional" id="UNDT000002-SC4"/>
+				<xsd:attribute name="characterSetCode" type="xsd:token" use="optional" id="UNDT000002-SC5"/>
+				<xsd:attribute name="URI" type="xsd:anyURI" use="optional" id="UNDT000002-SC6"/>
+				<xsd:attribute name="filename" type="xsd:token" use="optional" id="UNDT000002-SC7"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== CCT: CodeType ===== -->
+	<xsd:complexType name="CodeType" id="UNDT000007">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:token">
+				<xsd:attribute name="listID" type="xsd:token" use="optional" id="UNDT000007-SC2"/>
+				<xsd:attribute name="listAgencyID" type="xsd:token" use="optional" id="UNDT000007-SC3"/>
+				<xsd:attribute name="listAgencyName" type="xsd:token" use="optional" id="UNDT000007-SC4"/>
+				<xsd:attribute name="listName" type="xsd:token" use="optional" id="UNDT000007-SC5"/>
+				<xsd:attribute name="listVersionID" type="xsd:token" use="optional" id="UNDT000007-SC6"/>
+				<xsd:attribute name="name" type="xsd:token" use="optional" id="UNDT000007-SC7"/>
+				<xsd:attribute name="languageID" type="xsd:language" use="optional" id="UNDT000007-SC8"/>
+				<xsd:attribute name="listURI" type="xsd:anyURI" use="optional" id="UNDT000007-SC9"/>
+				<xsd:attribute name="listSchemeURI" type="xsd:anyURI" use="optional" id="UNDT000007-SC10"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== CCT: DateTimeType ===== -->
+	<xsd:complexType name="DateTimeType" id="UNDT000008">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:dateTime">
+				<xsd:attribute name="format" type="xsd:token" use="optional" id="UNDT000008-SC2"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== CCT: IdentifierType ===== -->
+	<xsd:complexType name="IdentifierType" id="UNDT000011">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:token">
+				<xsd:attribute name="schemeID" type="xsd:token" use="optional" id="UNDT000011-SC2"/>
+				<xsd:attribute name="schemeName" type="xsd:token" use="optional" id="UNDT000011-SC3"/>
+				<xsd:attribute name="schemeAgencyID" type="xsd:token" use="optional" id="UNDT000011-SC4"/>
+				<xsd:attribute name="schemeAgencyName" type="xsd:token" use="optional" id="UNDT000011-SC5"/>
+				<xsd:attribute name="schemeVersionID" type="xsd:token" use="optional" id="UNDT000011-SC6"/>
+				<xsd:attribute name="schemeDataURI" type="xsd:anyURI" use="optional" id="UNDT000011-SC7"/>
+				<xsd:attribute name="schemeURI" type="xsd:anyURI" use="optional" id="UNDT000011-SC8"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== CCT: IndicatorType ===== -->
+	<xsd:complexType name="IndicatorType" id="UNDT000012">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:boolean">
+				<xsd:attribute name="format" type="xsd:token" use="optional" id="UNDT000012-SC2"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== CCT: MeasureType ===== -->
+	<xsd:complexType name="MeasureType" id="UNDT000013">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="unitCode" type="xsd:token" use="optional" id="UNDT000013-SC2"/>
+				<xsd:attribute name="unitCodeListVersionID" type="xsd:token" use="optional" id="UNDT000013-SC3"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== CCT: NumericType ===== -->
+	<xsd:complexType name="NumericType" id="UNDT000014">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="format" type="xsd:token" use="optional" id="UNDT000014-SC2"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== CCT: QuantityType ===== -->
+	<xsd:complexType name="QuantityType" id="UNDT000018">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="unitCode" type="xsd:token" use="optional" id="UNDT000018-SC2"/>
+				<xsd:attribute name="unitCodeListID" type="xsd:token" use="optional" id="UNDT000018-SC3"/>
+				<xsd:attribute name="unitCodeListAgencyID" type="xsd:token" use="optional" id="UNDT000018-SC4"/>
+				<xsd:attribute name="unitCodeListAgencyName" type="xsd:token" use="optional" id="UNDT000018-SC5"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<!-- ===== CCT: TextType ===== -->
+	<xsd:complexType name="TextType" id="UNDT000019">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="languageID" type="xsd:token" use="optional" id="UNDT000019-SC2"/>
+				<xsd:attribute name="languageLocaleID" type="xsd:token" use="optional" id="UNDT000019-SC3"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>

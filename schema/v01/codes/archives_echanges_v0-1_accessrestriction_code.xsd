@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: AccessRestriction                 ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 31. January 2006
+
+  Liste des AccessRestriction, standard d'echange 0.1
+
+-->
+
+<xsd:schema version="1.0" 
+	    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	    xmlns:cct="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" 
+	    xmlns:ae="fr:gouv:ae:archive:draft:standard_echange_v0.1" 
+	    targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.1"  
+	    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<!-- ===================== Type Definition ========================= -->
+	<!-- =============================================================== -->
+	<!-- ===== Code List AccessRestriction: AccessRestriction Code ===== -->
+	<!-- =============================================================== -->
+
+  	<xsd:simpleType name="AccessRestrictionCodeType">
+	     <xsd:restriction base="xsd:token">
+
+	     <xsd:enumeration value="AR001">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Documents administratifs librement communicables</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>Loi du 17 juillet 1978</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	    </xsd:enumeration>
+
+	    <xsd:enumeration value="AR002">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Documents soumis au délai ordinaire</DocumentType>
+				<AdministrativeUtilityPeriod>30 ans</AdministrativeUtilityPeriod>
+				<Reference>Code du patrimoine, article 213-1</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	    </xsd:enumeration>
+
+	    <xsd:enumeration value="AR003">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Documents comportant des renseignements individuels de caractère médical</DocumentType>
+				<AdministrativeUtilityPeriod>150 ans à compter de la date de naissance</AdministrativeUtilityPeriod>
+				<Reference>Code du patrimoine, article 213-2</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	    </xsd:enumeration>
+
+	    <xsd:enumeration value="AR004">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Dossiers de personnel</DocumentType>
+				<AdministrativeUtilityPeriod>120 ans à compter de la date de naissance</AdministrativeUtilityPeriod>
+				<Reference>Code du patrimoine, article 213-2</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	     </xsd:enumeration>
+
+	     <xsd:enumeration value="AR005">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Documents relatifs aux affaires portées devant les juridictions, y compris les décisions de grâce</DocumentType>
+				<AdministrativeUtilityPeriod>100 ans à compter de la date de l'acte ou de la clôture du dossier</AdministrativeUtilityPeriod>
+				<Reference>Code du patrimoine, article 213-2</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	     </xsd:enumeration>
+
+	     <xsd:enumeration value="AR006">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Minutes et répertoires des notaires</DocumentType>
+				<AdministrativeUtilityPeriod>100 ans à compter de la date de l'acte ou de la clôture du dossier</AdministrativeUtilityPeriod>
+				<Reference>Code du patrimoine, article 213-2</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	     </xsd:enumeration>
+
+	     <xsd:enumeration value="AR007">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Registres de l'état civil et de l'enregistrement</DocumentType>
+				<AdministrativeUtilityPeriod>100 ans à compter de la date de l'acte ou de la clôture du dossier</AdministrativeUtilityPeriod>
+				<Reference>Code du patrimoine, article 213-2</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	     </xsd:enumeration>
+
+	     <xsd:enumeration value="AR008">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Documents contenant des renseignements individuels ayant trait à la vie personnelle et familiale et, d'une manière générale, aux faits et comportements d'ordre privé, collectés dans le cadre des enquêtes statistiques des services publics</DocumentType>
+				<AdministrativeUtilityPeriod>100 ans à compter de la date de recensement ou de l'enquête</AdministrativeUtilityPeriod>
+				<Reference>Code du patrimoine, article 213-2</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	    </xsd:enumeration>
+
+	    <xsd:enumeration value="AR009">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Documents qui contiennent des informations mettant en cause la vie privée</DocumentType>
+				<AdministrativeUtilityPeriod>60 ans à compter de la date de l'acte</AdministrativeUtilityPeriod>
+				<Reference>Code du patrimoine, article 213-2</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	    </xsd:enumeration>
+
+	    <xsd:enumeration value="AR010">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Documents intéressant la sûreté de l'Etat</DocumentType>
+				<AdministrativeUtilityPeriod>60 ans à compter de la date de l'acte</AdministrativeUtilityPeriod>
+				<Reference>Code du patrimoine, article 213-2</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	    </xsd:enumeration>
+
+	    <xsd:enumeration value="AR011">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Documents intéressant la défense nationale</DocumentType>
+				<AdministrativeUtilityPeriod>60 ans à compter de la date de l'acte</AdministrativeUtilityPeriod>
+				<Reference>Code du patrimoine, article 213-2</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	    </xsd:enumeration>
+
+	    <xsd:enumeration value="AR012">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Budgets et comptes des organismes privés ayant reçu une subvention publique</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>Loi du 12 avril 2000, article 20</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	    </xsd:enumeration>
+
+	    <xsd:enumeration value="AR013">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Procès-verbaux du conseil municipal, des budgets et des comptes de la commune et des arrêtés municipaux.</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>CGCT, article L. 2121-26</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	    </xsd:enumeration>
+
+	    <xsd:enumeration value="AR014">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Délibérations et procès-verbaux des séances publiques du conseil général, délibérations de la commission permanente, budgets et comptes du département, arrêtés du président du conseil général.</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>CGCT, article L. 3121-17</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	   </xsd:enumeration>
+
+	   <xsd:enumeration value="AR015">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Délibérations et procès-verbaux des séances publiques du conseil régional, délibérations de la commission permanente, budgets et comptes de la région, arrêtés du président du conseil régional.</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>CGCT, article L. 4132-16</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	   </xsd:enumeration>
+
+	   <xsd:enumeration value="AR016">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Procès-verbaux des organes délibérants des établissements publics de coopération intercommunale, budgets et comptes de ces établissements, arrêtés de leur président.</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>CGCT, article L. 5211-46</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	    </xsd:enumeration>
+
+	    <xsd:enumeration value="AR017">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Procès-verbaux des assemblées délibérantes des établissements publics de coopération interdépartementale, budgets, comptes, arrêtés des présidents de ces établissements publics.</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>CGCT, article L. 5421-5</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	   </xsd:enumeration>
+
+	   <xsd:enumeration value="AR018">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Procès-verbaux des assemblées délibérantes des établissements publics de coopération interrégionale, budgets, comptes, arrêtés des présidents de ces établissements publics.</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>CGCT, article L. 5621-9</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	   </xsd:enumeration>
+
+	   <xsd:enumeration value="AR019">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Procès-verbaux de l'organe délibérant des syndicats mixtes, budgets et comptes, arrêtés du président de ces établissements publics.</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>CGCT, article L. 5721-6</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR020">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Listes électorales.</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>Code électoral, article L. 28</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR021">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Listes d'émargement déposées à la préfecture ou à la sous-préfecture (pendant un délai de dix jours).</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Code électoral, article L. 68</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR022">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Les procès-verbaux des commissions chargées du recensement (pendant un délai de dix jours).</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Code électoral, article L.O. 179</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR023">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Extrait de rôle ou certificat de non-inscription au rôle, copie de l'avis de mise en recouvrement pour les impôts locaux et taxes annexes (à l'exclusion de la taxe départementale sur le revenu).</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Livre des procédures fiscales, article L. 104 (b)</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR024">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Liste des personnes assujetties à l'impôt sur le revenu, à l'impôt sur les sociétés, à la taxe départementale sur le revenu.</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Livre des procédures fiscales, article L. 111</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR025">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Documents, autres que les bordereaux d'inscription, déposés aux conservations des hypothèques (dans la limite des cinquante années précédant celle de la demande), inscriptions subsistantes, fichier immobilier.</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Code civil, article 2196</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR026">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Statuts et déclarations des associations, pièces faisant connaître les modifications de statuts et les changements survenus dans l'administration ou la direction.</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Décret du 16 août 1901, article 2</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR027">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Documents cadastraux</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Loi du 7 messidor an II</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR028">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Liste générale des objets mobiliers classés, documents nécessaires à l'élaboration de cette liste</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Loi du 31 décembre 1913, article 17</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR029">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Dossier médical</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Code de la santé publique, article L. 1111-7</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR030">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Mentions concernant le titulaire du permis de conduire.</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Code de la route, article L. 225-3</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR031">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Liste des assistants maternels agréés dans le département.</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Code de l'action sociale et des familles, article L. 421-8</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR032">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Registre des associations en Alsace-Moselle, pièces remises par l'association au tribunal d'instance.</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Code civil local d'Alsace-Moselle, article 79</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR033">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Dossier d'enquête publique relative à une opération susceptible d'affecter l'environnement</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Code de l'environnement, article L. 123-8</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR034">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Registre des acquisitions réalisées par préemption de la commune, avec l'utilisation effective des biens ainsi acquis.</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>Code de l'urbanisme, article L. 213-13</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR035">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Registre des contributions prescrites par l'autorisation ou l'acte mentionné à l'article L. 332-28 ainsi que celles exigées dans le cadre de la réalisation des zones d'aménagement concerté.</DocumentType>
+				<AdministrativeUtilityPeriod>0</AdministrativeUtilityPeriod>
+				<Reference>Code de l'urbanisme, article L. 332-29</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR036">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Projet de schéma de cohérence territoriale, de schéma de secteur et de plan local d'urbanisme.</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Code de l'urbanisme, article L. 121-5</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+
+	  <xsd:enumeration value="AR037">
+		<xsd:annotation>
+			<xsd:documentation>
+				<DocumentType>Casier judiciaire</DocumentType>
+				<AdministrativeUtilityPeriod></AdministrativeUtilityPeriod>
+				<Reference>Code de procédure pénale, article 772 et suivants</Reference>
+			</xsd:documentation>
+		</xsd:annotation>
+	  </xsd:enumeration>
+	 </xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

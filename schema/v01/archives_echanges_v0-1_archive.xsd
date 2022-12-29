@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ======================================================== -->
+<!-- =====                                              ===== -->
+<!-- =====                Archive                       ===== -->
+<!-- =====                                              ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 20. February 2006
+
+  Archive, standard d'echange 0.1
+  Prefix: AAESx1
+
+  Attention: cs schéma utilise le schéma archives_echanges_v0-1_organization.xsd
+ 
+-->
+
+<xsd:schema version="1.0" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:ccts="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" 
+            xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.1" 
+            targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.1"  
+            elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+<!-- ======================================================== -->
+<!-- ====                Imports                         ==== -->
+<!-- ======================================================== -->
+<!-- ======================================================== -->
+<!-- ====        Import of CoreComponentTypes            ==== -->
+<!-- ======================================================== -->
+
+<xsd:import namespace="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" schemaLocation="CoreComponentTypesSchemaModule_0.3.4.xsd"/>
+
+<!-- ======================================================== -->
+<!-- ====             Archive element                    ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="Archive" type="ArchiveType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="ArchiveType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>AAES000001</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Definition>Ensemble constitué d'un contenu d'information et de son information de pérennisation.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>Archive</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+
+                <xsd:sequence>
+
+                        <xsd:element name="ArchivalAgencyArchiveIdentifier" type="ccts:IdentifierType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.ArchivalAgencyArchiveIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de l'archive attribué par le service d'archive. L'identifiant pour l'émetteur du message est recommandé, si ce n'est obligatoire.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ArchivalAgencyArchiveIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ArchivalAgreement" type="ccts:IdentifierType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.ArchivalAgreementr</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Indique la convention d'archivage à appliquer pour l'archive..</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ArchivalAgreement</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ArchivalProfile" type="ccts:IdentifierType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.ArchivalProfile</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Indique la méthodologie de production de l'archive appliquée (structure adaptée au domaine particulier traité, par exemple archivage d'un dossier de marché public).</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ArchivalProfile</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DescriptionLanguage" type="ccts:CodeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.DescriptionLanguage</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Langue des descriptions.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DescriptionLanguage</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DescriptionLevel" type="ccts:CodeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-05</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.DescriptionLevel</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Indique si l'objet décrit est un groupe de documents, un sous-groupe de documents, un dossier, ou une pièce.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DescriptionLevel</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Name" type="ccts:TextType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-06</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.Name</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Intitulé du contenu d'information.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Name</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ServiceLevel" type="ccts:CodeType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-07</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.ServiceLevel</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Niveau de service demandé (disponibilité, sécurité...), en référence aux différents niveaux prévus par le contrat ou la convention passée entre le service versant et le service d'archives.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ServiceLevel</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="TransferringAgencyArchiveIdentifier" type="ccts:IdentifierType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-08</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.TransferringAgencyArchiveIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Identifiant d'archive fourni par le service versant. L'identifiant pour l'émetteur du message est recommandé, si ce n'est obligatoire..</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>TransferringAgencyArchiveIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ContentDescription" type="ContentDescriptionType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-09</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.ContentDescription</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Description du contenu de l'archive.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ContentDescription</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Document" type="DocumentType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-10</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.Attached</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Documents attachés.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Attached</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Contains" type="ArchiveObjectType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000001-11</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Archive.Contains</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Objet d'Archive.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Archive</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Contains</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+<!-- ======================================================== -->
+<!-- ====        ContentDescription element              ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ContentDescription" type="ContentDescriptionType"/>  
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="ContentDescriptionType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>AAES000002</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Definition>Informations sur le contenu de l'archive ou l'objet.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>ContentDescription</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+                <xsd:sequence>
+
+                        <xsd:element name="CustodialHistory" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.CustodialHistory</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Enumère les changements successifs de propriété, de responsabilité et de conservation de l'objet avant son entrée dans le lieu de conservation. On peut indiquer notamment comment s'est effectué le passage de l'application d'origine au fichier archivable.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>CustodialHistory</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Description" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.Description</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Permet de donner des précisions sur le contenu de l'objet. Il permet aussi de donner des précisions réservées aux professionnels et auxquelles le public ne doit pas avoir accès.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Description</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DescriptionAudience" type="ccts:CodeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.DescriptionAudience</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Permet d'indiquer si les précisions sur le contenu de l'objet sont à diffusion interne ou externe.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DescriptionAudience</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="FilePlanPosition" type="ccts:IdentifierType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.FilePlanPosition</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Classement de l'objet transféré dans le (ou les) plan(s) de classement du (ou des) producteur.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>FilePlanPosition</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Format" type="ccts:TextType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-05</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.Format</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Permet d'indiquer d'autres formats respectés par l'objet que ceux qui sont mentionnés dans les éléments BinaryObject (par exemple: le fichier pdf contient du texte avec des balises XML).</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Format</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Language" type="ccts:CodeType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-06</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.Language</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..n</ccts:Cardinality>
+                                <ccts:Definition>Langue du contenu de l'objet.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Language</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="LatestDate" type="ccts:DateTimeType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-07</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.LatestDate</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Date de fin du contenu.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>LatestDate</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="OldestDate" type="ccts:DateTimeType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-08</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.OldestDate</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Date et heure de début du contenu d'information.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>OldestDate</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="OtherDescriptiveData" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-09</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.OtherDescriptiveData</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Autres informations sur l'objet.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>OtherDescriptiveData</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="RelatedObjectReference" type="ccts:IdentifierType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-10</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.RelatedObjectReference</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Permet d'indiquer la référence d'un autre objet et la nature du lien avec ce dernier.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>RelatedObjectReference</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Size" type="ccts:MeasureType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-11</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.Size</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Taille de l'objet en octets, nombre d'entregistrements...</ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Size</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="OriginatingAgency" type="OrganizationType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-12</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.OriginatingAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Repository" type="OrganizationType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-13</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.Repository</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Repository</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ContentDescriptive" type="KeywordType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-14</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.ContentDescriptive</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ContentDescriptive</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Appraisal" type="RulesType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-15</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.Appraisal</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Appraisal</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="AccessRestriction" type="RulesType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000002-16</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ContentDescription.AccessRestriction</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ContentDescription</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>AccessRestriction</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+<!-- ======================================================== -->
+<!-- ====          ArchiveObject element                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveObject" type="ArchiveObjectType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="ArchiveObjectType">
+                          <xsd:annotation>      
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000003</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveObject</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Definition>Sous-ensemble d'une archive.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveObject</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>ArchiveObject</ccts:QualifierTermName>
+                                </xsd:documentation>
+                               </xsd:annotation>
+                <xsd:sequence>
+
+                        <xsd:element name="ArchivalAgencyObjectIdentifier" type="ccts:IdentifierType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000003-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveObject.ArchivalAgencyObjectIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de l'objet fourni par le service d'archives. L'identifiant pour l'émetteur du message est recommandé, si ce n'est obligatoire.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveObject</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ArchivalAgencyObjectIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DescriptionLevel" type="ccts:CodeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000003-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveObject.DescriptionLevel</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Indique si l'objet décrit est un groupe de documents, un sous-groupe de documents, un dossier, ou une pièce.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveObject</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DescriptionLevel</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Name" type="ccts:TextType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000003-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveObject.Name</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Intitulé du contenu d'information.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveObject</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Name</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="TransferringAgencyObjectIdentifier" type="ccts:IdentifierType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000003-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveObject.TransferringAgencyObjectIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de l'objet fourni par le service versant. L'identifiant pour l'émetteur du message est recommandé, si ce n'est obligatoire.Intitulé du contenu d'information.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveObject</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>TransferringAgencyObjectIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ContentDescription" type="ContentDescriptionType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000003-05</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveObject.ContentDescription</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveObject</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ContentDescription</ccts:PropertyTermName>
+                                </xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Document" type="DocumentType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000003-06</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveObject.Document</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveObject</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Document</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Contains" type="ArchiveObjectType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000003-07</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveObject.Contains</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveObject</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Contains</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+<!-- ======================================================== -->
+<!-- ====             Rules element                      ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="Rules" type="RulesType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="RulesType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>AAES000004</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Rules</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Definition>Règle à appliquer en matière d'accès ou de conservation de l'archive ou l'objet d'archive.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Rules</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>Rules</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+                <xsd:sequence>
+
+                        <xsd:element name="Code" type="ccts:CodeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000004-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Rules.Code</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Indique la règle à appliquer</ccts:Definition>
+                                <ccts:ObjectClassTermName>Rules</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Code</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="StartDate" type="ccts:DateTimeType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000004-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Rules.StartDateCode</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Date de départ du calcul</ccts:Definition>
+                                <ccts:ObjectClassTermName>Rules</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>StartDate</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+        
+<!-- ======================================================== -->
+<!-- ====           Keyword element                      ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="Keyword" type="KeywordType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="KeywordType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>AAES000005</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Keyword</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Definition>Mot-clé associé à une archive ou un objet d'archive.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Keyword</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>Keyword</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+
+                <xsd:sequence>
+
+                        <xsd:element name="KeywordAudience" type="ccts:CodeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000005-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Keyword.KeywordAudience</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Permet d'indiquer le caractère confidentiel d'un mot-clé.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Keyword</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>KeywordAudience</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="KeywordContent" type="ccts:TextType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000005-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Keyword.KeywordContent</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Valeur du mot-clé.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Keyword</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>KeywordContent</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="KeywordReference" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000005-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Keyword.KeywordReference</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Indique, s'il en a, l'identifiant du mot clé dans une liste déposée, par exemple pour un lieu son Code Officiel Géographique selon l'INSEE.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Keyword</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>KeywordReference</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="KeywordType" type="ccts:CodeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000005-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Keyword.KeywordType</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Type de mot clé.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Keyword</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>KeywordType</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                                </xsd:element>
+
+                        <xsd:element name="KeywordUnit" type="ccts:CodeType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000005-05</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Keyword.KeywordUnit</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Permet d'indiquer une éventuelle unité (monnaie, grandeur physique...) correspondant au contenu du mot-clé..</ccts:Definition>
+                                <ccts:ObjectClassTermName>Keyword</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>KeywordUnit</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+<!-- ======================================================== -->
+<!-- ====           Document element                     ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="Document" type="DocumentType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="DocumentType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>AAES000006</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Definition>Ensemble de données relatives à une pièce physique ou électronique qui fournit des informations ou des preuves.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>Document</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+
+                <xsd:sequence>
+                        <xsd:element name="Attachment" type="ccts:BinaryObjectType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Attachment</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..n</ccts:Cardinality>
+                                <ccts:Definition>Pièce jointe ou annexée. Dans une période transitoire, le même format peut aussi servir à indiquer une pièce "papier" et sa localisation.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Attachment</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Control" type="ccts:IndicatorType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Control</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Indique si des exigences de contrôle portent sur le document.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Control</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Copy" type="ccts:IndicatorType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Copy</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Indique s'il s'agit d'un original ou d'une copie.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Copy</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Creation" type="ccts:DateTimeType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Creation</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Date de création.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Creation</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Description" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-05</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Description</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Description du document.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Description</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Identification" type="ccts:IdentifierType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-06</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Identification</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Identifiant unique du document.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Identification</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Issue" type="ccts:DateTimeType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-07</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Issue</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Date d'émission du document.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Issue</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ItemIdentifier" type="ccts:IdentifierType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-08</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.ItemIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Identifiant unique d'un élément particulier dans le document.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ItemIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="MultipleType" type="ccts:IndicatorType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-09</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.MultipleType</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Indique si le document est ou non l'aggrégation de différents types de documents métier.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>MultipleType</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Name" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-10</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Name</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Désignation du document.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Name</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Purpose" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-11</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Purpose</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Objet ou objectif du document.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Purpose</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Receipt" type="ccts:DateTimeType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-12</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Receipt</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Date de réception.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Receipt</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Response" type="ccts:DateTimeType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-13</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Response</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Date de réponse.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Response</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Status" type="ccts:CodeType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-14</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Status</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Etat du document (par rapport avec son cycle de vie). Permet par exemple d'indiquer si la signature d'un document a été vérifiée avant transfert aux archives.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Status</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Submission" type="ccts:DateTimeType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-15</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Submission</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Date de soumission du document par un émetteur à un destinataire.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Submission</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Type" type="ccts:CodeType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>AAES000006-16</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>Document.Type</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Type de document, permet notamment de différencier un objet contenu et l'information de représentation ou de pérennisation de cet objet (OAIS), par exemple les données d'une base de données et le descriptif de sa structure.</ccts:Definition>
+                                <ccts:ObjectClassTermName>Document</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Type</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+</xsd:schema>

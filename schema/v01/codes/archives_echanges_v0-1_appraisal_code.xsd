@@ -1,0 +1,1631 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: AppraisalCode	                        ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 31. January 2006
+
+  Liste des type Appraisal, standard d'echange 0.1
+
+-->
+
+<xsd:schema version="1.0" 
+	    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	    xmlns:cct="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" 
+	    xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.1" 
+	    targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.1"  
+	    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<!-- ================ Type Definition =================== -->
+	<!-- ==================================================== -->
+	<!-- ===== Code List AppraisalCodeType: Appraisal Code ===== -->
+
+
+  	<xsd:simpleType name="AppraisalCodeType">
+	     <xsd:restriction base="xsd:token">
+		<xsd:enumeration value="001C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>1 an</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="001D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>1 an</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="002C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>2 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="002D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>2 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="003C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>3 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="003D">
+		        <xsd:annotation>
+			        <xsd:documentation>
+					<TimeOfKeeping>3 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+			        </xsd:documentation>
+		        </xsd:annotation>
+	        </xsd:enumeration>
+	        <xsd:enumeration value="004C">
+		        <xsd:annotation>
+		                <xsd:documentation>
+					<TimeOfKeeping>4 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+			        </xsd:documentation>
+		        </xsd:annotation>
+	        </xsd:enumeration>
+		<xsd:enumeration value="004D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>4 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="005C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>5 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="005D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>5 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="006C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>6 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="006D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>6 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="007C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>7 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="007D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>7 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="008C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>8 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="008D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>8 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="009C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>9 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="009D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>9 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="010C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>10 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="010D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>10 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="011C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>11 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="011D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>11 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="012C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>12 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="012D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>12 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="013C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>13 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="013D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>13 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="014C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>14 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="014D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>14 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="015C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>15 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="015D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>15 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="016C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>16 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="016D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>16 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="017C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>17 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="017D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>17 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="018C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>18 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="018D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>18 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="019C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>19 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="019D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>19 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="020C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>20 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="020D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>20 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="021C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>21 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="021D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>21 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="022C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>22 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="022D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>22 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="023C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>23 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="023D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>23 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="024C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>24 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="024D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>24 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="025C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>25 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="025D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>25 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="026C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>26 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="026D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>26 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="027C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>27 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="027D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>27 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="028C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>28 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="028D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>28 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="029C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>29 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="029D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>29 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="030C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>30 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="030D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>30 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="031C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>31 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="031D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>31 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="032C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>32 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="032D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>32 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="033C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>33 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="033D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>33 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="034C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>34 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="034D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>34 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="035C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>35 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="035D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>35 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="036C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>36 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="036D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>36 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="037C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>37 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="037D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>37 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="038C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>38 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="038D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>38 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="039C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>39 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="039D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>39 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="040C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>40 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="040D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>40 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="041C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>41 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="041D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>41 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="042C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>42 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="042D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>42 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="043C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>43 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="043D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>43 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="044C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>44 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="044D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>44 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="045C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>45 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="045D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>45 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="046C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>46 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="046D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>46 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="047C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>47 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="047D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>47 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="048C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>48 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="048D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>48 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="049C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>49 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="049D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>49 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="050C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>50 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="050D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>50 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="051C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>51 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="051D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>51 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="052C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>52 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="052D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>52 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="053C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>53 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="053D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>53 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="054C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>54 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="054D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>54 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="055C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>55 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="055D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>55 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="056C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>56 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="056D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>56 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="057C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>57 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="057D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>57 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="058C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>58 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="058D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>58 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="059C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>59 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="059D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>59 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="060C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>60 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="060D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>60 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="061C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>61 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="061D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>61 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="062C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>62 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="062D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>62 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="063C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>63 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="063D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>63 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="064C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>64 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="064D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>64 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="065C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>65 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="065D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>65 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="066C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>66 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="066D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>66 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="067C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>67 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="067D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>67 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="068C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>68 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="068D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>68 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="069C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>69 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="069D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>69 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="070C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>70 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="070D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>70 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="071C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>71 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="071D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>71 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="072C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>72 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="072D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>72 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="073C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>73 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="073D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>73 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="074C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>74 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="074D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>74 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="075C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>75 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="075D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>75 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="076C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>76 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="076D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>76 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="077C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>77 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="077D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>77 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="078C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>78 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="078D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>78 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="079C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>79 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="079D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>79 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="080C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>80 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="080D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>80 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="081C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>81 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="081D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>81 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="082C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>82 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="082D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>82 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="083C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>83 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="083D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>83 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="084C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>84 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="084D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>84 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="085C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>85 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="085D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>85 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="086C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>86 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="086D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>86 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="087C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>87 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="087D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>87 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="088C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>88 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="088D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>88 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="089C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>89 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="089D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>89 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="090C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>90 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="090D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>90 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="091C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>91 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="091D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>91 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="092C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>92 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="092D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>92 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="093C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>93 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="093D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>93 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="094C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>94 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="094D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>94 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="095C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>95 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="095D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>95 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="096C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>96 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="096D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>96 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="097C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>97 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="097D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>97 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="098C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>98 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="098D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>98 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="099C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>99 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="099D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>99 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="100C">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>100 ans</TimeOfKeeping>
+					<FinalDestination>Conserver</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="100D">
+			<xsd:annotation>
+				<xsd:documentation>
+					<TimeOfKeeping>100 ans</TimeOfKeeping>
+					<FinalDestination>Détruire</FinalDestination>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+	 </xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>		

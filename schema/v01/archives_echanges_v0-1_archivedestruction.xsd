@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ======================================================== -->
+<!-- =====                                              ===== -->
+<!-- =====           ArchiveDestruction                 ===== -->
+<!-- =====                                              ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 16. February 2006
+
+  ArchiveDestruction Messages, standard d'echange 0.1
+  Prefix=ADSAES
+
+-->
+
+<xsd:schema version="1.0" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:ccts="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" 
+            xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.1" 
+            targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.1"  
+            elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<!-- ======================================================== -->
+<!-- ====                Includes                        ==== -->
+<!-- ======================================================== -->
+
+
+<xsd:include schemaLocation="archives_echanges_v0-1_archive.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_signature.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_organization.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_hashcode.xsd"/>
+
+<!-- ======================================================== -->
+<!-- ====                Imports                         ==== -->
+<!-- ======================================================== -->
+<!-- ======================================================== -->
+<!-- ====        Import of CoreComponentTypes            ==== -->
+<!-- ======================================================== -->
+
+<xsd:import namespace="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" schemaLocation="CoreComponentTypesSchemaModule_0.3.4.xsd"/>
+
+
+
+<!-- ======================================================== -->
+<!-- ====       ArchiveDestructionRequest Message        ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveDestructionRequest" type="ArchiveDestructionRequestType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="ArchiveDestructionRequestType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000001</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequest</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText>Demande d'élimination d'archives</ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequest</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveDestructionRequest</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+
+                <xsd:sequence>
+
+                <xsd:element name="Comment" type="ccts:TextType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000001-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequest.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequest</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000001-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequest.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date de la demande d'élimination ou de la demande d'autorisation d'élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequest</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionRequestIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000001-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequest.DestructionRequestIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la demande d'élimination ou de la demande d'autorisation d'élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequest</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionRequestIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000001-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequest.UnitIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Tout identifiant permettant de reconnaître le contenu susceptible d'être éliminé</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequest</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="OriginatingAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000001-05</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequest.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequest</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSES000001-06</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequest.ArchivalAgencyr</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequest</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ControlAuthority" type="OrganizationType" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000001-07</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequest.ControlAuthorityr</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequest</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ControlAuthority</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Integrity" type="HashCodeType" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000001-08</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequest.Integrity</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequest</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Integrity</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Archive" type="ArchiveType"  maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000001-09</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequest.Archive</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequest</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Archive</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+
+<!-- ======================================================== -->
+<!-- ====   ArchiveDestructionRequestReply Message       ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveDestructionRequestReply" type="ArchiveDestructionRequestReplyType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="ArchiveDestructionRequestReplyType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000002</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText>Réponse à une demande de destruction d'archives (accusé de réception, rejet, anomalie, commentaires, réponse des services de contrôle...)</ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveDestructionRequestReply</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+
+                <xsd:sequence>
+
+                <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000002-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000002-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date de la réponse à la demande d'élimination ou à la demande d'autorisation d'élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionRequestIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000002-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply.DestructionRequestIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la demande d'élimination ou de la demande d'autorisation d'élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionRequestIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionRequestReplyIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000002-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply.DestructionRequestReplyIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la réponse à la demande d'élimination ou à la demande d'autorisation d'élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionRequestReplyIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000002-05</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply.ReplyCode</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ReplyCode</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000002-06</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply.UnitIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Tout identifiant permettant de reconnaître le contenu susceptible d'être éliminé</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="OriginatingAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000002-07</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSES000002-08</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply.ArchivalAgencyr</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ControlAuthority" type="OrganizationType" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000002-09</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply.ControlAuthorityr</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ControlAuthority</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000002-10</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReply.NonRepudiation</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>NonRepudiation</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+<!-- ======================================================== -->
+<!-- ====     ArchiveDestructionAcceptance Message       ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveDestructionAcceptance" type="ArchiveDestructionAcceptanceType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="ArchiveDestructionAcceptanceType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000003</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText>Accord pour la destruction d'archives</ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveDestructionAcceptance</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+
+                <xsd:sequence>
+                        
+                        <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000003-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000003-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date de l'accord pour élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionAcceptanceIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000003-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.DestructionAcceptanceIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identification de l'accord pour élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionAcceptanceIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionRequestIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000003-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.DestructionRequestIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la demande d'élimination ou de la demande d'autorisation d'élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionRequestIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000003-05</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.ReplyCode</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ReplyCode</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000003-06</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.UnitIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Tout identifiant permettant de reconnaître le contenu susceptible d'être éliminé</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="OriginatingAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000003-07</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSES000003-08</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.ArchivalAgencyr</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ControlAuthority" type="OrganizationType" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000003-09</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.ControlAuthorityr</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ControlAuthority</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000003-10</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.NonRepudiation</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>NonRepudiation</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Archive" type="ArchiveType"  maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000003-11</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionAcceptance.Archive</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Archive</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+        
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+<!-- ==================================================================== -->
+<!-- ==== ArchiveDestructionRequestReplyReplyAcknowledgement Message ==== -->
+<!-- ==================================================================== -->
+
+        <xsd:element name="ArchiveDestructionRequestReplyReplyAcknowledgement" type="ArchiveDestructionRequestReplyReplyAcknowledgementType"/>
+
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="ArchiveDestructionRequestReplyReplyAcknowledgementType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000004</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText>Accusé de réception de la réponse négative à une demande d'élimination d'archives</ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+
+                <xsd:sequence>
+
+                <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000004-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000004-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date de l'accusé de réception de la réponse à la demande d'élimination ou à la demande d'autorisation d'élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionRequestReplyAcknowledgementIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000004-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement.DestructionRequestReplyAcknowledgementIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de l'accusé de réception de la réponse à la demande d'élimination ou à la demande d'autorisation d'élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionRequestReplyAcknowledgementIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionRequestReplyIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000004-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement.DestructionRequestReplyIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la réponse à la demande d'élimination ou à la demande d'autorisation d'élimination</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionRequestReplyIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000004-05</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement.ReplyCode</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ReplyCode</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000004-06</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement.UnitIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Tout identiant permettant de reconnaître le contenu à éliminer</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+        
+                <xsd:element name="OriginatingAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000004-07</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSES000004-08</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement.ArchivalAgencyr</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ControlAuthority" type="OrganizationType" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000004-09</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement.ControlAuthorityr</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ControlAuthority</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000004-10</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionRequestReplyReplyAcknowledgement.NonRepudiation</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionRequestReplyReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>NonRepudiation</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+<!-- ======================================================== -->
+<!-- ====     ArchiveDestructionNotification Message     ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveDestructionNotification" type="ArchiveDestructionNotificationType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="ArchiveDestructionNotificationType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>ADSAES000005</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText></ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveDestructionNotification</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveDestructionNotification</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+
+                <xsd:sequence>
+
+                <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000005-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000005-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionAcceptanceIdentifier" type="ccts:IdentifierType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000005-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.DestructionAcceptanceIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionAcceptanceIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionDate" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000005-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.DestructionDate</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionDate</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionNotificationIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000005-05</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.DestructionNotificationIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionNotificationIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="DestructionRequestIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000005-06</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.DestructionRequestIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>DestructionRequestIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000005-07</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.UnitIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Tout identiant permettant de reconnaître le contenu à éliminer</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+        
+                <xsd:element name="OriginatingAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSAES000005-08</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ADSES000005-09</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveDestructionNotification.ArchivalAgencyr</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveDestructionNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+</xsd:schema>

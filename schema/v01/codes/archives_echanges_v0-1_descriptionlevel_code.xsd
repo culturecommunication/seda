@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: Description Level                 ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 31. January 2006
+
+  Liste de code des niveaux de description, standard d'echange 0.1
+
+-->
+
+<xsd:schema version="1.0" 
+	    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	    xmlns:cct="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" 
+	    xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.1" 
+	    targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.1"  
+	    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+	<!-- ================ Type Definitions ================== -->
+	<!-- ==================================================== -->
+	<!-- ===== Code List DescriptionLevel: DescriptionLevel Code ===== -->
+  	<xsd:simpleType name="LevelDescriptionType">
+	     <xsd:restriction base="xsd:token">
+		<xsd:enumeration value="class">
+		<xsd:annotation>
+		      <xsd:documentation>
+		      <name>Classe</name>
+		      <description>Cette valeur, issue de la tradition archivistique allemande, ne correspond pas pour l'instant aux pratiques archivistiques françaises</description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="collection">
+		<xsd:annotation>
+		      <xsd:documentation>
+		      <name>Collection</name>
+		      <description>Réunion artificielle de documents en fonction de critères communs liés à leur contenu ou à leur support, sans considération de leur provenance, par opposition au fonds d'archives constitué de façon organique</description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="file">
+		<xsd:annotation>
+		      <xsd:documentation>
+		      <name>Dossier</name>
+		      <description>ensemble de documents regroupés, soit par le producteur pour son usage courant, soit dans le processus du classement d'archives, parce qu'ils concernent un même sujet ou une même affaire; le dossier est ordinairement l'unité de base à l'intérieur d'une série organique</description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="fonds">
+		<xsd:annotation>
+		      <xsd:documentation>
+		      <name>Fonds</name>
+		      <description>ensemble de documents quels que soit leur type et leur support, créé ou reçu de manière organique et utilisé par une personne physique ou morale dans l'exercice de ses activités</description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="item">
+		<xsd:annotation>
+		      <xsd:documentation>
+		      <name>Item</name>
+		      <description>plus petite unité documentaire, par exemple une lettre, un mémoire, un rapport, une photographie, un enregistrement sonore</description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="recordgrp">
+		<xsd:annotation>
+		      <xsd:documentation>
+		      <name>Groupe de documents</name>
+		      <description>niveau de description intermédiaire qui ne correspond pas à une division organique (sous-fonds, série ou sous-série organique); parties au sein d'une collection, versements,  épaves d'un fonds, subdivisions de fonds dont on ne connait pas la nature exacte, sous-ensemble classés thématiquement</description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="series">
+		<xsd:annotation>
+		      <xsd:documentation>
+		      <name>Serie organique</name>
+		      <description>division organique d'un fonds, correspondant à un ensemble de dossiers maintenus groupés parce qu'ils résultent d'une même activité, se rapportent à une même fonction ou à un même sujet ou revêtent une même forme</description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="subfonds">
+		<xsd:annotation>
+		      <xsd:documentation>
+		      <name>Sous fonds</name>
+		      <description>division organique d'un fonds correspondant aux divisions administratives de l'institution ou de l'organisme producteur, ou, à défaut,  à un regroupement géographique, chronologique, fonctionnel ou autre des documents; quand le producteur a une structure hiérarchique complexe , chaque sous-fonds est lui-même subdivisé, autant que nécessaire pour refléter les niveaux hiérarchiques</description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="subgrp">
+		<xsd:annotation>
+		      <xsd:documentation>
+		      <name>Sous-groupe de documents</name>
+		      <description>subdivision du groupe de documents</description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+		<xsd:enumeration value="subseries">
+		<xsd:annotation>
+		      <xsd:documentation>
+		      <name>Sous-série organique</name>
+		      <description>subdivision de la série organique</description>
+		      </xsd:documentation>
+		</xsd:annotation>
+                </xsd:enumeration>
+	     </xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

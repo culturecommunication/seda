@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- ======================================================== -->
+<!-- ===== Code List: File Type Code                    ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 31. January 2006
+
+  Liste de code des types de fichiers, standard d'echange 0.1
+
+-->
+
+<xsd:schema version="1.0" 
+	    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	    xmlns:cct="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" 
+	    xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.1" 
+	    targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.1"  
+	    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+
+	<!-- ================ Type Definitions ================== -->
+	<!-- ==================================================== -->
+	<!-- ===== Code List Type Definition: FileType Code ===== -->
+
+	<xsd:simpleType name="FileTypeCodeType">
+		<xsd:restriction base="xsd:token">
+			 <xsd:enumeration value="HTML">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Hypertext Markup Language</Name>
+				     <Version></Version>
+				     <PRONOMIdentifier>fmt/96</PRONOMIdentifier>
+				     <MimeType>text/html</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="HTML(2.0)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Hypertext Markup Language</Name>
+				     <Version>2.0</Version>
+				     <PRONOMIdentifier>fmt/97</PRONOMIdentifier>
+				     <MimeType>text/html</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="HTML(3.2)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Hypertext Markup Language</Name>
+				     <Version>3.2</Version>
+				     <PRONOMIdentifier>fmt/98</PRONOMIdentifier>
+				     <MimeType>text/html</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="HTML(4.0)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Hypertext Markup Language</Name>
+				     <Version>4.0</Version>
+				     <PRONOMIdentifier>fmt/99</PRONOMIdentifier>
+				     <MimeType>text/html</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="HTML(4.01)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Hypertext Markup Language</Name>
+				     <Version>4.01</Version>
+				     <PRONOMIdentifier>fmt/100</PRONOMIdentifier>
+				     <MimeType>text/html</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="PDF(1.0)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Portable Document Format</Name>
+				     <Version>1.0</Version>
+				     <PRONOMIdentifier>fmt/14</PRONOMIdentifier>
+				     <MimeType>application/pdf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="PDF(1.1)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Portable Document Format</Name>
+				     <Version>1.1</Version>
+				     <PRONOMIdentifier>fmt/15</PRONOMIdentifier>
+				     <MimeType>application/pdf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="PDF(1.2)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Portable Document Format</Name>
+				     <Version>1.2</Version>
+				     <PRONOMIdentifier>fmt/16</PRONOMIdentifier>
+				     <MimeType>application/pdf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="PDF(1.3)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Portable Document Format</Name>
+				     <Version>1.3</Version>
+				     <PRONOMIdentifier>fmt/17</PRONOMIdentifier>
+				     <MimeType>application/pdf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="PDF(1.4)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Portable Document Format</Name>
+				     <Version>1.4</Version>
+				     <PRONOMIdentifier>fmt/18</PRONOMIdentifier>
+				     <MimeType>application/pdf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="PDF(1.5)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Portable Document Format</Name>
+				     <Version>1.5</Version>
+				     <PRONOMIdentifier>fmt/19</PRONOMIdentifier>
+				     <MimeType>application/pdf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="PDF(1.6)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Portable Document Format</Name>
+				     <Version>1.6</Version>
+				     <PRONOMIdentifier>fmt/20</PRONOMIdentifier>
+				     <MimeType>application/pdf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="RTF(1.0)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Rich Text Format</Name>
+				     <Version>1.0</Version>
+				     <PRONOMIdentifier>fmt/45</PRONOMIdentifier>
+				     <MimeType>text/rtf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="RTF(1.1)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Rich Text Format</Name>
+				     <Version>1.1</Version>
+				     <PRONOMIdentifier>fmt/46</PRONOMIdentifier>
+				     <MimeType>text/rtf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="RTF(1.2)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Rich Text Format</Name>
+				     <Version>1.2</Version>
+				     <PRONOMIdentifier>fmt/47</PRONOMIdentifier>
+				     <MimeType>text/rtf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="RTF(1.3)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Rich Text Format</Name>
+				     <Version>1.3</Version>
+				     <PRONOMIdentifier>fmt/48</PRONOMIdentifier>
+				     <MimeType>text/rtf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="RTF(1.4)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Rich Text Format</Name>
+				     <Version>1.4</Version>
+				     <PRONOMIdentifier>fmt/49</PRONOMIdentifier>
+				     <MimeType>text/rtf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="RTF(1.5)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Rich Text Format</Name>
+				     <Version>1.5</Version>
+				     <PRONOMIdentifier>fmt/50</PRONOMIdentifier>
+				     <MimeType>text/rtf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="RTF(1.6)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Rich Text Format</Name>
+				     <Version>1.6</Version>
+				     <PRONOMIdentifier>fmt/51</PRONOMIdentifier>
+				     <MimeType>text/rtf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="RTF(1.7)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Rich Text Format</Name>
+				     <Version>1.7</Version>
+				     <PRONOMIdentifier>fmt/52</PRONOMIdentifier>
+				     <MimeType>text/rtf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="RTF(1.8)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Rich Text Format</Name>
+				     <Version>1.8</Version>
+				     <PRONOMIdentifier>fmt/53</PRONOMIdentifier>
+				     <MimeType>text/rtf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>	
+			 <xsd:enumeration value="SGML">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Standard Generalized Markup Language</Name>
+				     <Version></Version>
+				     <PRONOMIdentifier></PRONOMIdentifier>
+				     <MimeType>text/sgml</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			     </xsd:enumeration>
+			 <xsd:enumeration value="TXT">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Plain Text File</Name>
+				     <Version></Version>
+				     <PRONOMIdentifier></PRONOMIdentifier>
+				     <MimeType>text/plain</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="XML(1.0)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Documents</Category>
+				     <Name>Extensible Markup Language</Name>
+				     <Version>1.0</Version>
+				     <PRONOMIdentifier>fmt/101</PRONOMIdentifier>
+				     <MimeType>text/xml</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			   </xsd:enumeration>
+			 <xsd:enumeration value="CSV">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Echange de Base de données</Category>
+				     <Name>Comma Separated Value</Name>
+				     <Version></Version>
+				     <PRONOMIdentifier></PRONOMIdentifier>
+				     <MimeType>text/csv</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="GIF(1987a)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>Graphics Interchange Format</Name>
+				     <Version>1987a</Version>
+				     <PRONOMIdentifier>fmt/3</PRONOMIdentifier>
+				     <MimeType>image/gif</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="GIF(1989a)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>Graphics Interchange Format</Name>
+				     <Version>1989a</Version>
+				     <PRONOMIdentifier>fmt/4</PRONOMIdentifier>
+				     <MimeType>image/gif</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="JFIF(1.00)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>JPEG File Interchange Format</Name>
+				     <Version>1.00</Version>
+				     <PRONOMIdentifier>fmt/42</PRONOMIdentifier>
+				     <MimeType>image/jpeg</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="JFIF(1.01)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>JPEG File Interchange Format</Name>
+				     <Version>1.01</Version>
+				     <PRONOMIdentifier>fmt/43</PRONOMIdentifier>
+				     <MimeType>image/jpeg</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="JFIF(1.02)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>JPEG File Interchange Format</Name>
+				     <Version>1.02</Version>
+				     <PRONOMIdentifier>fmt/44</PRONOMIdentifier>
+				     <MimeType>image/jpeg</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="PNG(1.0)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>Portable Network Graphics</Name>
+				     <Version>1.0</Version>
+				     <PRONOMIdentifier>fmt/11</PRONOMIdentifier>
+				     <MimeType>image/png</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="PNG(1.1)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>Portable Network Graphics</Name>
+				     <Version>1.1</Version>
+				     <PRONOMIdentifier>fmt/12</PRONOMIdentifier>
+				     <MimeType>image/png</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="PNG(1.2)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>Portable Network Graphics</Name>
+				     <Version>1.2</Version>
+				     <PRONOMIdentifier>fmt/13</PRONOMIdentifier>
+				     <MimeType>image/png</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="TIFF(3)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>Tagged Image File Format</Name>
+				     <Version>3</Version>
+				     <PRONOMIdentifier>fmt/7</PRONOMIdentifier>
+				     <MimeType>image/tiff</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="TIFF(4)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>Tagged Image File Format</Name>
+				     <Version>4</Version>
+				     <PRONOMIdentifier>fmt/8</PRONOMIdentifier>
+				     <MimeType>image/tiff</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="TIFF(5)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>Tagged Image File Format</Name>
+				     <Version>5</Version>
+				     <PRONOMIdentifier>fmt/9</PRONOMIdentifier>
+				     <MimeType>image/tiff</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="TIFF(6)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Images Fixes</Category>
+				     <Name>Tagged Image File Format</Name>
+				     <Version>6</Version>
+				     <PRONOMIdentifier>fmt/10</PRONOMIdentifier>
+				     <MimeType>image/tiff</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="MP3">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Flux de données audio</Category>
+				     <Name>MPEG 1/2 Audio Layer 3</Name>
+				     <Version></Version>
+				     <PRONOMIdentifier>fmt/134</PRONOMIdentifier>
+				     <MimeType>audio/mpeg</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="WAVE(0)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Flux de données audio</Category>
+				     <Name>Broadcast WAVE</Name>
+				     <Version>0</Version>
+				     <PRONOMIdentifier>fmt/1</PRONOMIdentifier>
+				     <MimeType></MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="WAVE(1)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Flux de données audio</Category>
+				     <Name>Broadcast WAVE</Name>
+				     <Version>1</Version>
+				     <PRONOMIdentifier>fmt/2</PRONOMIdentifier>
+				     <MimeType></MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DV">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Flux audiovisuels</Category>
+				     <Name>Digital Video</Name>
+				     <Version></Version>
+				     <PRONOMIdentifier></PRONOMIdentifier>
+				     <MimeType>video/DV</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="MPEG2">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Flux audiovisuels</Category>
+				     <Name>MPEG-2 Video Format</Name>
+				     <Version></Version>
+				     <PRONOMIdentifier></PRONOMIdentifier>
+				     <MimeType>video/mpeg</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="MPEG4">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Flux audiovisuels</Category>
+				     <Name>MPEG-4 Video Format</Name>
+				     <Version></Version>
+				     <PRONOMIdentifier></PRONOMIdentifier>
+				     <MimeType>video/mpeg</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="CGM">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Computer Graphics Metafile</Name>
+				     <Version></Version>
+				     <PRONOMIdentifier></PRONOMIdentifier>
+				     <MimeType>image/cgm</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DXF(1.0)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Drawing Interchange File Format</Name>
+				     <Version>1.0</Version>
+				     <PRONOMIdentifier>fmt/64</PRONOMIdentifier>
+				     <MimeType>image/vnd.dxf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DXF(1.2)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Drawing Interchange File Format</Name>
+				     <Version>1.2</Version>
+				     <PRONOMIdentifier>fmt/65</PRONOMIdentifier>
+				     <MimeType>image/vnd.dxf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DXF(1.3)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Drawing Interchange File Format</Name>
+				     <Version>1.3</Version>
+				     <PRONOMIdentifier>fmt/66</PRONOMIdentifier>
+				     <MimeType>image/vnd.dxf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DXF(1.4)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Drawing Interchange File Format</Name>
+				     <Version>1.4</Version>
+				     <PRONOMIdentifier>fmt/67</PRONOMIdentifier>
+				     <MimeType>image/vnd.dxf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DXF(2.0)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Drawing Interchange File Format</Name>
+				     <Version>2.0</Version>
+				     <PRONOMIdentifier>fmt/68</PRONOMIdentifier>
+				     <MimeType>image/vnd.dxf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DXF(2.1)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Drawing Interchange File Format</Name>
+				     <Version>2.1</Version>
+				     <PRONOMIdentifier>fmt/69</PRONOMIdentifier>
+				     <MimeType>image/vnd.dxf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DXF(2.2)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Drawing Interchange File Format</Name>
+				     <Version>2.2</Version>
+				     <PRONOMIdentifier>fmt/70</PRONOMIdentifier>
+				     <MimeType>image/vnd.dxf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DXF(2.5)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Drawing Interchange File Format</Name>
+				     <Version>2.5</Version>
+				     <PRONOMIdentifier>fmt/71</PRONOMIdentifier>
+				     <MimeType>image/vnd.dxf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DXF(2.6)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Drawing Interchange File Format</Name>
+				     <Version>2.6</Version>
+				     <PRONOMIdentifier>fmt/72</PRONOMIdentifier>
+				     <MimeType>image/vnd.dxf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="DXF(2000-2002)">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Drawing Interchange File Format</Name>
+				     <Version>2000-2002</Version>
+				     <PRONOMIdentifier>fmt/78</PRONOMIdentifier>
+				     <MimeType>image/vnd.dxf</MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+			 <xsd:enumeration value="STEP">
+			       <xsd:annotation>
+			             <xsd:documentation>
+				     <Category>Plans vectoriels</Category>
+				     <Name>Standard for the Exchange of Product</Name>
+				     <Version></Version>
+				     <PRONOMIdentifier></PRONOMIdentifier>
+				     <MimeType></MimeType>
+				     </xsd:documentation>
+			       </xsd:annotation>
+			  </xsd:enumeration>
+	</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

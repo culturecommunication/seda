@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ======================================================== -->
+<!-- =====                                              ===== -->
+<!-- =====           ArchiveModification                ===== -->
+<!-- =====                                              ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 16. February 2006
+
+  ArchiveModification Messages, standard d'echange 0.1
+  Prefix=AMAES
+
+-->
+
+<xsd:schema version="1.0" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:ccts="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" 
+            xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.1" 
+            targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.1"  
+            elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<!-- ======================================================== -->
+<!-- ====                Includes                        ==== -->
+<!-- ======================================================== -->
+
+
+<xsd:include schemaLocation="archives_echanges_v0-1_archive.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_signature.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_organization.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_hashcode.xsd"/>
+
+<!-- ======================================================== -->
+<!-- ====                Imports                         ==== -->
+<!-- ======================================================== -->
+<!-- ======================================================== -->
+<!-- ====        Import of CoreComponentTypes            ==== -->
+<!-- ======================================================== -->
+
+<xsd:import namespace="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" schemaLocation="CoreComponentTypesSchemaModule_0.3.4.xsd"/>
+
+
+
+<!-- ======================================================== -->
+<!-- ====   ArchiveModificationNotification Message      ==== -->
+<!-- ======================================================== -->
+
+<xsd:element name="ArchiveModificationNotification" type="ArchiveModificationNotificationType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="ArchiveModificationNotificationType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>AMAES000001</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotification</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText>Notification de modification d'archives (format ou métadonnées)</ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotification</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveModificationNotification</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+
+                <xsd:sequence>
+
+                <xsd:element name="Comment" type="ccts:TextType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000001-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotification.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Indique la modification effectuée (modification des données, des métadonnées...)</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000001-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotification.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date de la notification de modification</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ModificationDate" type="ccts:DateTimeType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000001-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotification.ModificationDate</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Date de la modification</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ModificationDate</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ModificationNotificationIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000001-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotification.ModificationNotificationIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identification de la notification de modification</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ModificationNotificationIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000001-05</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotification.UnitIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Tout identifiant permettant de reconnaître l'archive ou l'objet modifié</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="OriginatingAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMES000001-06</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotification.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMES000001-07</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotification.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotification</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+<!-- =============================================================== -->
+<!-- ==== ArchiveModificationNotificationAcknowledgement Message ==== -->
+<!-- ================================================================ -->
+
+<xsd:element name="ArchiveModificationNotificationAcknowledgement" type="ArchiveModificationNotificationAcknowledgementType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="ArchiveModificationNotificationAcknowledgementType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>AMAES000002</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotificationAcknowledgement</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText>Accusé de réception d'une notification de modification d'archives)</ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotificationAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveModificationNotificationAcknowledgement</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+
+                <xsd:sequence>
+
+                <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000002-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotificationAcknowledgement.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotificationAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000002-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotificationAcknowledgement.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date de l'accusé de réception de la notification de modification</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotificationAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ModificationNotificationAcknowledgementIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000002-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotificationAcknowledgement.ModificationNotificationAcknowledgementIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de l'accusé de réception de la notification de modification</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotificationAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ModificationNotificationAcknowledgementIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ModificationNotificationIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000002-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotificationAcknowledgement.ModificationNotificationIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la notification de modification</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotificationAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ModificationNotificationIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000002-05</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotificationAcknowledgement.ReplyCode</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotificationAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ReplyCode</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000002-06</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotificationAcknowledgement.UnitIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Tout identifiant permettant de reconnaître l'archive ou l'objet modifié</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotificationAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="OriginatingAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000002-07</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotificationAcknowledgement.OriginatingAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotificationAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000002-08</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotificationAcknowledgement.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotificationAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>AMAES000002-09</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveModificationNotificationAcknowledgement.NonRepudiation</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveModificationNotificationAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>NonRepudiation</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+</xsd:schema>

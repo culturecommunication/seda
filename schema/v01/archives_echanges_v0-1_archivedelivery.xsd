@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ======================================================== -->
+<!-- =====                                              ===== -->
+<!-- =====              ArchiveDelivery                 ===== -->
+<!-- =====                                              ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 16. February 2006
+
+  ArchiveDelivery Messages, standard d'echange 0.1
+  Prefix=ADYAES
+
+-->
+
+<xsd:schema version="1.0" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:ccts="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" 
+            xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.1" 
+            targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.1"  
+            elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<!-- ======================================================== -->
+<!-- ====                Includes                        ==== -->
+<!-- ======================================================== -->
+
+
+<xsd:include schemaLocation="archives_echanges_v0-1_archive.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_signature.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_organization.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_hashcode.xsd"/>
+
+<!-- ======================================================== -->
+<!-- ====                Imports                         ==== -->
+<!-- ======================================================== -->
+<!-- ======================================================== -->
+<!-- ====        Import of CoreComponentTypes            ==== -->
+<!-- ======================================================== -->
+
+<xsd:import namespace="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" schemaLocation="CoreComponentTypesSchemaModule_0.3.4.xsd"/>
+
+
+<!-- ======================================================== -->
+<!-- ====        ArchiveDeliveryRequest Message          ==== -->
+<!-- ======================================================== -->
+
+<xsd:element name="ArchiveDeliveryRequest" type="ArchiveDeliveryRequestType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="ArchiveDeliveryRequestType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000001</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequest</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:DefinitionText>Demande de communication d'archives</ccts:DefinitionText>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequest</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>ArchiveDeliveryRequest</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+
+                <xsd:sequence>
+
+                        <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000001-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequest.Comment</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Commentaires</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Date" type="ccts:DateTimeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000001-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequest.Date</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Date de la demande de commmunication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryRequestIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000001-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequest.DeliveryRequestIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de la demande de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryRequestIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Derogation" type="ccts:IndicatorType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000001-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequest.Derogation</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Indique si le demandeur souhaite qu'une procédure de dérogation soit enclenchée en cas de non communicabilité de l'archive demandée en communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Derogation</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000001-05</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequest.UnitIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Tout identifiant permettant de reconnaître le contenu demandé</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                        <xsd:documentation>.</xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="AccessRequester" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000001-06</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequest.AccessRequester</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>AccessRequester</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ArchivalAgency" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000001-07</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequest.ArchivalAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Authentication</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Authentication" type="SignatureType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000001-08</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequest.Authentication</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Authentication</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+        
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+<!-- ======================================================== -->
+<!-- ====       ArchiveDeliveryRequestReply Message      ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveDeliveryRequestReply" type="ArchiveDeliveryRequestReplyType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="ArchiveDeliveryRequestReplyType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000002</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequestReply</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:DefinitionText>Demande de communication d'archives</ccts:DefinitionText>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequestReply</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>ArchiveDeliveryRequestReply</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+
+                <xsd:sequence>
+
+                        <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000002-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequestReply.Comment</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Commentaires</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Date" type="ccts:DateTimeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000002-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchivArchiveDeliveryRequestReply.Date</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Date de la réponse</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryRequestIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000002-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequestReply.DeliveryRequestIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de la demande de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryRequestIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryRequestReplyIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000002-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequestReply.</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de la réponse à la demande de communcation</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName></ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000002-05</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequestReply.ReplyCode</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ReplyCode</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000002-06</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequestReply.UnitIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Tout identifiant permettant de reconnaître le contenu susceptible d'être communiqué</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="AccessRequester" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000002-07</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequestReply.AccessRequester</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>AccessRequester</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ArchivalAgency" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000002-08</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequestReply.ArchivalAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Authentication</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Authentication" type="SignatureType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000002-09</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryRequestReply.Authentication</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Authentication</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+<!-- ======================================================== -->
+<!-- ==== ArchiveDeliveryAuthorizationRequest Message    ==== -->
+<!-- ======================================================== -->
+
+<xsd:element name="ArchiveDeliveryAuthorizationRequest" type="ArchiveDeliveryAuthorizationRequestType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="ArchiveDeliveryAuthorizationRequestType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:DefinitionText>Demande d'autorisation pour une communication d'archives</ccts:DefinitionText>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>ArchiveDeliveryAuthorizationRequest</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+
+                <xsd:sequence>
+
+                        <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.Comment</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Commentaires</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Date" type="ccts:DateTimeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.Date</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Date de la demande d'autorisation de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryAuthorizationRequestIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.DeliveryAuthorizationRequestIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de la demande d'autorisation de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryAuthorizationRequestIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ArchiveDeliveryRequestIdentifier" type="ccts:IdentifierType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.ArchiveDeliveryRequestIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>>Identifiant de la demande de communication (permet de rappeler la demande initiale du demandeur)</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ArchiveDeliveryRequestIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-05</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.UnitIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..n</ccts:Cardinality>
+                                <ccts:Definition>Tout identifiant permettant de reconnaître le contenu demandé.</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ArchivalAgency" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-06</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.ArchivalAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Service d'Archivage</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ControlAuthority" type="OrganizationType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-07</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.ControlAuthority</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Services de Contrôle</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ControlAuthority</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+
+                        </xsd:element>
+                
+                        <xsd:element name="Requester" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-08</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.Requester</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Requester</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>  
+
+                        <xsd:element name="OriginatingAgency" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-09</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.OriginatingAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>  
+
+                        <xsd:element name="Authentication" type="SignatureType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-10</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.Authentication</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Authentication</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+        
+                        <xsd:element name="Archive" type="ArchiveType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000003-11</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequest.Archive</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequest</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Archive</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+        
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+<!-- ========================================================== -->
+<!-- ==== ArchiveDeliveryAuthorizationRequestReply Message ==== -->
+<!-- ========================================================== -->
+
+        <xsd:element name="ArchiveDeliveryAuthorizationRequestReply" type="ArchiveDeliveryAuthorizationRequestReplyType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="ArchiveDeliveryAuthorizationRequestReplyType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:DefinitionText>Réponse donnée à une demande d'autorisation de communication ou d'élimination d'archives</ccts:DefinitionText>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+
+                <xsd:sequence>
+
+                        <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.Comment</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Commentaires</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                
+                        <xsd:element name="Date" type="ccts:DateTimeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.Date</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Date de la réponse à la demande d'autorisation de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryAuthorizationRequestIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.DeliveryAuthorizationRequestIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de la demande d'autorisation de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryAuthorizationRequestIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryAuthorizationRequestReplyIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.DeliveryAuthorizationRequestReplyIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de la réponse à la demande d'autorisation de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryAuthorizationRequestReplyIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004-05</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.ReplyCode</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..n</ccts:Cardinality>
+                                <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ReplyCode</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004-06</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.UnitIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..n</ccts:Cardinality>
+                                <ccts:Definition>Tout identifiant permettant de reconnaître le contenu susceptible d'être communiqué</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ArchivalAgency" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004-07</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.ArchivalAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Service d'Archivage</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ControlAuthority" type="OrganizationType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004-08</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.ControlAuthority</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Services de Contrôle</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ControlAuthority</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                
+                        <xsd:element name="OriginatingAgency" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004-09</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.OriginatingAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>  
+
+                        <xsd:element name="Authentication" type="SignatureType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000004-10</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.Authentication</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Authentication</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+<!-- ========================================================================= -->
+<!-- ==== ArchiveDeliveryAuthorizationRequestReplyAcknowledgement Message ==== -->
+<!-- ========================================================================= -->
+
+        <xsd:element name="ArchiveDeliveryAuthorizationRequestReplyAcknowledgement" type="ArchiveDeliveryAuthorizationRequestReplyAcknowledgementType"/>
+
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="ArchiveDeliveryAuthorizationRequestReplyAcknowledgementType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:DefinitionText>Accusé de réception de réponse à une demande d'autorisation pour une communication d'archives</ccts:DefinitionText>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+
+                <xsd:sequence>
+
+                        <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement.Comment</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Commentaires</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Date" type="ccts:DateTimeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement.Date</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Date de l'accusé de réception de la réponse à la demande d'autorisation de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryAuthorizationRequestReplyAcknowledgementIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement.DeliveryAuthorizationRequestReplyAcknowledgementIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de l'accusé de réception de la réponse à la demande d'autorisation de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryAuthorizationRequestReplyAcknowledgementIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryAuthorizationRequestReplyIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement.DeliveryAuthorizationRequestReplyIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de la réponse à la demande d'autorisation de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryAuthorizationRequestReplyIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005-05</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement.ReplyCode</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ReplyCode</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005-06</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement.UnitIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Tout identifiant permettant de reconnaître le contenu d'information à communiquer</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ArchivalAgency" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005-07</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReply.ArchivalAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Service d'Archivage</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReply</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ControlAuthority" type="OrganizationType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005-08</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement.ControlAuthority</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Services de Contrôle</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ControlAuthority</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                
+                        <xsd:element name="OriginatingAgency" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005-09</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement.OriginatingAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>OriginatingAgency</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>  
+
+                        <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000005-10</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement.NonRepudiation</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAuthorizationRequestReplyAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>NonRepudiation</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+<!-- ======================================================== -->
+<!-- ====          ArchiveDelivery Message               ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:element name="ArchiveDelivery" type="ArchiveDeliveryType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="ArchiveDeliveryType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:DefinitionText>Communication d'archives</ccts:DefinitionText>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>ArchiveDelivery</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+
+                <xsd:sequence>
+
+                        <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-1</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.Comment</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Commentaires</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Date" type="ccts:DateTimeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-2</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.Date</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Date de la communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryAuthorizationIdentifier" type="ccts:IdentifierType" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-3</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.DeliveryAuthorizationIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de l'autorisation de communication accordée par une autorité de contrôle</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryAuthorizationIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-4</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.DeliveryIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de la communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryRequestIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-5</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.DeliveryRequestIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de la demande de communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryRequestIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-6</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.UnitIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..n</ccts:Cardinality>
+                                <ccts:Definition>Tout identifiant permettant de reconnaître le contenu communiqué</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Requester" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-7</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.Requester</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Requester</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ArchivalAgency" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-8</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.ArchivalAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>  
+
+                        <xsd:element name="Signature" type="SignatureType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-9</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.Signature</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Signature</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="HashCode" type="HashCodeType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-10</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.HashCode</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>HashCode</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Archive" type="ArchiveType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000006-11</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDelivery.Archive</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDelivery</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Archive</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+<!-- ======================================================== -->
+<!-- ====   ArchiveDeliveryAcknowledgement Message       ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveDeliveryAcknowledgement" type="ArchiveDeliveryAcknowledgementType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="ArchiveDeliveryAcknowledgementType">
+                <xsd:annotation>
+                        <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000007</ccts:UniqueID>
+                                <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAcknowledgement</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:DefinitionText>Accusé de réception pour une communication d'archives</ccts:DefinitionText>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:QualifierTermName>ArchiveDeliveryAcknowledgement</ccts:QualifierTermName>
+                        </xsd:documentation>
+                </xsd:annotation>
+
+                <xsd:sequence>
+
+                        <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000007-01</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAcknowledgement.Comment</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition>Commentaires</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Date" type="ccts:DateTimeType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000007-02</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAcknowledgement.Date</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Date de l'accusé de réception</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryAcknowledgementIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000007-03</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAcknowledgement.DeliveryAcknowledgementIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de l'accusé de réception de la communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryAcknowledgementIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="DeliveryIdentifier" type="ccts:IdentifierType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000007-04</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAcknowledgement.DeliveryIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition>Identifiant de la communication</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>DeliveryIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000007-05</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAcknowledgement.ReplyCode</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName></ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="UnitIdentifier" type="ccts:IdentifierType" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000007-06</ccts:UniqueID>
+                                <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAcknowledgement.UnitIdentifier</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..n</ccts:Cardinality>
+                                <ccts:Definition>Tout identifiant permettant de reconnaître le contenu communiqué</ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>UnitIdentifier</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Requester" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000007-07</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAcknowledgement.Requester</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Requester</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="ArchivalAgency" type="OrganizationType">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000007-08</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAcknowledgement.ArchivalAgency</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>1..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+
+                        <xsd:element name="Signature" type="SignatureType" minOccurs="0">
+                                <xsd:annotation>
+                                <xsd:documentation>
+                                <ccts:UniqueID>ADYAES000007-09</ccts:UniqueID>
+                                <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                                <ccts:DictionaryEntryName>ArchiveDeliveryAcknowledgement.Signature</ccts:DictionaryEntryName>
+                                <ccts:VersionID>000001</ccts:VersionID>
+                                <ccts:Cardinality>0..1</ccts:Cardinality>
+                                <ccts:Definition></ccts:Definition>
+                                <ccts:ObjectClassTermName>ArchiveDeliveryAcknowledgement</ccts:ObjectClassTermName>
+                                <ccts:PropertyTermName>Signature</ccts:PropertyTermName>
+                                </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+</xsd:schema>

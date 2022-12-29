@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ======================================================== -->
+<!-- =====                                              ===== -->
+<!-- =====            ArchiveTransfer                   ===== -->
+<!-- =====                                              ===== -->
+<!-- ======================================================== -->
+<!--
+
+  Last change: 16. February 2006
+
+  ArchiveTransfer Messages, standard d'echange 0.1
+  Prefix=ARTAES
+
+-->
+
+<xsd:schema version="1.0" 
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:ccts="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" 
+            xmlns="fr:gouv:ae:archive:draft:standard_echange_v0.1" 
+            targetNamespace="fr:gouv:ae:archive:draft:standard_echange_v0.1"  
+            elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+<!-- ======================================================== -->
+<!-- ====                Includes                        ==== -->
+<!-- ======================================================== -->
+
+
+<xsd:include schemaLocation="archives_echanges_v0-1_archive.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_signature.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_organization.xsd"/>
+<xsd:include schemaLocation="archives_echanges_v0-1_hashcode.xsd"/>
+
+<!-- ======================================================== -->
+<!-- ====                Imports                         ==== -->
+<!-- ======================================================== -->
+<!-- ======================================================== -->
+<!-- ====        Import of CoreComponentTypes            ==== -->
+<!-- ======================================================== -->
+
+<xsd:import namespace="urn:unece:uncefact:dataschema:draft:CoreComponentTypesSchemaModule:0:3:4" schemaLocation="CoreComponentTypesSchemaModule_0.3.4.xsd"/>
+
+
+
+<!-- ======================================================== -->
+<!-- ====            ArchiveTransfer Message             ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveTransfer" type="ArchiveTransferType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+        <xsd:complexType name="ArchiveTransferType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>ATAES000001</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText>Transfert d'archives</ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveTransfer</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+
+                <xsd:sequence>
+
+                <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000001-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000001-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date du transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                        
+                        
+                <xsd:element name="RelatedTransferReference" type="ccts:IdentifierType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000001-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer.RelatedTransferReference</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Référence à un autre transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>RelatedTransferReference</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+               </xsd:element>
+
+                <xsd:element name="TransferIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000001-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer.TransferIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant du transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="TransferRequestReplyIdentifier" type="ccts:IdentifierType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000001-05</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer.TransferRequestReplyIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la réponse à la demande de transfert (permet par exemple de rappeler l'accord donné par le service d'archives)</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferRequestReplyIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                        <xsd:element name="TransferringAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000001-06</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer.TransferringAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferringAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                        <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000001-07</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Integrity" type="HashCodeType" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000001-08</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer.Integrity</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Integrity</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000001-09</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer.NonRepudiation</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>NonRepudiation</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Contains" type="ArchiveType"  maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000001-10</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransfer.Contains</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransfer</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Contains</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+<!-- ======================================================== -->
+<!-- ====        ArchiveTransferReply Message            ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveTransferReply" type="ArchiveTransferReplyType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+        <xsd:complexType name="ArchiveTransferReplyType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>ATAES000002</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReply</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText>Réponse à un transfert d'archives (accusé de réception, rejet, anomalie..)</ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveTransferReply</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveTransferReply</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+
+                <xsd:sequence>
+
+                <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000002-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReply.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000002-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReply.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date de la réponse au transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+                
+                <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000002-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReply.ReplyCode</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ReplyCode</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="TransferIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000002-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReply.TransferIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant du transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="TransferReplyIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000002-05</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReply.TransferReplyIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la réponse au transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferReplyIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="TransferringAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000002-06</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReply.TransferringAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferringAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000002-07</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReply.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="NonRepudiation" type="SignatureType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000002-08</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReply.NonRepudiationNonRepudiation</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReply</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>NonRepudiation</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+<!-- ======================================================== -->
+<!-- ====     ArchiveTransferAccceptance Message         ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveTransferAcceptance" type="ArchiveTransferAcceptanceType"/>
+
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+
+        <xsd:complexType name="ArchiveTransferAcceptanceType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>ATAES000003</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferAcceptance</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText>Prise en charge d'un transfert à titre de versement</ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveTransferAcceptance</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveTransferAcceptance</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+
+                <xsd:sequence>
+
+                <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000003-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferAcceptance.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000003-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferAcceptance.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date de la prise en charge du transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000003-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferAcceptance.ReplyCode</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ReplyCode</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="TransferAcceptanceIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000003-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferAcceptance.TransferAcceptanceIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la prise en charge du transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferAcceptanceIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="TransferIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000003-05</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferAcceptance.TransferIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant du transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="TransferringAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000003-06</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferAcceptance.TransferringAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferringAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000003-07</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferAcceptance.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Approval" type="SignatureType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000003-08</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferAcceptance.Approval</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Approval</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Archive" type="ArchiveType" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000003-09</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferAcceptance.Archive</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..n</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferAcceptance</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Archive</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+        </xsd:complexType>
+
+
+
+<!-- ======================================================== -->
+<!-- ==== ArchiveTransferReplyAcknowledgement  Message   ==== -->
+<!-- ======================================================== -->
+
+        <xsd:element name="ArchiveTransferReplyAcknowledgement" type="ArchiveTransferReplyAcknowledgementType"/>
+
+<!-- ======================================================== -->
+<!-- ====                Type Definition                 ==== -->
+<!-- ======================================================== -->
+
+
+
+        <xsd:complexType name="ArchiveTransferReplyAcknowledgementType">
+                        <xsd:annotation>
+                        <xsd:documentation>
+                        <ccts:UniqueID>ATAES000004</ccts:UniqueID>
+                        <ccts:CategoryCode>ABIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReplyAcknowledgement</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:DefinitionText>Accusé de réception d'une réponse à un transfert d'archives</ccts:DefinitionText>
+                        <ccts:ObjectClassTermName>ArchiveTransferReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:QualifierTermName>ArchiveTransferReplyAcknowledgement</ccts:QualifierTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                <xsd:sequence>
+
+                <xsd:element name="Comment" type="ccts:TextType" minOccurs="0">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000004-01</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReplyAcknowledgement.Comment</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>0..1</ccts:Cardinality>
+                        <ccts:Definition>Commentaires</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Comment</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="Date" type="ccts:DateTimeType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000004-02</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReplyAcknowledgement.Date</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Date de l'accusé de réception de la réponse au transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>Date</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ReplyCode" type="ccts:CodeType" maxOccurs="unbounded">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000004-03</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReplyAcknowledgement.ReplyCode</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..n</ccts:Cardinality>
+                        <ccts:Definition>Code de la réponse (OK, anomalie...)</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ReplyCode</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="TransferReplyAcknowledgementIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000004-04</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReplyAcknowledgement.TransferReplyAcknowledgementIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de l'accusé de réception de la réponse au transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferReplyAcknowledgementIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="TransferReplyIdentifier" type="ccts:IdentifierType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000004-05</ccts:UniqueID>
+                        <ccts:CategoryCode>BBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReplyAcknowledgement.TransferReplyIdentifier</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition>Identifiant de la réponse au transfert</ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferReplyIdentifier</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                        </xsd:element>
+
+
+                <xsd:element name="TransferringAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000004-06</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReplyAcknowledgement.TransferringAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>TransferringAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+
+                <xsd:element name="ArchivalAgency" type="OrganizationType">
+                        <xsd:annotation>
+                        <xsd:documentation >
+                        <ccts:UniqueID>ATAES000004-07</ccts:UniqueID>
+                        <ccts:CategoryCode>ASBIE</ccts:CategoryCode>
+                        <ccts:DictionaryEntryName>ArchiveTransferReplyAcknowledgement.ArchivalAgency</ccts:DictionaryEntryName>
+                        <ccts:VersionID>000001</ccts:VersionID>
+                        <ccts:Cardinality>1..1</ccts:Cardinality>
+                        <ccts:Definition></ccts:Definition>
+                        <ccts:ObjectClassTermName>ArchiveTransferReplyAcknowledgement</ccts:ObjectClassTermName>
+                        <ccts:PropertyTermName>ArchivalAgency</ccts:PropertyTermName>
+                        </xsd:documentation>
+                        </xsd:annotation>
+                </xsd:element>
+                </xsd:sequence>
+                <xsd:attribute name="Id" type="xsd:ID" use="optional"/>
+
+        </xsd:complexType>
+
+</xsd:schema>
