@@ -68,8 +68,6 @@ Sherpa
 
 L'outil **SHERPA** (*Service HEbergé pour la Rédaction de Profils d'Archivage*), mis à disposition par les Archives de France afin de rédiger des profils d'archivage conformes au SEDA dans les versions 0.2, 1.0 et 2.0 sera décommissionné lorsque l'outil Pastis sera pleinement actif. Les codes sources étant mis à disposition son utilisation sous une autre forme par d'autres acteurs est rendue possible. 
 
-**Attention** ``Sherpa n'est pas encore conforme à seda 2.1 et 2.2.``
-
 `Sherpa <https://francearchives.fr/fr/article/88482498>`_ 
 
 
