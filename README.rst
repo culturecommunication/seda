@@ -101,6 +101,14 @@ Documentation technique
 * `Consulter la documentation en ligne <https://francearchives.fr/seda/2.2/>`_ ``[Bientôt]``
 
 
+
+Comparaison entre SEDA 2.2, SEDA 2.1 et SEDA 2.0
+===================================
+
+``[Bientôt]``
+
+
+
 Outils
 ===================================
 
