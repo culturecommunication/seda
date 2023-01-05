@@ -133,11 +133,6 @@ En savoir plus
 
 * `La page SEDA de FranceArchives <https://francearchives.fr/fr/article/88482501>`_
 
-* Claire Sibille-de Grimoüard, Baptiste Nichèle, `Le Standard d'échange de données pour l'archivage (SEDA), un outil structurant pour l'archivage. <https://www.persee.fr/doc/gazar_0016-5522_2015_num_240_4_5291>`_ In : La Gazette des archives, n°240, 2015-4, pp. 153-164.
-
-* Claire Sibille-de Grimoüard, `D'un standard national d'échange de données pour l'archivage à un projet de norme ISO <https://siaf.hypotheses.org/806>`_, publié le 6 avril 2018 sur le carnet Modernisation et archives des Archives de France.
-
-
 
 
 Organisation du dépôt Github SEDA
