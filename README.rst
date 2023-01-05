@@ -66,7 +66,7 @@ Elaboré par le CINES avec le soutien du SIAF et en partenariat avec VITAM, il e
 Sherpa
 ---------------
 
-L'outil **SHERPA** (*Service HEbergé pour la Rédaction de Profils d'Archivage*), mis à disposition par les Archives de France afin de rédiger des profils d'archivage conformes au SEDA dans les versions 0.2, 1.0 et 2.0 sera décommissionné lorsque l'outil Pastis sera pleinement actif. Les codes sources étant mis à disposition son utilisation sous une autre forme par d'autres acteurs est rendue possible. 
+L'outil **SHERPA** (*Service HEbergé pour la Rédaction de Profils d'Archivage*), mis à disposition par les Archives de France afin de rédiger des profils d'archivage conformes au SEDA dans les versions 0.2, 1.0 et 2.0 sera décommissionné lorsque l'outil Pastis -qui intègre les versions 2.1 et 2.2 du SEDA- sera pleinement actif. Les codes sources étant mis à disposition son utilisation sous une autre forme par d'autres acteurs est rendue possible. 
 
 `Sherpa <https://francearchives.fr/fr/article/88482498>`_ 
 
