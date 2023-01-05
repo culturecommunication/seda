@@ -158,6 +158,6 @@ Pour naviguer d'une branche à l'autre, suivez simplement les liens proposés da
 Contact
 ===================================
 
-Pour toute question, n'hésitez pas à contacter le *Bureau de l'expertise numérique et de la conservation durable* du **Service interministériel des Archives de France** : ``archivage.numerique.siaf`` **AT** ``culture.gouv.fr``
+Pour toute question, n'hésitez pas à contacter le *Bureau de l'expertise numérique et de la conservation durable* du **Service interministériel des Archives de France** : ``archivage.numerique.siaf@culture.gouv.fr``
 
 
