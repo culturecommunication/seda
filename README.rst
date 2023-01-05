@@ -119,7 +119,7 @@ Outils spécifiques à la version 2.0
 Outils génériques
 ---------------
 
-`Une palette d'outils <../../tree/outils/>`_ facilite le traitement de vos archives avec SEDA !
+`Une palette d'outils <../../tree/outils/>`_ facilite le traitement de vos archives avec le SEDA !
 
 
 
