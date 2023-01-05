@@ -116,7 +116,7 @@ Outils spécifiques à la version 2.2
 Outils génériques
 ---------------
 
-`Une palette d'outils <../../tree/outils/>`_ facilite le traitement de vos archives avec SEDA !
+`Une palette d'outils <../../tree/outils/>`_ facilite le traitement de vos archives avec le SEDA !
 
 
 
