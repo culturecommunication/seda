@@ -112,7 +112,7 @@ Un autre exemple de code java (corrigé et mis à jour pour la version 1.0 du SE
 Outils génériques
 ---------------
 
-`Une palette d'outils <../../tree/outils/>`_ facilite le traitement de vos archives avec SEDA !
+`Une palette d'outils <../../tree/outils/>`_ facilite le traitement de vos archives avec le SEDA !
 
 
 Téléchargement
