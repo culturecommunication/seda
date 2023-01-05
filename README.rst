@@ -26,7 +26,7 @@ Création de paquet et manifeste
 Octave
 ---------------
 
-L'*Outil de Constitution et de Traitement Automatisé des Versements Électroniques* (**OCTAVE**) permet à l’archiviste de traiter après import des arborescences bureautiques (dédoublonnage, tri, fusion, classement, renommage), d’enrichir les métadonnées par saisie ou import csv complémentaire et de constituer des SIP aux formats SEDA 1 et SEDA 2.1 accompagné d’un manifeste xml,tout en pouvant produire bordereau de récolement et d’élimination.
+L'*Outil de Constitution et de Traitement Automatisé des Versements Électroniques* (**OCTAVE**) permet à l’archiviste de traiter après import des arborescences bureautiques (dédoublonnage, tri, fusion, classement, renommage), d’enrichir les métadonnées par saisie ou import csv complémentaire et de constituer des SIP aux formats SEDA 1 et SEDA 2.1 accompagné d’un manifeste xml, tout en pouvant produire bordereau de récolement et d’élimination.
 
 `Octave <https://francearchives.fr/fr/article/88482499>`_
 
