@@ -92,7 +92,7 @@ MEDONA
 
 En 2012, le Service interministériel des Archives de France a engagé auprès de l’AFNOR une démarche de normalisation du SEDA à partir de la version 1.0. Cette démarche normative était souhaitée tant par les services d’archives publics que les prestataires de tiers-archivage que par d’autres communautés (banques, éditeurs de coffres-forts numériques). Les travaux de normalisation ont abouti à la publication en janvier 2014 de la **norme NF Z 44-022** *« Modélisation des Échanges de DONnées pour l’Archivage »* ou **MEDONA**. La version 2.0 du SEDA a permis de le rendre compatible à la norme MEDONA en décembre 2015.
 
-`La norme norme NF Z 44-022 | MEDONA <https://www.boutique.afnor.org/fr-fr/norme/nf-z44022/medona-modelisation-des-echanges-de-donnees-pour-larchivage/fa179927/1417>`_
+`La norme NF Z 44-022 | MEDONA <https://www.boutique.afnor.org/fr-fr/norme/nf-z44022/medona-modelisation-des-echanges-de-donnees-pour-larchivage/fa179927/1417>`_
 
 
 DEPIP
