@@ -58,7 +58,7 @@ Pastis
 
 La conception de l’outil **PASTIS** (*Profil d’Archivage Simple pour le Traitement de l’Information en SEDA*), est issue d'une réflexion sur les outils utilisateurs nécessaires au bon fonctionnement de la plate-forme Vitam et s'est élargie ensuite à des besoins de communautés plus vastes et utilisant plusieurs types de SAE. 
 
-Elaboré par le CINES avec le soutien du SIAF et en partenariat avec VITAM, il est disponible en ligne dans une version de test, jusqu’à sa publication en automne 2022 sous une forme intégrée à **VITAM UI** d'une part et sous une forme executable de façon indépendante d'autre part. Il permet d’élaborer des profils d'archivage et des profils d'unités archivistiques en SEDA 2.1. et à terme en SEDA 2.2.
+Elaboré par le CINES avec le soutien du SIAF et en partenariat avec VITAM, il est disponible en ligne dans une version de test, jusqu’à sa publication en 2023 sous une forme intégrée à **VITAM UI** d'une part et sous une forme exécutable de façon indépendante d'autre part. Il permet d’élaborer des profils d'archivage et des profils d'unités archivistiques en SEDA 2.1. et à terme en SEDA 2.2.
 
 `Pastis <http://pastis.cines.fr/>`_
 
