@@ -105,7 +105,11 @@ Documentation technique
 Comparaison entre SEDA 2.2, SEDA 2.1 et SEDA 2.0
 ===================================
 
-``[Bientôt]``
+`Différences entre les versions 2.1 et 2.0
+<../../tree/seda-2.1/#note-de-version-changelog>`_
+
+`Différences entre les versions 2.2 et 2.1
+</#note-de-version-changelog>`_
 
 
 
