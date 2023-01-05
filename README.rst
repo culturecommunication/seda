@@ -33,9 +33,6 @@ Consulter `la page d'accueil
 <../../tree/main/>`_
 
 
-Les fondements du SEDA 2.x
----------------
-
 Consulter `la page de présentation du SEDA 2.0
 <../../tree/seda-2.0/>`_
 
