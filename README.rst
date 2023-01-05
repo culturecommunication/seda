@@ -80,7 +80,7 @@ v012v02.xsl transforme un message SEDA de la version 0.1 vers la version 0.2.
 Outils génériques
 ---------------
 
-`Une palette d'outils <../../tree/outils/>`_ facilite le traitement de vos archives avec SEDA !
+`Une palette d'outils <../../tree/outils/>`_ facilite le traitement de vos archives avec le SEDA !
 
 
 
