@@ -23,13 +23,6 @@ SEDA - Boîte à outils | Standard d'Echange de Données pour l'Archivage
 Création de paquet et manifeste
 ===================================
 
-Octave
----------------
-
-L'*Outil de Constitution et de Traitement Automatisé des Versements Électroniques* (**OCTAVE**) permet à l’archiviste de traiter après import des arborescences bureautiques (dédoublonnage, tri, fusion, classement, renommage), d’enrichir les métadonnées par saisie ou import csv complémentaire et de constituer des SIP aux formats SEDA 1 et SEDA 2.1 accompagné d’un manifeste xml, tout en pouvant produire bordereau de récolement et d’élimination.
-
-`Octave <https://francearchives.fr/fr/article/88482499>`_
-
 
 Docs par Archifiltre
 ---------------
@@ -37,6 +30,14 @@ Docs par Archifiltre
 L'outil **Docs** de visualisation d'arborescence de fichiers, d'audit et d'enrichissement de métadonnées fait partie de la suite **Archifiltre**. Les enrichissements peuvent être récupérés dans un export utilisant les balises SEDA 2.1 lequel peut ensuite être importé dans Octave ou dans Resip pour la constitution des SIP en vue de versement dans un système d'archivage électronique.
 
 `Docs par Archifiltre <https://archifiltre.fabrique.social.gouv.fr/>`_
+
+
+Octave
+---------------
+
+L'*Outil de Constitution et de Traitement Automatisé des Versements Électroniques* (**OCTAVE**) permet à l’archiviste de traiter après import des arborescences bureautiques (dédoublonnage, tri, fusion, classement, renommage), d’enrichir les métadonnées par saisie ou import csv complémentaire et de constituer des SIP aux formats SEDA 1 et SEDA 2.1 accompagné d’un manifeste xml, tout en pouvant produire bordereau de récolement et d’élimination.
+
+`Octave <https://francearchives.fr/fr/article/88482499>`_
 
 
 Resip
