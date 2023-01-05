@@ -119,7 +119,7 @@ seda_v02.sch est un schematron qui permet de compléter la validation d'un trans
 Outils génériques
 ---------------
 
-`Une palette d'outils <../../tree/outils/>`_ facilite le traitement de vos archives avec SEDA !
+`Une palette d'outils <../../tree/outils/>`_ facilite le traitement de vos archives avec le SEDA !
 
 
 
