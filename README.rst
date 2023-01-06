@@ -97,7 +97,7 @@ En 2012, le Service interministériel des Archives de France a engagé auprès d
 
 DEPIP
 ---------------
-Le processus de normalisation s’est poursuivi avec le portage de la **norme MEDONA** auprès de l’Organisation internationale de normalisation (ISO), afin de lui conférer une portée internationale. Cette initiative avait aussi pour objectif d’élargir le domaine d’application des archives à toute entité chargée d’assurer à terme la pérennisation d’objets numériques (musées, bibliothèques) et au secteur privé (retrait des spécificités du secteur public). La **norme ISO 20614** *« Protocole d’échange de données pour l’interopérabilité et la préservation »* (dite **DEPIP** pour *Data exchange protocol for interoperability et preservation*) a été publiée en novembre 2017.
+Le processus de normalisation s’est poursuivi avec le portage de la **norme MEDONA** auprès de l’Organisation internationale de normalisation (ISO), afin de lui conférer une portée internationale. Cette initiative avait aussi pour objectif d’élargir le domaine d’application des archives à toute entité chargée d’assurer à terme la pérennisation d’objets numériques (musées, bibliothèques) et au secteur privé (retrait des spécificités du secteur public). La **norme ISO 20614** *« Protocole d’échange de données pour l’interopérabilité et la préservation »* (dite **DEPIP** pour *Data exchange protocol for interoperability and preservation*) a été publiée en novembre 2017.
 
 `La norme ISO 20614 | DEPIP <https://www.boutique.afnor.org/fr-fr/norme/nf-iso-20614/information-et-documentation-protocole-dechange-de-donnees-pour-linteropera/fa187971/1716>`_ 
 
