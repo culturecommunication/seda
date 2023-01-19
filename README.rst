@@ -90,14 +90,24 @@ Du standard aux normes
 MEDONA
 ---------------
 
-En 2012, le Service interministériel des Archives de France a engagé auprès de l’AFNOR une démarche de normalisation du SEDA à partir de la version 1.0. Cette démarche normative était souhaitée tant par les services d’archives publics que les prestataires de tiers-archivage que par d’autres communautés (banques, éditeurs de coffres-forts numériques). Les travaux de normalisation ont abouti à la publication en janvier 2014 de la **norme NF Z 44-022** *« Modélisation des Échanges de DONnées pour l’Archivage »* ou **MEDONA**. La version 2.0 du SEDA a permis de le rendre compatible à la norme MEDONA en décembre 2015.
+En 2012, le Service interministériel des Archives de France a engagé auprès de l’AFNOR une démarche de normalisation du SEDA à partir de la version 1.0. 
+
+Cette démarche normative initiée en 2013 était souhaitée tant par les services d’archives publics que par d’autres types d’acteurs comme des prestataires de tiers-archivage, des banques ou des éditeurs de composants logiciels de coffre-fort numériques pour répondre à des besoins de stabilité, de généricité et d’indépendance.
+
+Les travaux de normalisation ont abouti à la publication en janvier 2014 de la **norme NF Z 44-022** *« Modélisation des Échanges de DONnées pour l’Archivage »* ou **MEDONA** qui, en retirant toutes les mentions spécifiques aux archives publiques élargit son spectre d’application aux archives privées. Par ailleurs les référentiels n’y sont plus imposés. Enfin, les objets échangés n’y sont plus décrits que sur un plan technique.
+
+La version 2.0 du SEDA a permis de le rendre compatible à la norme MEDONA en décembre 2015.
 
 `La norme NF Z 44-022 | MEDONA <https://www.boutique.afnor.org/fr-fr/norme/nf-z44022/medona-modelisation-des-echanges-de-donnees-pour-larchivage/fa179927/1417>`_
 
 
 DEPIP
 ---------------
-Le processus de normalisation s’est poursuivi avec le portage de la **norme MEDONA** auprès de l’Organisation internationale de normalisation (ISO), afin de lui conférer une portée internationale. Cette initiative avait aussi pour objectif d’élargir le domaine d’application des archives à toute entité chargée d’assurer à terme la pérennisation d’objets numériques (musées, bibliothèques) et au secteur privé (retrait des spécificités du secteur public). La **norme ISO 20614** *« Protocole d’échange de données pour l’interopérabilité et la préservation »* (dite **DEPIP** pour *Data exchange protocol for interoperability and preservation*) a été publiée en novembre 2017.
+Le processus de normalisation s’est poursuivi avec le portage de la **norme MEDONA** auprès de l’Organisation internationale de normalisation (ISO), afin de lui conférer une portée internationale. 
+
+Il était espéré une augmentation du rayonnement de la norme par l’élargissement du marché des éditeurs de logiciels et du champ d’application à toute entité chargée d’assurer à terme la pérennisation d’objets numérique comme les bibliothèques et les musées. La norme est davantage alignée sur le modèle de référence pour un système ouvert d’archivage d’information (OAIS). Par ailleurs, DEPIP peut être implémenté soit dans sa totalité soit partiellement. Enfin, le XML n’est plus la seule possibilité d’implémentation : d’autres technologies (JSON) sont possibles.
+
+La **norme ISO 20614** *« Protocole d’échange de données pour l’interopérabilité et la préservation »* (dite **DEPIP** pour *Data exchange protocol for interoperability and preservation*) a été publiée en novembre 2017.
 
 `La norme ISO 20614 | DEPIP <https://www.boutique.afnor.org/fr-fr/norme/nf-iso-20614/information-et-documentation-protocole-dechange-de-donnees-pour-linteropera/fa187971/1716>`_ 
 
