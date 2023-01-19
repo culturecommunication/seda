@@ -49,7 +49,7 @@ L’application **ReSIP**, construite au-dessus de la bibliothèque sedalib dans
 
 
 
-Création de profil d'archivage et de profil d'unité d'archivage
+Création de profil d'archivage et de profil d'unité archivistique
 ===================================
 
 
@@ -71,3 +71,9 @@ L'outil **SHERPA** (*Service HEbergé pour la Rédaction de Profils d'Archivage*
 `Sherpa <https://francearchives.fr/fr/article/88482498>`_ 
 
 
+Agape
+---------------
+
+L’*Application de Génération Automatisée de Profils Électronique*s (**AGAPE**) est un outil d'aide à l'édition de la partie technique d'un profil d'archivage permettant de générer un schéma de profil pour les transferts. Développé par le Siaf en 2009-2010 pour faciliter l'écriture, la maintenance et l'utilisation des profils d'archivage, il n’est plus l’objet d’évolutions depuis la dernière version de janvier 2013 mais garde une vie autonome et reste utilisé pour un travail fin sur les profils en SEDA 0.1 à 1.0 . Ecrit en Java, il est hébergé sur la forge d’Adullact et téléchargeable sur un poste individuel.
+
+`Agape <https://adullact.net/projects/agape/>`_ 
