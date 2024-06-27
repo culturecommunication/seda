@@ -102,8 +102,8 @@ Documentation technique
 ---------------
 
 * `SEDA 2.3 | Documentation HTML des schémas XML </doc/seda-2.3-XML-schema_documentation_HTML.zip>`_ ``[ZIP à télécharger]``
-* `SEDA 2.3 | Diagrammes SVG des schémas XML </doc/seda-2.3-XML-schema_documentation_SVG.zip>`_  ``[Bientôt]``
-* `Consulter la documentation en ligne <https://www.francearchives.gouv.fr/seda/2.3/>`_ ``[Bientôt]``
+* `SEDA 2.3 | Diagrammes SVG des schémas XML ``[Bientôt]``
+* `Consulter la documentation en ligne ``[Bientôt]``
 
 
 
@@ -131,6 +131,6 @@ Outils génériques
 Téléchargement
 ===================================
 
-`Télécharger l'ensemble du SEDA 2.3 <../../releases/tag/seda_v2.3/>`_ (schémas XML et documentation)
+`Télécharger l'ensemble du SEDA 2.3 <../../releases/tag/seda_v2.3/>`_ (schémas XML et documentation) ``[Bientôt]``
 
 
