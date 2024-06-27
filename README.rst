@@ -58,7 +58,7 @@ Les principaux changements **par rapport à la version 2.2** sont :
 
 **Signature numérique :**
 
-* Dépréciation du bloc ``SignatureGroup``. Attention** ``SignatureGroup`` est désactivé par sa simple mise en commentaires dans les fichiers XSD. Dans les versions suivantes du SEDA (à partir de la v2.4), il sera définitivement supprimé des schémas.
+* Dépréciation du bloc ``SignatureGroup``. Attention ``SignatureGroup`` est désactivé par sa simple mise en commentaires dans les fichiers XSD. Dans les versions suivantes du SEDA (à partir de la v2.4), il sera définitivement supprimé des schémas.
 
 * Ajout du bloc ``SigningInformation`` permettant de décrire les informations de signature de l'objet binaire associé à l'unité archivistique. 
 
