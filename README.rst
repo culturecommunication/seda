@@ -102,7 +102,9 @@ Documentation technique
 ---------------
 
 * `SEDA 2.3 | Documentation HTML des schémas XML </doc/seda-2.3-XML-schema_documentation_HTML.zip>`_ ``[ZIP à télécharger]``
+
 * `SEDA 2.3 | Diagrammes SVG des schémas XML ``[Bientôt]``
+
 * `Consulter la documentation en ligne ``[Bientôt]``
 
 
@@ -115,9 +117,9 @@ Outils
 Outils spécifiques à la version 2.3
 ---------------
 
-``[Bientôt]``
-* Une feuille de transformation (XSLT) SEDA v2.3 vers EAD2002
-* Une feuille de transformation (XSLT) SEDA v2.3 vers HTML
+* Une feuille de transformation (XSLT) SEDA v2.3 vers EAD2002 ``[Bientôt]``
+
+* Une feuille de transformation (XSLT) SEDA v2.3 vers HTML ``[Bientôt]``
 
 
 
