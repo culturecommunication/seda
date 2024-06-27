@@ -33,18 +33,6 @@ Consulter `la page d'accueil
 <../../tree/main/>`_
 
 
-Consulter `la page de présentation du SEDA 2.0
-<../../tree/seda-2.0/>`_
-
-
-Consulter `la page de présentation du SEDA 2.1
-<../../tree/seda-2.1/>`_
-
-
-Consulter `la page de présentation du SEDA 2.2
-<../../tree/seda-2.2/>`_
-
-
 
 Genèse du SEDA 2.3
 ---------------
@@ -70,9 +58,7 @@ Les principaux changements **par rapport à la version 2.2** sont :
 
 **Signature numérique :**
 
-* Dépréciation du bloc ``SignatureGroup``.
-
-**Attention** ``SignatureGroup`` est désactivé par sa simple mise en commentaires dans les fichiers XSD. Dans les versions suivantes du SEDA (à partir de la v2.4), il sera définitivement supprimé des schémas.
+* Dépréciation du bloc ``SignatureGroup``. Attention** ``SignatureGroup`` est désactivé par sa simple mise en commentaires dans les fichiers XSD. Dans les versions suivantes du SEDA (à partir de la v2.4), il sera définitivement supprimé des schémas.
 
 * Ajout du bloc ``SigningInformation`` permettant de décrire les informations de signature de l'objet binaire associé à l'unité archivistique. 
 
@@ -83,7 +69,7 @@ Les principaux changements **par rapport à la version 2.2** sont :
 
 **Distinction des versions et usages des objets :**
 
-Deux nouveaux éléments, ``DataObjectUse`` et ``DataObjectNumber``, facultatifs, ont été ajoutés afin de distinguer la notion d’usage et la notion de version :
+Deux nouveaux éléments facultatifs (``DataObjectUse`` et ``DataObjectNumber``) ont été ajoutés afin de distinguer la notion d’usage et la notion de version :
 
 * Au niveau des objets binaires.
 
@@ -116,7 +102,7 @@ Documentation technique
 ---------------
 
 * `SEDA 2.3 | Documentation HTML des schémas XML </doc/seda-2.3-XML-schema_documentation_HTML.zip>`_ ``[ZIP à télécharger]``
-* `SEDA 2.3 | Diagrammes SVG des schémas XML </doc/seda-2.3-XML-schema_documentation_SVG.zip>`_  ``[ZIP à télécharger]``
+* `SEDA 2.3 | Diagrammes SVG des schémas XML </doc/seda-2.3-XML-schema_documentation_SVG.zip>`_  ``[Bientôt]``
 * `Consulter la documentation en ligne <https://www.francearchives.gouv.fr/seda/2.3/>`_ ``[Bientôt]``
 
 
