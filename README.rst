@@ -115,7 +115,7 @@ La **norme ISO 20614** *« Protocole d’échange de données pour l’interopé
 Historique des versions
 ===================================
 
-* `SEDA v2.3 <../../tree/seda-2.3/>`_ (Juin 2023) ``Version actuelle``
+* `SEDA v2.3 <../../tree/seda-2.3/>`_ (Juin 2024) ``Version actuelle``
 
 * `SEDA v2.2 <../../tree/seda-2.2/>`_ (Janvier 2022)
 
