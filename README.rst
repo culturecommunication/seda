@@ -1,5 +1,5 @@
 #####
-SEDA - Version 2.2 | Standard d'Echange de Données pour l'Archivage
+SEDA - Version 2.3 | Standard d'Echange de Données pour l'Archivage
 #####
 
 
@@ -23,7 +23,7 @@ Vous cherchez `une autre version du SEDA <../main/README.rst#3historique-des-ver
 
 
 
-Les caractéristiques du SEDA v2.2
+Les caractéristiques du SEDA v2.3
 ===================================
 
 Introduction au SEDA
@@ -41,85 +41,98 @@ Consulter `la page de présentation du SEDA 2.1
 <../../tree/seda-2.1/>`_
 
 
-Genèse du SEDA 2.2
+Consulter `la page de présentation du SEDA 2.2
+<../../tree/seda-2.2/>`_
+
+
+
+Genèse du SEDA 2.3
 ---------------
 
-**La version 2.2** du Standard d'échanges de données pour l'archivage (SEDA) -publiée en **janvier 2022** sous l'égide du Service interministériel des Archives de France- comprend six schémas et un dictionnaire. Une mise à jour mineure a été publiée en **décembre 2022** pour actualiser la balise ``TextContent`` (voir plus loin).
+**La version 2.3** du Standard d'échanges de données pour l'archivage (SEDA) -publiée en **juin 2024** sous l'égide du Service interministériel des Archives de France- comprend six schémas, un dictionnaire et une documentation sommaire des nouveautés. La documentation du standard est en cours de refonte. Aussi, la documentation intégrale de la v2.3 sera-t-elle publiée en décembre 2024.
 
-Les schémas sont le fruit du travail mené en 2020-2021 par le Comité de pilotage du SEDA, qui rassemble des acteurs œuvrant pour l’utilisation de ce standard d'échange dans les services publics d’archives, chez les tiers-archiveurs, les éditeurs de logiciels d’archivage électronique ou encore les cabinets spécialisés dans l'accompagnement de projets d'archivage électronique.
+Les schémas résultent des travaux menés entre 2022 et 2024 par le Comité de pilotage du SEDA, qui rassemble des acteurs œuvrant pour l’utilisation de ce standard d'échange dans les services publics d’archives, chez les tiers-archiveurs, les éditeurs de logiciels d’archivage électronique ou encore les cabinets spécialisés dans l'accompagnement de projets d'archivage électronique.
 
-Les comités de pilotage du SEDA se sont interrompus en 2018 après la publication de la version 2.1, qui correspondait à une mise à jour significative de la deuxième génération du standard. En 2019, les utilisations opérationnelles du SEDA ont fait émerger des points d’amélioration à cette version 2.1. La reprise des travaux en 2020 avait donc pour objet de faire évoluer le standard, pour répondre aux besoins exprimés par l'ensemble des membres du comité de pilotage lors de la séance du 7 janvier 2020.
 
-Les travaux menés collectivement en 2020-2021 ont abouti à la publication de la version 2.2 en janvier 2022. Ils ont permis de traiter les besoins prioritaires en matière d’évolution de balises, tout en gardant intacte l’économie générale de la version précédente 2.1. 
+Les nouveautés par rapport à la version 2.2 :
 
-En 2023, les travaux du comité de pilotage s’attacheront notamment à compléter la documentation et les informations sur cette dernière version, et à mener des études prospectives.
+* Prise en charge la **signature numérique des documents**.
 
+* Possibilité d'ajouter des **identifiants pérennes** (DOI, ARK, etc.) aux métadonnées descriptives et aux groupes d'objets techniques (numériques et/ou physiques).
+
+* Possibilité de distinguer **l'usage** et la **version** des objets (numériques ou physiques), en complément ou alternative à l'élément ``DataObjectVersion`` existant.
+	
+	
 
 Note de version (changelog)
 ---------------
-Les principaux changements **par rapport à la version 2.1** sont:
+Les principaux changements **par rapport à la version 2.2** sont :
 
-* Modification de ``AgentType`` générique dans l’ontologie ;
-* Dépréciation de ``AgentAbstract`` ; 
-* Ajout d'une nouvelle règle de gestion ``HoldRule`` dans les métadonnées de gestion ;
-* Ajout de ``HoldRuleCodeListVersion`` ;
-* Ajout de ``OriginatingSystemIdReplyToGroup`` et de ``TextContent`` (pour les courriels) ;
-* Ajout de ``LinkingAgentIdentifierType`` dans les ``Event`` ;
-* Ajout de ``DataObjectProfile`` dans les métadonnées techniques ;
-* Ajout de ``DateLitteral`` dans l’ontologie ;
-* Modification du type de ``MessageIdentifier`` (devient ``NonEmptyToken``).
+**Signature numérique :**
 
-|
-| **Attention**
-| La balise ``TextContent`` a fait l'objet d'une modification mineure en **décembre 2022** *(postérieure à la publication initiale des schémas en janvier 2022)*. Sa cardinalité a été modifiée afin de rendre la balise répétable.
-| 
+* Dépréciation du bloc ``SignatureGroup``.
+
+**Attention** ``SignatureGroup`` est désactivé par sa simple mise en commentaires dans les fichiers XSD. Dans les versions suivantes du SEDA (à partir de la v2.4), il sera définitivement supprimé des schémas.
+
+* Ajout du bloc ``SigningInformation`` permettant de décrire les informations de signature de l'objet binaire associé à l'unité archivistique. 
+
+
+**Identifiants pérennes :**
+
+* Ajout d'un bloc ``PersistentIdentifier``.
+
+**Distinction des versions et usages des objets :**
+
+Deux nouveaux éléments, ``DataObjectUse`` et ``DataObjectNumber``, facultatifs, ont été ajoutés afin de distinguer la notion d’usage et la notion de version :
+
+* Au niveau des objets binaires.
+
+* Au niveau des objets physiques.
+
+
 
 Schémas XML
 ===================================
 `Les schémas </schema/>`_ traduisent la forme des messages échangés au cours des transactions.
-Ils ont été réalisés par le Cabinet Mintika à partir des principes définis en Comité de pilotage.
+
+
 
 
 Documentation
 ===================================
 
-
 Documentation générale
 ---------------
+* `SEDA 2.3 | Documentation sommaire des nouveautés </doc/seda-2.3-documentation_sommaire.pdf>`_
 
-* SEDA 2.2 | Description du standard ``[à paraître en 2023]``
+* SEDA 2.3 | Dictionnaire des balises ``[à paraître en juillet 2024]``
 
-* `SEDA 2.2 | Dictionnaire des balises </doc/seda-2.2-dictionnaire_[DocumentDeTravail-2022-01-31].pdf>`_
+* SEDA 2.3 | Documentation fonctionnelle  ``[à paraître en décembre 2024]``
 
-Le **document de description du standard** sera publiée en 2023. Le **dictionnaire des balises SEDA** est proposé dans une version de travail. Il synthétise par grands ensembles de métadonnées (gestion, description, technique, transport et typologie de messages) les éléments présents dans les schémas du standard. 
+
+
 
 Documentation technique
 ---------------
 
-* `SEDA 2.2 | Documentation HTML des schémas XML </doc/seda-2.2-XML-schema_documentation_HTML.zip>`_ ``[ZIP à télécharger]``
-* `SEDA 2.2 | Diagrammes SVG des schémas XML </doc/seda-2.2-XML-schema_documentation_SVG.zip>`_  ``[ZIP à télécharger]``
-* `Consulter la documentation en ligne <https://francearchives.fr/seda/2.2/>`_ ``[Bientôt]``
+* `SEDA 2.3 | Documentation HTML des schémas XML </doc/seda-2.3-XML-schema_documentation_HTML.zip>`_ ``[ZIP à télécharger]``
+* `SEDA 2.3 | Diagrammes SVG des schémas XML </doc/seda-2.3-XML-schema_documentation_SVG.zip>`_  ``[ZIP à télécharger]``
+* `Consulter la documentation en ligne <https://www.francearchives.gouv.fr/seda/2.3/>`_ ``[Bientôt]``
 
 
-
-Comparaison entre SEDA 2.2, SEDA 2.1 et SEDA 2.0
-===================================
-
-`Différences entre les versions 2.1 et 2.0
-<../../tree/seda-2.1/#note-de-version-changelog>`_
-
-`Différences entre les versions 2.2 et 2.1
-<#note-de-version-changelog>`_
 
 
 
 Outils
 ===================================
 
-Outils spécifiques à la version 2.2
+Outils spécifiques à la version 2.3
 ---------------
 
 ``[Bientôt]``
+* Une feuille de transformation (XSLT) SEDA v2.3 vers EAD2002
+* Une feuille de transformation (XSLT) SEDA v2.3 vers HTML
+
 
 
 Outils génériques
@@ -132,6 +145,6 @@ Outils génériques
 Téléchargement
 ===================================
 
-`Télécharger l'ensemble du SEDA 2.2 <../../releases/tag/seda_v2.2/>`_ (schémas XML et documentation)
+`Télécharger l'ensemble du SEDA 2.3 <../../releases/tag/seda_v2.3/>`_ (schémas XML et documentation)
 
 
