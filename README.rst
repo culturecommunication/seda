@@ -89,7 +89,7 @@ Documentation
 
 Documentation générale
 ---------------
-* `SEDA 2.3 | Documentation sommaire des nouveautés </doc/seda-2.3-documentation_sommaire.pdf>`_
+* `SEDA 2.3 | Documentation sommaire des nouveautés <https://raw.githubusercontent.com/culturecommunication/seda/seda-2.3/doc/seda-2.3-documentation_sommaire.pdf>`_
 
 * SEDA 2.3 | Dictionnaire des balises ``[à paraître en juillet 2024]``
 
