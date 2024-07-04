@@ -98,7 +98,7 @@ Documentation technique
 
 * `SEDA 2.2 | Documentation HTML des schémas XML </doc/seda-2.2-XML-schema_documentation_HTML.zip>`_ ``[ZIP à télécharger]``
 * `SEDA 2.2 | Diagrammes SVG des schémas XML </doc/seda-2.2-XML-schema_documentation_SVG.zip>`_  ``[ZIP à télécharger]``
-* `Consulter la documentation en ligne <https://francearchives.fr/seda/2.2/>`_ ``[Bientôt]``
+* `Consulter la documentation en ligne <https://francearchives.fr/seda/2.2/>`_ 
 
 
 
