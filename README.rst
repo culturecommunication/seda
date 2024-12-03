@@ -48,6 +48,19 @@ L’application **ReSIP**, construite au-dessus de la bibliothèque sedalib dans
 `Resip <https://www.programmevitam.fr/pages/ressources/resip/>`_
 
 
+SedaBox
+---------------
+
+La **SEDABox** met en ligne des services permettant de faciliter la manipulation et la production du SEDA. Conçue pour la communauté d’utilisateurs du standard (archivistes et/ou informaticiens) en charge de préparation des données, elle propose des solutions de traitements pour améliorer la compatibilité des fichiers produits dans divers outils du SEDA, visualiser des contenus nativement XML, convertir le SEDA dans d’autres standards ou valider des données archivistiques. Les archives elles-mêmes ne transitent jamais par la plateforme hébergée en ligne. Pour l’utiliser, il suffit d’être authentifié et de téléverser les fichiers XML dans l’une des tuiles disponibles.
+
+
+`SedaBox <https://hub.mintika.fr/Sedabox/>`_
+
+
+
+
+
+
 
 Création de profil d'archivage et de profil d'unité archivistique
 ===================================
@@ -60,7 +73,9 @@ La conception de l’outil **PASTIS** (*Profil d’Archivage Simple pour le Trai
 
 Elaboré par le CINES avec le soutien du SIAF et en partenariat avec VITAM, il est disponible en ligne dans une version de test, jusqu’à sa publication en 2023 sous une forme intégrée à **VITAM UI** d'une part et sous une forme exécutable de façon indépendante d'autre part. Il permet d’élaborer des profils d'archivage et des profils d'unités archivistiques en SEDA 2.1. et à terme en SEDA 2.2.
 
-`Pastis <http://pastis.cines.fr/>`_
+`Pastis - Accueil <https://www.programmevitam.fr/pages/ressources/pastis/>`_
+`Pastis - Télécharger l'application automone ("standalone") pour Windows <https://download.programmevitam.fr/pastis-standalone/>`_
+
 
 
 Sherpa
