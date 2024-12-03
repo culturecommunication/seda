@@ -1,0 +1,331 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="codes/styles.css" type="text/css" media="all"><script type="text/javascript" src="codes/toggle.js"></script><title>Standard d'Echange de Données pour l'Archivage (SEDA)</title>
+   </head>
+   <body>
+      <h2>
+         			Message de Transfert <a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>schemaLocation</label> = "fr:gouv:culture:archivesdefrance:seda:v2.3 seda-2.3-main.xsd"
+                  							</span><span class="nonexpandable"><label>id</label> = "ID1"
+                  							</span></span></a> 
+      </h2>
+      <fieldset>
+         <legend onclick="mytoggle('entete')">En-tête</legend>
+         <div id="entete">
+            <div class="info-generales">
+               <div class="Date"><label>Date: </label>20 juin 2023
+               </div>
+               <div class="MessageIdentifier"><label>MessageIdentifier: </label>SIP SEDA de test
+               </div>
+               <div class="AcquisitionInformation"><label>Modalités d'entrées: </label>Acquisition Information
+               </div>
+               <div class="LegalStatus"><label>Statut legal: </label>Public Archive
+               </div>
+               <div class="OriginatingAgencyIdentifier"><label>Identifiant du service producteur: </label>changeIt
+               </div>
+               <div class="SubmissionAgencyIdentifier"><label>SubmissionAgencyIdentifier: </label>changeIt
+               </div>
+            </div>
+            <div class="acteurs">
+               <div class="acteur">
+                  <fieldset class="Organisation">
+                     <legend onclick="mytoggle('d1e482')">Service versant</legend>
+                     <div id="d1e482">
+                        <div class="Identifier"><label>Identifiant de l'agent: </label>changeIt
+                        </div>
+                     </div>
+                  </fieldset>
+               </div>
+               <div class="acteur">
+                  <fieldset class="Organisation">
+                     <legend onclick="mytoggle('d1e476')">Service d'archives</legend>
+                     <div id="d1e476">
+                        <div class="Identifier"><label>Identifiant de l'agent: </label>changeIt
+                        </div>
+                     </div>
+                  </fieldset>
+               </div>
+            </div>
+            <div class="gestionRules">
+               <div class="gestion"></div>
+               <div class="gestion"></div>
+               <div class="gestion"></div>
+               <div class="gestion"></div>
+               <div class="gestion"></div>
+               <div class="gestion"></div>
+               <div class="gestion"></div>
+            </div>
+         </div>
+      </fieldset>
+      <fieldset>
+         <legend onclick="mytoggle('content')">Contenu</legend>
+         <div id="content">
+            <div id="commands"><span><a href="javascript:expandAll(true)">tout ouvrir</a> | <a href="javascript:expandAll(false)">tout fermer</a></span></div>
+            <div>
+               <p class="Archive-name">Document</p>
+               <div><a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>id</label> = "ID12"
+                           							</span></span></a> 
+                  <div class="ContentDescription">
+                     <div class="collapsed-content">
+                        <div class="Description"><label>Description: </label>Signed Document with embedded Signature and TimeStamp
+                        </div>
+                        <div class="DescriptionLevel"><label>Niveau de description: </label>Item
+                        </div>
+                        <div class="SigningInformation"><label>Informations sur la signature: </label><div class="code-value">
+                              <div class="SigningRole"><label>Etiquette de signature: </label>SignedDocument
+                              </div>
+                              <div class="SigningRole"><label>Etiquette de signature: </label>Signature
+                              </div>
+                              <div class="SigningRole"><label>Etiquette de signature: </label>Timestamp
+                              </div>
+                              <div class="DetachedSigningRole"><label>Unité d'archives encapsulée: </label>AdditionalProof
+                              </div><span style="background-color:red">
+                                 <span style="background-color:red">
+                                    
+                                    <div class="FullName"><label>Nom complet: </label>Caroline DISTRIQUIN
+                                    </div>
+                                    
+                                    <div class="SigningTime"><label>Date de signature: </label>2023-01-27T10:54:54+01:00
+                                    </div>
+                                    </span>
+                                 </span><span style="background-color:red">
+                                 
+                                 <div class="TimeStamp"><label>Horodatage de la signature: </label>2023-01-27T10:54:54+01:00
+                                 </div>
+                                 </span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <ul>
+                     <li class="expandable" onclick="toggle(event, this)">
+                        <p class="ArchiveUnit-name" onclick="toggle(event, this)">Additional proof: Appendix 2</p>
+                        <div class="ArchiveUnit" onclick="toggle(event, this)"><a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>id</label> = "ID16"
+                                    							</span></span></a> 
+                           <div class="ContentDescription">
+                              <div class="collapsed-content">
+                                 <div class="DescriptionLevel"><label>Niveau de description: </label>Item
+                                 </div>
+                                 <div class="SigningInformation"><label>Informations sur la signature: </label><div class="code-value">
+                                       <div class="SigningRole"><label>Etiquette de signature: </label>AdditionalProof
+                                       </div><span style="background-color:red">
+                                          
+                                          <div class="AdditionalProofInformation"><label>Informations relatives aux preuves complémentaires: </label>Additional proof: Appendix 2
+                                          </div>
+                                          </span></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <ul>
+                              <li class="expandable" onclick="toggle(event, this)">
+                                 <p onclick="toggle(event, this)" class="Document-name">
+                                    			Objet de données
+                                    		
+                                 </p>
+                                 <div class="Document" onclick="toggle(event, this)">
+                                    <div class="Filename"><label>Nom du fichier: </label>attachment_0_Annexe_2.pdf
+                                    </div>
+                                    <div class="Uri"><label>Chemin vers le fichier: </label>content/ID22.pdf
+                                    </div>
+                                    <div class="MessageDigest"><label>Empreinte: </label><a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>algorithm</label> = "SHA-512"
+                                                							</span></span></a> e6cc8b7704acadaf77152e5c6e6fdbf6d7d28c0af1f979bfe181a8e2fc017a6c9780fd727fe390e2a9d06def030ba4ac8683e1ffda79e5d81c87ceef234c021b
+                                    </div>
+                                    <div class="Size"><label>Taille: </label>183330
+                                    </div>
+                                    <div class="FormatLitteral"><label>Forme littérale du format: </label>Acrobat PDF 1.5 - Portable Document Format
+                                    </div>
+                                    <div class="MimeType"><label>Type MIME: </label>application/pdf
+                                    </div>
+                                    <div class="FormatId"><label>Identifiant PRONOM: </label>fmt/19
+                                    </div>
+                                    <div class="LastModified"><label>Date de dernière modification: </label>2023-06-20T14:44:30.566
+                                    </div>
+                                    <div class="DataObjectVersion"><label>DataObjectVersion: </label>BinaryMaster_1
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="expandable" onclick="toggle(event, this)">
+                        <p class="ArchiveUnit-name" onclick="toggle(event, this)">Additional proof: Appendix 1</p>
+                        <div class="ArchiveUnit" onclick="toggle(event, this)"><a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>id</label> = "ID15"
+                                    							</span></span></a> 
+                           <div class="ContentDescription">
+                              <div class="collapsed-content">
+                                 <div class="DescriptionLevel"><label>Niveau de description: </label>Item
+                                 </div>
+                                 <div class="SigningInformation"><label>Informations sur la signature: </label><div class="code-value">
+                                       <div class="SigningRole"><label>Etiquette de signature: </label>AdditionalProof
+                                       </div><span style="background-color:red">
+                                          
+                                          <div class="AdditionalProofInformation"><label>Informations relatives aux preuves complémentaires: </label>Additional proof: Appendix 1
+                                          </div>
+                                          </span></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <ul>
+                              <li class="expandable" onclick="toggle(event, this)">
+                                 <p onclick="toggle(event, this)" class="Document-name">
+                                    			Objet de données
+                                    		
+                                 </p>
+                                 <div class="Document" onclick="toggle(event, this)">
+                                    <div class="Filename"><label>Nom du fichier: </label>attachment_1_Annexe_1.pdf
+                                    </div>
+                                    <div class="Uri"><label>Chemin vers le fichier: </label>content/ID24.pdf
+                                    </div>
+                                    <div class="MessageDigest"><label>Empreinte: </label><a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>algorithm</label> = "SHA-512"
+                                                							</span></span></a> ed11531a18534d42be83d6f633abb965e5f7508ce2dfcbf10244e5a40ae026aa3c898798df12efcb142748ce93552da527762e06a1bea370b39dec3d56a95961
+                                    </div>
+                                    <div class="Size"><label>Taille: </label>184087
+                                    </div>
+                                    <div class="FormatLitteral"><label>Forme littérale du format: </label>Acrobat PDF 1.5 - Portable Document Format
+                                    </div>
+                                    <div class="MimeType"><label>Type MIME: </label>application/pdf
+                                    </div>
+                                    <div class="FormatId"><label>Identifiant PRONOM: </label>fmt/19
+                                    </div>
+                                    <div class="LastModified"><label>Date de dernière modification: </label>2023-06-20T14:44:30.611
+                                    </div>
+                                    <div class="DataObjectVersion"><label>DataObjectVersion: </label>BinaryMaster_1
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="expandable" onclick="toggle(event, this)">
+                        <p class="ArchiveUnit-name" onclick="toggle(event, this)">Additional proof: PDF</p>
+                        <div class="ArchiveUnit" onclick="toggle(event, this)"><a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>id</label> = "ID13"
+                                    							</span></span></a> 
+                           <div class="ContentDescription">
+                              <div class="collapsed-content">
+                                 <div class="DescriptionLevel"><label>Niveau de description: </label>Item
+                                 </div>
+                                 <div class="SigningInformation"><label>Informations sur la signature: </label><div class="code-value">
+                                       <div class="SigningRole"><label>Etiquette de signature: </label>AdditionalProof
+                                       </div><span style="background-color:red">
+                                          
+                                          <div class="AdditionalProofInformation"><label>Informations relatives aux preuves complémentaires: </label>Additional proof: PDF
+                                          </div>
+                                          </span></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <ul>
+                              <li class="expandable" onclick="toggle(event, this)">
+                                 <p onclick="toggle(event, this)" class="Document-name">
+                                    			Objet de données
+                                    		
+                                 </p>
+                                 <div class="Document" onclick="toggle(event, this)">
+                                    <div class="Filename"><label>Nom du fichier: </label>docaposteProof.pdf
+                                    </div>
+                                    <div class="Uri"><label>Chemin vers le fichier: </label>content/ID21.pdf
+                                    </div>
+                                    <div class="MessageDigest"><label>Empreinte: </label><a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>algorithm</label> = "SHA-512"
+                                                							</span></span></a> 64a4797a8b840e8245d8b69dfc2dbc493cb65313b9336581a932d628b5ccd5b7d1ad3385e9f47d401ba9f1aa6e9153a1405864dee8e98f4d981d7069e55efea3
+                                    </div>
+                                    <div class="Size"><label>Taille: </label>238122
+                                    </div>
+                                    <div class="FormatLitteral"><label>Forme littérale du format: </label>Acrobat PDF 1.4 - Portable Document Format
+                                    </div>
+                                    <div class="MimeType"><label>Type MIME: </label>application/pdf
+                                    </div>
+                                    <div class="FormatId"><label>Identifiant PRONOM: </label>fmt/18
+                                    </div>
+                                    <div class="LastModified"><label>Date de dernière modification: </label>2023-06-20T14:44:30.649
+                                    </div>
+                                    <div class="DataObjectVersion"><label>DataObjectVersion: </label>BinaryMaster_1
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="expandable" onclick="toggle(event, this)">
+                        <p class="ArchiveUnit-name" onclick="toggle(event, this)">Additional proof: XML</p>
+                        <div class="ArchiveUnit" onclick="toggle(event, this)"><a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>id</label> = "ID14"
+                                    							</span></span></a> 
+                           <div class="ContentDescription">
+                              <div class="collapsed-content">
+                                 <div class="DescriptionLevel"><label>Niveau de description: </label>Item
+                                 </div>
+                                 <div class="SigningInformation"><label>Informations sur la signature: </label><div class="code-value">
+                                       <div class="SigningRole"><label>Etiquette de signature: </label>AdditionalProof
+                                       </div><span style="background-color:red">
+                                          
+                                          <div class="AdditionalProofInformation"><label>Informations relatives aux preuves complémentaires: </label>Additional proof: XML
+                                          </div>
+                                          </span></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <ul>
+                              <li class="expandable" onclick="toggle(event, this)">
+                                 <p onclick="toggle(event, this)" class="Document-name">
+                                    			Objet de données
+                                    		
+                                 </p>
+                                 <div class="Document" onclick="toggle(event, this)">
+                                    <div class="Filename"><label>Nom du fichier: </label>maarchProof.xml
+                                    </div>
+                                    <div class="Uri"><label>Chemin vers le fichier: </label>content/ID23.xml
+                                    </div>
+                                    <div class="MessageDigest"><label>Empreinte: </label><a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>algorithm</label> = "SHA-512"
+                                                							</span></span></a> 7be785a2774aaa327a625c51b9a4757560915a65dd70cf7ae87fc0bd52cd0e39c690736f93aee188fac39fc4e63dd5afdaf2932b0bee465e203a0b45bc84637f
+                                    </div>
+                                    <div class="Size"><label>Taille: </label>3403
+                                    </div>
+                                    <div class="FormatLitteral"><label>Forme littérale du format: </label>Extensible Markup Language
+                                    </div>
+                                    <div class="MimeType"><label>Type MIME: </label>application/xml, text/xml
+                                    </div>
+                                    <div class="FormatId"><label>Identifiant PRONOM: </label>fmt/101
+                                    </div>
+                                    <div class="LastModified"><label>Date de dernière modification: </label>2023-06-20T14:47:35.849
+                                    </div>
+                                    <div class="DataObjectVersion"><label>DataObjectVersion: </label>BinaryMaster_1
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ul>
+                  <ul>
+                     <li class="expandable" onclick="toggle(event, this)">
+                        <p onclick="toggle(event, this)" class="Document-name">
+                           			Objet de données
+                           		
+                        </p>
+                        <div class="Document" onclick="toggle(event, this)">
+                           <div class="Filename"><label>Nom du fichier: </label>mainDocument_Signature_dossier_niveau_3.pdf
+                           </div>
+                           <div class="Uri"><label>Chemin vers le fichier: </label>content/ID11.pdf
+                           </div>
+                           <div class="MessageDigest"><label>Empreinte: </label><a href="javascript:void(0)" class="info"><span><span class="nonexpandable"><label>algorithm</label> = "SHA-512"
+                                       							</span></span></a> 2e1208919d3bf98e3228c0527d8dff8e8f51b3e4c89693f4e916ebb9e1878c1e8df464157fbaf33e02acd8db6beba824690cf97efccdb1f22bad6997030eba22
+                           </div>
+                           <div class="Size"><label>Taille: </label>370989
+                           </div>
+                           <div class="FormatLitteral"><label>Forme littérale du format: </label>Acrobat PDF 1.5 - Portable Document Format
+                           </div>
+                           <div class="MimeType"><label>Type MIME: </label>application/pdf
+                           </div>
+                           <div class="FormatId"><label>Identifiant PRONOM: </label>fmt/19
+                           </div>
+                           <div class="LastModified"><label>Date de dernière modification: </label>2023-06-20T14:44:30.721
+                           </div>
+                           <div class="DataObjectVersion"><label>DataObjectVersion: </label>BinaryMaster_1
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </fieldset>
+   </body>
+</html>

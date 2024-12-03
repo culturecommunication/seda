@@ -1,0 +1,30 @@
+.info-generales  { text-align:center; }
+a.info           { text-decoration: none; position:relative; z-index:10; }
+a.info:before    { padding-right: 0.3em; content: url("pics/ico-loupe.gif"); }
+a.info:hover     { z-index:20; }
+a.info > span    { display:none; }
+a.info:hover > span { display:block; position:absolute; top:18px; left:10px; padding-left:5px; padding-top:2px; padding-bottom:2px; padding-right:5px; font-family:'Courier', monospace; font-weight:normal; font-size:10px; color:#777777; text-decoration:none; width:450px; text-align:left; background-color: lightblue; white-space:normal; }
+a.info:hover > span > span { display:block; }
+.acteurs, .gestionRules { display: flex; flex-wrap: wrap; gap: 30px; padding-top: 20px;}
+.acteur, .gestion { flex: 1; vertical-align: top; padding-top : 30px;}
+.Archive-name, .ArchiveUnit-name, .Document-name {	 font-weight: bold; }
+.Archive-name:before { padding-right: 0.3em; content: url("pics/folder.png"); }
+div.Archive      { display: block; padding: 0.8em; border: dotted 1px blue; background-color: #EEEEFF; }
+div.ArchiveUnit     { display: none; padding: 0.6em; border: dotted 1px grey; }
+div.Document     { display: none; padding: 0.4em; border: dotted 1px #CBD5E0; background-color: #CACFD6; }
+div.Organisation { display: block; padding: 0.8em; margin: 0.8em; border: dotted 1px blue; }
+body             { font-size: small; color:#4B4B4B; background-color: #F7FAFC;}
+fieldset         { border: 1px solid black;}
+legend           { color: black; font-weight: bold; padding: 2px 6px }
+h2               { color: black; text-align:center;}
+h4               { margin: 0px; padding: 0.1em;}
+label            { font-weight: bold; }
+code             { display: block; padding: 0.8em; margin: 0.8em; background-color: lightgrey; }
+div.Address, div.Contact { display: block; padding: 0.8em; margin: 0.8em; border: dotted 1px blue; }
+div.code-value   { padding-left: 2.0em; }
+li.nonexpandable { margin: 0px; padding: 0px; list-style: none; }
+li.expandable    { margin: 0px; padding: 0px; list-style-image: url("pics/file-open.png"); }
+li.expanded      { margin: 0px; padding: 0px; list-style-image: url("pics/folder.png"); }
+#commands        { text-align: right; }
+.ContentDescription { display: block; background-color: #E2E8F0;	 border: dotted 1px #CBD5E0; padding: 0.8em; margin: 0.8em; }
+.Management { display: block; background-color: #F0F7FF;	 border: dotted 1px #CBD5E0; padding: 0.8em; margin: 0.8em; }

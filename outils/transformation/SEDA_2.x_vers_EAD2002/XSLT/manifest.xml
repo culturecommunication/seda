@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ArchiveTransfer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="fr:gouv:culture:archivesdefrance:seda:v2.3 ../../../../Desktop/SEDA/seda-seda_v2.3/seda-2.3-main.xsd"
+ xmlns="fr:gouv:culture:archivesdefrance:seda:v2.3" xmlns:ns2="http://www.w3.org/1999/xlink"
+ xml:id="_20240711105010995">
+    <Date>2024-07-11T10:52:17.879+02:00</Date>
+    <MessageIdentifier>SIP SEDA</MessageIdentifier>
+    <CodeListVersions>
+        <MessageDigestAlgorithmCodeListVersion>MessageDigestAlgorithmCode</MessageDigestAlgorithmCodeListVersion>
+        <MimeTypeCodeListVersion>MimeTypeCode</MimeTypeCodeListVersion>
+        <FileFormatCodeListVersion>FileFormatCode</FileFormatCodeListVersion>
+        <StorageRuleCodeListVersion>StorageRuleCode</StorageRuleCodeListVersion>
+        <AppraisalRuleCodeListVersion>AppraisalRuleCode</AppraisalRuleCodeListVersion>
+        <AccessRuleCodeListVersion>AccessRuleCode</AccessRuleCodeListVersion>
+        <DisseminationRuleCodeListVersion>DisseminationRuleCode</DisseminationRuleCodeListVersion>
+        <ReuseRuleCodeListVersion>ReuseRuleCode</ReuseRuleCodeListVersion>
+        <ClassificationRuleCodeListVersion>ClassificationRuleCode</ClassificationRuleCodeListVersion>
+    </CodeListVersions>
+    <DataObjectPackage>
+        <BinaryDataObject id="ID20240711105011141">
+            <Uri>Content/panorama_20240711105217889.jpg</Uri>
+            <MessageDigest algorithm="SHA-256">fa964196f91b71ac9d22788e27d63e96cf3a5b0daaf2486cc2d1c9461b60a179</MessageDigest>
+            <Size>12268142</Size>
+            <FormatIdentification>
+                <FormatLitteral>Exchangeable Image File Format (Compressed)</FormatLitteral>
+                <MimeType>image/jpeg</MimeType>
+                <FormatId>fmt/1507</FormatId>
+            </FormatIdentification>
+            <FileInfo>
+                <Filename>panorama_20240711105217889.jpg</Filename>
+                <LastModified>2024-06-06T09:59:18.802+02:00</LastModified>
+            </FileInfo>
+        </BinaryDataObject>
+        <DescriptiveMetadata>
+            <ArchiveUnit id="ID20240711105011016">
+                <Management>
+                    <AppraisalRule>
+                        <Rule>r 1</Rule>
+                        <StartDate>2015-03-03</StartDate>
+                        <FinalAction>Keep</FinalAction>
+                    </AppraisalRule>
+                    <AccessRule>
+                        <Rule>règle management 1</Rule>
+                        <StartDate>2023-06-06</StartDate>
+                    </AccessRule>
+                    <LogBook>
+                        <Event>
+                            <EventIdentifier>ID20240711105011032</EventIdentifier>
+                            <EventType>Creation</EventType>
+                            <EventDateTime>2024-07-11T10:50:11</EventDateTime>
+                            <EventDetail>Performed by: 'picka'</EventDetail>
+                        </Event>
+                    </LogBook>
+                </Management>
+                <Content>
+                    <DescriptionLevel>File</DescriptionLevel>
+                    <Title xml:lang="fr">Racine</Title>
+                    <ArchivalAgencyArchiveUnitIdentifier>Cote Archives</ArchivalAgencyArchiveUnitIdentifier>
+                    <Description xml:lang="fr">Test de transformation</Description>
+                    <CustodialHistory>
+                        <CustodialHistoryItem xml:lang="fr">Historique de la conservation</CustodialHistoryItem>
+                    </CustodialHistory>
+                    <Keyword>
+                        <KeywordContent>administration seigneuriale</KeywordContent>
+                        <KeywordReference>http://data.culture.fr/thesaurus/resource/ark:/67717/T1-943</KeywordReference>
+                        <KeywordType>subject</KeywordType>
+                    </Keyword>
+                    <Source>source</Source>
+                    <StartDate>2024-07-11</StartDate>
+                    <EndDate>2024-07-11</EndDate>
+                    <Gps>
+                        <GpsAltitude>1</GpsAltitude>
+                        <GpsAltitudeRef>2</GpsAltitudeRef>
+                        <GpsLatitude>3</GpsLatitude>
+                        <GpsLatitudeRef>4</GpsLatitudeRef>
+                        <GpsLongitude>5</GpsLongitude>
+                        <GpsLongitudeRef>6</GpsLongitudeRef>
+                        <GpsDateStamp>7</GpsDateStamp>
+                    </Gps>
+                </Content>
+                <ArchiveUnit id="ID20240711105011065">
+                    <Management>
+                        <AccessRule>
+                            <Rule>règle management 2</Rule>
+                            <StartDate>2023-06-06</StartDate>
+                        </AccessRule>
+                        <LogBook>
+                            <Event>
+<EventIdentifier>ID20240711105011079</EventIdentifier>
+<EventType>Creation</EventType>
+<EventDateTime>2024-07-11T10:50:11</EventDateTime>
+<EventDetail>Performed by: 'picka'</EventDetail>
+                            </Event>
+                        </LogBook>
+                    </Management>
+                    <Content>
+                        <DescriptionLevel>RecordGrp</DescriptionLevel>
+                        <Title xml:lang="de">Niveau 1</Title>
+                        <OriginatingAgencyArchiveUnitIdentifier>Cote producteur</OriginatingAgencyArchiveUnitIdentifier>
+                    </Content>
+                    <ArchiveUnit id="ID20240711105011097">
+                        <Management>
+                            <LogBook>
+<Event>
+    <EventIdentifier>ID20240711105011109</EventIdentifier>
+    <EventType>Creation</EventType>
+    <EventDateTime>2024-07-11T10:50:11</EventDateTime>
+    <EventDetail>Performed by: 'picka'</EventDetail>
+</Event>
+                            </LogBook>
+                        </Management>
+                        <Content>
+                            <DescriptionLevel>File</DescriptionLevel>
+                            <Title>Niveau 1.1</Title>
+                        </Content>
+                        <ArchiveUnit id="ID20240711105016819">
+                            <Management>
+<LogBook>
+    <Event>
+        <EventIdentifier>ID20240711105016861</EventIdentifier>
+        <EventType>Creation</EventType>
+        <EventDateTime>2024-07-11T10:50:16</EventDateTime>
+        <EventDetail>Performed by: 'picka'</EventDetail>
+    </Event>
+</LogBook>
+                            </Management>
+                            <Content>
+<DescriptionLevel>Item</DescriptionLevel>
+<Title>panorama</Title>
+                            </Content>
+                            <DataObjectReference>
+                                <DataObjectReferenceId>ID20240711105011141</DataObjectReferenceId>
+                            </DataObjectReference>
+                            <DataObjectReference>
+                                <DataObjectReferenceId>ID20240711105011141</DataObjectReferenceId>
+                            </DataObjectReference>
+                        </ArchiveUnit>
+                    </ArchiveUnit>
+                </ArchiveUnit>
+                <ArchiveUnit id="ID20240711105016886">
+                    <Management>
+                        <LogBook>
+                            <Event>
+<EventIdentifier>ID20240711105016914</EventIdentifier>
+<EventType>Creation</EventType>
+<EventDateTime>2024-07-11T10:50:16</EventDateTime>
+<EventDetail>Performed by: 'picka'</EventDetail>
+                            </Event>
+                        </LogBook>
+                    </Management>
+                    <Content>
+                        <DescriptionLevel>RecordGrp</DescriptionLevel>
+                        <Title>Niveau 2</Title>
+                    </Content>
+                </ArchiveUnit>
+            </ArchiveUnit>
+        </DescriptiveMetadata>
+        <ManagementMetadata>
+            <OriginatingAgencyIdentifier>origin</OriginatingAgencyIdentifier>
+            <AppraisalRule>
+                <Rule>regle générale</Rule>
+                <StartDate>2015-03-03</StartDate>
+                <FinalAction>Keep</FinalAction>
+            </AppraisalRule>
+            <AccessRule>
+                <Rule>règle haut niveau</Rule>
+                <StartDate>2019-01-03</StartDate>
+            </AccessRule>
+            
+            <LogBook>
+                <Event>
+                    <EventDateTime>2024-07-11T10:52:17.885+02:00</EventDateTime>
+                    <EventDetail>docuteam-packer 6.9.1</EventDetail>
+                </Event>
+            </LogBook>
+        </ManagementMetadata>
+    </DataObjectPackage>
+    <ArchivalAgency>
+        <Identifier>arch01</Identifier>
+    </ArchivalAgency>
+    <TransferringAgency>
+        <Identifier>prod01</Identifier>
+    </TransferringAgency>
+</ArchiveTransfer>

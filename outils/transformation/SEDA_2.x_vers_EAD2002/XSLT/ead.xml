@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ead
+  SYSTEM "ead.dtd">
+<ead><!--Transformation SEDA 2.3 vers EAD--><eadheader>
+      <eadid/>
+      <filedesc>
+         <titlestmt>
+            <titleproper/>
+         </titlestmt>
+      </filedesc>
+   </eadheader>
+   <archdesc level="file">
+      <did>
+         <unitid type="identifiant du service d'archives">Cote Archives</unitid>
+         <unittitle>[lang: fr] Racine</unittitle>
+         <unitdate label="Date de l'unité documentaire" normal="2024/2024">2024-07-11 / 2024-07-11</unitdate>
+         <origination>origin</origination>
+      </did>
+      <accessrestrict altrender="RacineManifest">
+         <p>règle haut niveau</p>
+         <p>à partir de : <date>2019-01-03</date>
+         </p>
+      </accessrestrict>
+      <accessrestrict altrender="PlanDeClassement">
+         <p>règle management 1</p>
+         <p>à partir de : <date>2023-06-06</date>
+         </p>
+      </accessrestrict>
+      <appraisal altrender="RacineManifest">
+         <p>regle générale</p>
+         <p>à partir de : <date>2015-03-03</date>
+         </p>
+         <p>Conserver</p>
+      </appraisal>
+      <appraisal altrender="PlanDeClassement">
+         <p>r 1</p>
+         <p>à partir de : <date>2015-03-03</date>
+         </p>
+         <p>Conserver</p>
+      </appraisal>
+      <custodhist>
+         <p>[lang: fr] Historique de la conservation</p>
+      </custodhist>
+      <scopecontent>
+         <p>[lang: fr] Test de transformation</p>
+      </scopecontent>
+      <originalsloc>
+         <p>source</p>
+      </originalsloc>
+      <controlaccess>
+         <subject>administration seigneuriale</subject>
+         <geogname> GpsAltitude : 1 GpsAltitudeRef : 2 GpsLatitude : 3 GpsLatitudeRef : 4 GpsLongitude : 5 GpsLongitudeRef : 6 GpsDateStamp : 7</geogname>
+      </controlaccess>
+      <dsc>
+         <c level="recordgrp">
+            <did>
+               <unitid type="identifiant du service producteur">Cote producteur</unitid>
+               <unittitle>[lang: de] Niveau 1</unittitle>
+            </did>
+            <accessrestrict altrender="PlanDeClassement">
+               <p>règle management 2</p>
+               <p>à partir de : <date>2023-06-06</date>
+               </p>
+            </accessrestrict>
+            <c level="file">
+               <did>
+                  <unittitle>Niveau 1.1</unittitle>
+               </did>
+               <c level="item">
+                  <did>
+                     <unittitle>panorama</unittitle>
+                  </did>
+                  <dao title="panorama_20240711105217889.jpg"/>
+                  <phystech>
+                     <p>Poids du fichier : 12268142 octets</p>
+                     <p>Identifiant PRONOM : fmt/1507</p>
+                     <p>Forme littéral du nom de format : Exchangeable Image File Format (Compressed)</p>
+                     <p>panorama_20240711105217889.jpg</p>
+                     <p>2024-06-06T09:59:18.802+02:00</p>
+                  </phystech>
+                  <dao title="panorama_20240711105217889.jpg"/>
+                  <phystech>
+                     <p>Poids du fichier : 12268142 octets</p>
+                     <p>Identifiant PRONOM : fmt/1507</p>
+                     <p>Forme littéral du nom de format : Exchangeable Image File Format (Compressed)</p>
+                     <p>panorama_20240711105217889.jpg</p>
+                     <p>2024-06-06T09:59:18.802+02:00</p>
+                  </phystech>
+               </c>
+            </c>
+         </c>
+         <c level="recordgrp">
+            <did>
+               <unittitle>Niveau 2</unittitle>
+            </did>
+         </c>
+      </dsc>
+   </archdesc>
+</ead>
