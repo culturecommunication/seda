@@ -35,7 +35,7 @@ L'outil **Docs** de visualisation d'arborescence de fichiers, d'audit et d'enric
 Octave
 ---------------
 
-L'*Outil de Constitution et de Traitement Automatisé des Versements Électroniques* (**OCTAVE**) permet à l’archiviste de traiter après import des arborescences bureautiques (dédoublonnage, tri, fusion, classement, renommage), d’enrichir les métadonnées par saisie ou import csv complémentaire et de constituer des SIP aux formats SEDA 1 et SEDA 2.1 accompagné d’un manifeste xml, tout en pouvant produire bordereau de récolement et d’élimination.
+L'*Outil de Constitution et de Traitement Automatisé des Versements Électroniques* (**OCTAVE**) permet à l’archiviste de traiter après import des arborescences bureautiques (dédoublonnage, tri, fusion, classement, renommage), d’enrichir les métadonnées par saisie ou import csv complémentaire et de constituer des SIP aux formats SEDA 1 et SEDA 2.2 accompagné d’un manifeste xml, tout en pouvant produire bordereau de récolement et d’élimination.
 
 `Octave <https://francearchives.fr/fr/article/88482499>`_
 
@@ -43,7 +43,7 @@ L'*Outil de Constitution et de Traitement Automatisé des Versements Électroniq
 Resip
 ---------------
 
-L’application **ReSIP**, construite au-dessus de la bibliothèque sedalib dans le cadre du programme Vitam, permet de construire et manipuler des structures arborescentes d’archives, d’en éditer les métadonnées, de les importer et exporter sous la forme de SIP, sous la forme de hiérarchie disque ou encore sous forme csv pour les plans de classement. Elle peut prendre en compte des fichiers bureautiques ou des conteneurs de messagerie. La version SEDA utilisée est la 2.1.
+L’application **ReSIP**, construite au-dessus de la bibliothèque sedalib dans le cadre du programme Vitam, permet de construire et manipuler des structures arborescentes d’archives, d’en éditer les métadonnées, de les importer et exporter sous la forme de SIP, sous la forme de hiérarchie disque ou encore sous forme csv pour les plans de classement. Elle peut prendre en compte des fichiers bureautiques ou des conteneurs de messagerie. La version SEDA utilisée est la 2.2.
 
 `Resip <https://www.programmevitam.fr/pages/ressources/resip/>`_
 
@@ -71,7 +71,7 @@ Pastis
 
 La conception de l’outil **PASTIS** (*Profil d’Archivage Simple pour le Traitement de l’Information en SEDA*), est issue d'une réflexion sur les outils utilisateurs nécessaires au bon fonctionnement de la plate-forme Vitam et s'est élargie ensuite à des besoins de communautés plus vastes et utilisant plusieurs types de SAE. 
 
-Elaboré par le CINES avec le soutien du SIAF et en partenariat avec VITAM, il est disponible en ligne dans une version de test, jusqu’à sa publication en 2023 sous une forme intégrée à **VITAM UI** d'une part et sous une forme exécutable de façon indépendante d'autre part. Il permet d’élaborer des profils d'archivage et des profils d'unités archivistiques en SEDA 2.1. et à terme en SEDA 2.2.
+Elaboré par le CINES avec le soutien du SIAF et en partenariat avec VITAM, il est disponible en ligne dans une version de test, jusqu’à sa publication en 2023 sous une forme intégrée à **VITAM UI** d'une part et sous une forme exécutable de façon indépendante d'autre part. Il permet d’élaborer des profils d'archivage et des profils d'unités archivistiques en SEDA 2.1. et en SEDA 2.2.
 
 `Pastis - Page d'accueil <https://www.programmevitam.fr/pages/ressources/pastis/>`_
 
