@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<!--
-	SEDA v1.0 XSLT display HTML
--->
+<!-- ======================================================== -->
+<!-- =====                                              ===== -->
+<!--               XSLT SEDA 2.3 HTML SIAF                    -->
+<!--               		2024                   			-->
+<!-- =====                                              ===== -->
+<!-- ======================================================== -->
 
 <xsl:stylesheet version="2.0" xmlns:seda="fr:gouv:culture:archivesdefrance:seda:v2.3" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2" exclude-result-prefixes="seda xsl xsd ccts">
 	<xsl:output indent="yes" media-type="text/html" encoding="UTF-8"/>
 	
 	<xsl:key name="BinaryData" match="seda:BinaryDataObject" use="@id"/>
-	<xsl:key name="GroupBinaryData" match="seda:DataObjectGroup" use="@id"/>
+	<xsl:key name="PhysicalData" match="seda:PhysicalDataObject" use="@id"/>
+	<xsl:key name="DataGroup" match="seda:DataObjectGroup" use="@id"/>
+	
+	<xsl:key name="BinaryDataGroupId" match="seda:BinaryDataObject/seda:DataObjectGroupId" use="."/>
+	<xsl:key name="PhysicalDataGroupId" match="seda:PhysicalDataObject/seda:DataObjectGroupId" use="."/>
 
 	<xsl:template match="/">
 		<html>
@@ -274,54 +281,42 @@
 <!-- DataObjectReference -->
 	<xsl:template match="seda:DataObjectReference">
 		<p onclick="toggle(event, this)" class="Document-name">
-			Objet de données
+			<xsl:if test="key('BinaryData', seda:DataObjectReferenceId)/seda:MessageDigest | key('DataGroup', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:MessageDigest | key('BinaryDataGroupId', seda:DataObjectGroupReferenceId)/following::seda:MessageDigest">
+				Objet de données numériques
+			</xsl:if>
+			<xsl:if test="key('PhysicalData', seda:DataObjectReferenceId)/seda:PhysicalId | key('PhysicalDataGroupId', seda:DataObjectGroupReferenceId)/following::seda:PhysicalId">
+				Objet de données physiques
+			</xsl:if>
 		</p>
+		<xsl:for-each select="key('DataGroup', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject|key('BinaryDataGroupId', seda:DataObjectGroupReferenceId)|key('BinaryData', seda:DataObjectReferenceId)|key('PhysicalData', seda:DataObjectReferenceId) | key('PhysicalDataGroupId', seda:DataObjectGroupReferenceId)">
 		<div class="Document" onclick="toggle(event, this)">
-			<xsl:apply-templates select="@*"/>           
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:FileInfo/seda:Filename"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:Uri"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:Attachment"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:MessageDigest"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:Size"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:FormatIdentification/seda:FormatLitteral"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:FormatIdentification/seda:MimeType"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:FormatIdentification/seda:FormatId"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:FileInfo/seda:LastModified"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:DataObjectProfile"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:DataObjectVersion"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:DataObjectNumber"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:Compressed"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:Encoding"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:Metadata"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:OtherMetadata"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:CreatingApplicationName"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:CreatingApplicationVersion"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:DateCreatedByApplication"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:CreatingOs"/>
-			<xsl:apply-templates select="key('BinaryData', seda:DataObjectReferenceId)/seda:CreatingOsVersion"/>
+			<xsl:apply-templates select="@*"/>
 			
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:FileInfo/seda:Filename"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:Uri"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:Attachment"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:MessageDigest"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:Size"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:FormatIdentification/seda:FormatLitteral"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:FormatIdentification/seda:MimeType"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:FormatIdentification/seda:FormatId"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:FileInfo/seda:LastModified"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:DataObjectProfile"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:DataObjectVersion"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:DataObjectNumber"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:Compressed"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:Encoding"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:Metadata"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:OtherMetadata"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:CreatingApplicationName"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:CreatingApplicationVersion"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:DateCreatedByApplication"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:CreatingOs"/>
-			<xsl:apply-templates select="key('GroupBinaryData', seda:DataObjectGroupReferenceId)/seda:BinaryDataObject/seda:CreatingOsVersion"/>
+			<xsl:apply-templates select="seda:FileName|following-sibling::seda:FileInfo/seda:Filename"/>
+			<xsl:apply-templates select="seda:Uri|following-sibling::seda:Uri"/>
+			<xsl:apply-templates select="seda:Attachment|following-sibling::seda:Attachment"/>
+			<xsl:apply-templates select="seda:MessageDigest|following-sibling::seda:MessageDigest"/>
+			<xsl:apply-templates select="seda:Size|following-sibling::seda:Size"/>
+			<xsl:apply-templates select="seda:FormatIdentification/seda:FormatLitteral|following-sibling::seda:FormatIdentification/seda:FormatLitteral"/>
+			<xsl:apply-templates select="seda:FormatIdentification/seda:MimeType|following-sibling::seda:FormatIdentification/seda:MimeType"/>
+			<xsl:apply-templates select="seda:FormatIdentification/seda:FormatId|following-sibling::seda:FormatIdentification/seda:FormatId"/>
+			<xsl:apply-templates select="seda:FileInfo/seda:LastModified|following-sibling::seda:FileInfo/seda:LastModified"/>
+			<xsl:apply-templates select="seda:DataObjectProfile|following-sibling::seda:DataObjectProfile"/>
+			<xsl:apply-templates select="seda:DataObjectVersion|following-sibling::seda:DataObjectVersion"/>
+			<xsl:apply-templates select="seda:DataObjectNumber|following-sibling::seda:DataObjectNumber"/>
+			<xsl:apply-templates select="seda:Compressed|following-sibling::seda:Compressed"/>
+			<xsl:apply-templates select="seda:Encoding|following-sibling::seda:Encoding"/>
+			<xsl:apply-templates select="seda:Metadata|following-sibling::seda:Metadata"/>
+			<xsl:apply-templates select="seda:OtherMetadata|following-sibling::seda:OtherMetadata"/>
+			<xsl:apply-templates select="seda:CreatingApplicationName|following-sibling::seda:CreatingApplicationName"/>
+			<xsl:apply-templates select="seda:CreatingApplicationVersion|following-sibling::seda:CreatingApplicationVersion"/>
+			<xsl:apply-templates select="seda:DateCreatedByApplication|following-sibling::seda:DateCreatedByApplication"/>
+			<xsl:apply-templates select="seda:CreatingOs|following-sibling::seda:CreatingOs"/>
+			<xsl:apply-templates select="seda:CreatingOsVersion|following-sibling::seda:CreatingOsVersion"/>
+			<xsl:apply-templates select="seda:PhysicalId|following-sibling::seda:PhysicalId"/>
+			<xsl:apply-templates select="seda:PhysicalDimensions|following-sibling::seda:PhysicalDimensions"/>
 		</div>
+		</xsl:for-each>
 	</xsl:template>
 	
 <!-- Attachment -->
@@ -638,6 +633,7 @@
 			<xsl:when test="($term = 'Gender')">Genre</xsl:when>
 			<xsl:when test="($term = 'GivenName')">Nom d'usage</xsl:when>
 			<xsl:when test="($term = 'FullName')">Nom complet</xsl:when>
+			<xsl:when test="($term = 'FirstName')">Prénom</xsl:when>
 			<xsl:when test="($term = 'BirthName')">Nom de naissance</xsl:when>
 			<xsl:when test="($term = 'BirthPlace')">Lieu de naissance</xsl:when>
 			<xsl:when test="($term = 'DeathDate')">Lieu de mort</xsl:when>
@@ -701,6 +697,11 @@
 			<xsl:when test="($term = 'LastModified')">Date de dernière modification</xsl:when>
 			<xsl:when test="($term = 'Filename')">Nom du fichier</xsl:when>
 			<xsl:when test="($term = 'DataObjectProfile')">Profil d'objet</xsl:when>
+			
+			<!-- BinaryDataObject -->
+			<xsl:when test="($term = 'DataObjectNumber')">Version d'un objet de données</xsl:when>
+			<xsl:when test="($term = 'PhysicalId')">Identifiant d'un objet physique</xsl:when>
+			<xsl:when test="($term = 'PhysicalDimensions')">Dimensions d'un objet physique</xsl:when>
 			
 			<!-- ManagementMetadata | Management -->
 			<xsl:when test="($term = 'ArchivalAgreement')">Convention de services</xsl:when>
