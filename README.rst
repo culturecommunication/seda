@@ -119,9 +119,11 @@ Outils
 Outils spécifiques à la version 2.3
 ---------------
 
-* `Feuille de transformation (XSLT) SEDA v2.3 vers EAD2002 https://github.com/culturecommunication/seda/tree/seda-2.3/outils/transformation/SEDA_2.x_vers_EAD2002/XSLT`_
+* `Feuille de transformation (XSLT) SEDA v2.3 vers EAD2002 <https://github.com/culturecommunication/seda/tree/seda-2.3/outils/transformation/SEDA_2.x_vers_EAD2002/XSLT>`_
 
-* `Feuille de transformation (XSLT) SEDA v2.3 vers HTML https://github.com/culturecommunication/seda/tree/seda-2.3/outils/transformation/SEDA_2.x_vers_HTML/XSLT`_
+
+* `Feuille de transformation (XSLT) SEDA v2.3 vers HTML <https://github.com/culturecommunication/seda/tree/seda-2.3/outils/transformation/SEDA_2.x_vers_HTML/XSLT>`_
+
 
 
 
