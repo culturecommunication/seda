@@ -91,9 +91,11 @@ Documentation générale
 ---------------
 * `SEDA 2.3 | Documentation sommaire des nouveautés <https://raw.githubusercontent.com/culturecommunication/seda/seda-2.3/doc/seda-2.3-documentation_sommaire.pdf>`_
 
-* SEDA 2.3 | Dictionnaire des balises ``[à paraître en juillet 2024]``
+* `SEDA 2.3 | Guide d'introduction <https://github.com/culturecommunication/seda/raw/refs/heads/seda-2.3/doc/seda-2.3-guide_introduction_v0.5.pdf>`_
 
-* SEDA 2.3 | Documentation fonctionnelle  ``[à paraître en décembre 2024]``
+* SEDA 2.3 | Dictionnaire des balises ``[à paraître]``
+
+* SEDA 2.3 | Documentation fonctionnelle  ``[à paraître]``
 
 
 
@@ -117,9 +119,9 @@ Outils
 Outils spécifiques à la version 2.3
 ---------------
 
-* Une feuille de transformation (XSLT) SEDA v2.3 vers EAD2002 ``[Bientôt]``
+* `Feuille de transformation (XSLT) SEDA v2.3 vers EAD2002 https://github.com/culturecommunication/seda/tree/seda-2.3/outils/transformation/SEDA_2.x_vers_EAD2002/XSLT`_
 
-* Une feuille de transformation (XSLT) SEDA v2.3 vers HTML ``[Bientôt]``
+* `Feuille de transformation (XSLT) SEDA v2.3 vers HTML https://github.com/culturecommunication/seda/tree/seda-2.3/outils/transformation/SEDA_2.x_vers_HTML/XSLT`_
 
 
 
